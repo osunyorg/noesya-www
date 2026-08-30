@@ -1,13 +1,25 @@
-theme: osuny
+theme: noesya-hugo-theme
 _merge: deep
 params:
-  summary:
-    position: hero
-  search:
-    active: true
-  logo:
-    header: ''
-    footer: ''
+  plausible: www.noesya.coop
+  ecosystem: www
   home:
     head:
       title: site
+  design:
+    force_full_width: true
+  toc:
+    disabled: true
+  posts:
+    single:
+      meta:
+        position: hero
+        options:
+          authors: false
+          dates: false
+          published_at: false
+          reading_time: false
+          share: false
+          taxonomies: true
+          updated_at: false
+          with_labels: true
