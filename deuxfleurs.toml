@@ -1,0 +1,40 @@
+[[cors]]
+allowed_origins = "*"
+allowed_methods = ["GET", "POST"]
+allowed_headers = "*"
+
+[[headers]]
+for = ["**/*.woff2", "**/*.woff", "**/*.svg", "**/*.ttf", "**/*.otf", "**/*.eot", "**/*.js", "**/*.css"]
+compress = "gzip"
+[headers.values]
+Cache-Control = "max-age=31536000, no-transform, public"
+
+[[headers]]
+for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
+[headers.values]
+Cache-Control = "max-age=31536000, no-transform, public"
+
+[[redirects]]
+from = "/applications/index.html"
+to = "/metiers/applications/"
+
+[[redirects]]
+from = "/sites/index.html"
+to = "/metiers/sites/"
+
+[[redirects]]
+from = "/formation/index.html"
+to = "/metiers/formation/"
+
+[[redirects]]
+from = "/projets/index.html"
+to = "/references/"
+
+[[redirects]]
+from = "/conseil/index.html"
+to = "/metiers/conseil/"
+
+[[redirects]]
+from = "/references/applicaitons/index.html"
+to = "/references/applications/"
+
