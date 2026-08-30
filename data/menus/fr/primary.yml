@@ -1,0 +1,89 @@
+---
+title: Menu principal
+items:
+- title: Métiers
+  slug: metiers
+  target: "/metiers/"
+  kind: page
+  new_tab: false
+  children:
+  - title: Conseil honnête
+    slug: conseil-honnete
+    target: "/metiers/conseil/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/metiers/conseil"
+    file: content/fr/pages/metiers/conseil/_index.html
+  - title: Applications robustes
+    slug: applications-robustes
+    target: "/metiers/applications/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/metiers/applications"
+    file: content/fr/pages/metiers/applications/_index.html
+  - title: Sites soignés
+    slug: sites-soignes
+    target: "/metiers/sites/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/metiers/sites"
+    file: content/fr/pages/metiers/sites/_index.html
+  - title: Formation engagée
+    slug: formation-engagee
+    target: "/metiers/formation/"
+    kind: page
+    new_tab: false
+    children: []
+    descendants_targets: []
+    path: "/pages/metiers/formation"
+    file: content/fr/pages/metiers/formation/_index.html
+  descendants_targets:
+  - "/metiers/applications/"
+  - "/metiers/conseil/"
+  - "/metiers/formation/"
+  - "/metiers/sites/"
+  path: "/pages/metiers"
+  file: content/fr/pages/metiers/_index.html
+- title: Actualités
+  slug: actualites
+  target: "/actualites/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/posts"
+  file: content/fr/posts/_index.html
+- title: Projets
+  slug: projets
+  target: "/projets/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/projects"
+  file: content/fr/projects/_index.html
+- title: Personnes
+  slug: personnes
+  target: "/personnes/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/persons"
+  file: content/fr/persons/_index.html
+- title: Organisations
+  slug: organisations
+  target: "/organisations/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/organizations"
+  file: content/fr/organizations/_index.html
+
