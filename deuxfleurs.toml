@@ -19,6 +19,10 @@ from = "/applications/index.html"
 to = "/metiers/applications/"
 
 [[redirects]]
+from = "/actualites/2021-01-01-sebastien-gaya/index.html"
+to = "/actualites/2021-09-01-sebastien-gaya/"
+
+[[redirects]]
 from = "/sites/index.html"
 to = "/metiers/sites/"
 
