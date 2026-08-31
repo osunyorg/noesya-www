@@ -37,8 +37,8 @@ items:
   descendants_targets: []
   path: "/pages/metiers/formation"
   file: content/fr/pages/metiers/formation/_index.html
-- title: Équipe
-  slug: equipe
+- title: Équipe senior
+  slug: equipe-senior
   target: "/equipe/"
   kind: page
   new_tab: false
@@ -46,8 +46,8 @@ items:
   descendants_targets: []
   path: "/pages/equipe"
   file: content/fr/pages/equipe/_index.html
-- title: Références
-  slug: references
+- title: Références solides
+  slug: references-solides
   target: "/references/"
   kind: page
   new_tab: false
