@@ -1,0 +1,18 @@
+.page__home
+    @include media-breakpoint-up(desktop)
+        .hero
+            .content
+                padding-top: 0
+                .hero-text
+                    padding-top: pxToRem(100)
+                    width: columns(7)
+                    p
+                        @include body-text
+                        font-size: pxToRem(25)
+                        line-height: pxToRem(38)
+                        color: var(--color-text)
+                        font-style: italic
+                        margin-top: $spacing-3
+                .hero-image
+                    width: columns(3)
+                    margin-right: offset(1)

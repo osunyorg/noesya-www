@@ -23,3 +23,8 @@ params:
           taxonomies: true
           updated_at: false
           with_labels: true
+  components:
+    lightbox:
+      disabled: false
+      in_hero:
+        disabled: true
