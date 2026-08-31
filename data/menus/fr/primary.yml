@@ -1,15 +1,24 @@
 ---
 title: Menu principal
 items:
-- title: Métiers
-  slug: metiers
-  target: "/metiers/"
+- title: Conseil honnête
+  slug: conseil-honnete
+  target: "/metiers/conseil/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/metiers"
-  file: content/fr/pages/metiers/_index.html
+  path: "/pages/metiers/conseil"
+  file: content/fr/pages/metiers/conseil/_index.html
+- title: Applications robustes
+  slug: applications-robustes
+  target: "/metiers/applications/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/metiers/applications"
+  file: content/fr/pages/metiers/applications/_index.html
 - title: Équipe
   slug: equipe
   target: "/equipe/"
@@ -37,4 +46,22 @@ items:
   descendants_targets: []
   path: "/pages/engagements"
   file: content/fr/pages/engagements/_index.html
+- title: Sites soignés
+  slug: sites-soignes
+  target: "/metiers/sites/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/metiers/sites"
+  file: content/fr/pages/metiers/sites/_index.html
+- title: Formation engagée
+  slug: formation-engagee
+  target: "/metiers/formation/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/metiers/formation"
+  file: content/fr/pages/metiers/formation/_index.html
 
