@@ -1,4 +1,22 @@
 .page__home
+    .hero
+        .content
+            .hero-text
+                p
+                    font-style: italic
+    @include media-breakpoint-down(desktop)
+        .hero
+            .content
+                display: flex
+                flex-direction: column
+                margin-top: var(--grid-gutter)
+                .hero-text
+                    margin-top: var(--grid-gutter)
+                .hero-image
+                    order: -1
+                    margin-bottom: 0
+                    width: 50%
+                    margin-left: auto
     @include media-breakpoint-up(desktop)
         .hero
             .content
@@ -10,8 +28,6 @@
                         @include body-text
                         font-size: pxToRem(25)
                         line-height: pxToRem(38)
-                        color: var(--color-text)
-                        font-style: italic
                         margin-top: $spacing-3
                 .hero-image
                     width: columns(3)
