@@ -1,8 +1,11 @@
-theme: noesya-hugo-theme
 _merge: deep
+theme: noesya-hugo-theme
 params:
   plausible: www.noesya.coop
   ecosystem: www
+  blocks:
+    ignored:
+      - block-class-organisation
   home:
     head:
       title: site
@@ -23,6 +26,12 @@ params:
           taxonomies: true
           updated_at: false
           with_labels: true
+  projects:
+    single:
+      summary:
+        position: content
+      meta:
+        position: none
   components:
     lightbox:
       disabled: false

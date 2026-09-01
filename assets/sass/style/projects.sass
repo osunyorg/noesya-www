@@ -1,0 +1,469 @@
+
+// New variables
+// TODO : should keep this ?
+$project-navigation-title: pxToRem(45)
+$project-navigation-text: pxToRem(26)
+
+$post-title-size: pxToRem(75)
+$post-title-line-height: 100%
+$post-date-size: pxToRem(46)
+$post-date-line-height: 120%
+
+.projects__page
+    @include switch-colors-to-light-theme
+    .hero
+        height: 75vh
+        margin-bottom: 0
+        overflow: hidden
+        padding-top: 0
+        position: relative
+        @include media-breakpoint-up(desktop)
+            padding-bottom: $spacing-4
+        .container, .content
+            height: 100%
+        .container .content
+            margin: 0
+            max-width: unset
+            padding: 0
+        .content
+            align-items: flex-end
+            display: flex
+            justify-content: space-between
+            padding-left: $spacing-3
+            padding-right: $spacing-3
+            @include media-breakpoint-up(desktop)
+                padding: var(--grid-gutter)
+                max-width: var(--grid-max-width)
+                margin-left: auto
+                margin-right: auto
+            .hero-text
+                margin: $spacing-5 0
+            figure
+                filter: brightness(70%)
+                height: 100%
+                object-fit: cover
+                left: 0
+                margin-left: 0
+                margin-right: 0
+                position: absolute
+                top: 0
+                right: 0
+                width: 100%
+                z-index: 1
+                a, picture
+                    display: block
+                    height: 100%
+                img
+                    height: 100%
+                    object-fit: cover
+                figcaption
+                    display: none
+            .hero-text
+                position: relative
+                z-index: 2
+                width: 100%
+                hgroup
+                    color: white
+                    flex: 1
+                    z-index: 2
+                    @include media-breakpoint-up(desktop)   
+                        display: flex 
+                        justify-content: space-between
+                        h1
+                            font-size: $post-title-size
+                            line-height: $post-title-line-height
+                            width: columns(9)
+                            + p
+                                font-size: $post-date-size
+                                line-height: $post-date-line-height
+                    @include media-breakpoint-down(desktop)
+                        margin: 0
+                        h1 + p
+                            margin-top: $spacing-2
+    
+    .block-features ul
+        @include media-breakpoint-up(md)
+            @include grid(3)
+        @include media-breakpoint-between(sm, md)
+            li
+                max-width: columns(9)
+    .block-summary
+        // padding-top: $spacing-5 !important
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+        .lead
+            p
+                @include h3
+        .lead + div
+            display: flex
+            justify-content: space-between
+            flex: 1
+            gap: var(--grid-gutter)
+            margin-top: 4px
+            picture img
+                min-width: 100px
+                margin-top: 6px
+            @include media-breakpoint-down(sm)
+                display: block
+            @include media-breakpoint-down(md)
+                picture img
+                    max-width: 100px
+        @include media-breakpoint-down(desktop)
+            .lead + div
+                margin-top: $spacing-5
+                picture 
+                    max-width: 120px
+        @include media-breakpoint-up(desktop)
+            .block-content
+                display: flex
+                gap: var(--grid-gutter)
+            .lead
+                width: columns(8)
+                + div picture
+                    width: columns(1.5) // TODO CHECK
+    .projects-navigation
+        align-items: center
+        display: flex
+        font-size: $project-navigation-text
+        justify-content: center
+        min-height: 100vh
+        ul
+            list-style: none
+            text-align: center
+            padding-left: 0
+            a
+                align-items: center
+                .navigation, &
+                    display: flex
+                    flex-direction: column
+                    text-decoration: none
+                .navigation
+                    position: relative
+                    font-family: $body-font-family
+                    font-style: italic
+                    &::after
+                        background: black
+                        bottom: -4px
+                        content: ""
+                        display: flex
+                        height: 1px
+                        position: absolute
+                        right: 0
+                        left: auto
+                        transform: width .3s ease
+                        width: 0%
+                        -webkit-animation: nav-hover-out 1s forwards
+                        animation: nav-hover-out 1s forwards
+                &:hover .navigation::after
+                    -webkit-animation: nav-hover-in 1s forwards
+                    animation: nav-hover-in 1s forwards
+                    
+                h3
+                    @include h1
+                    margin: $spacing-5 0 $spacing-2
+                    @include media-breakpoint-up(desktop)
+                        font-size: $project-navigation-title
+                    + span
+                        color: $color-text-alt
+    .block:not(.block-chapter) .top .block-title,
+    .block-chapter.block-chapter--alt_background .block-title
+        @include h5
+        font-family: $body-font-family
+        font-style: italic
+        text-transform: initial
+    
+    @include media-breakpoint-up(desktop)
+        .block
+            padding-top: calc(#{$spacing-6} - #{$spacing-3})
+            padding-bottom: calc(#{$spacing-6} - #{$spacing-3})
+        .block-call_to_action
+            margin-top: calc(#{$spacing-6} - #{$spacing-2})
+        .block-organization_chart
+            padding-top: calc(#{$spacing-5})
+    // Blocks
+
+    .block-image, 
+    .block-gallery
+        figcaption
+            bottom: 0
+            font-size: 0
+            position: absolute
+            transform: translateY(100%)
+            right: 0
+        @include in-page-without-sidebar
+            .block-content figure
+                background: $color-background-alt
+                display: block
+                picture
+                    margin: 0
+                    width: 100%
+                @include media-breakpoint-up(desktop)
+                    picture img
+                        margin: auto
+                        max-height: unset
+                    figcaption
+                        font-size: 0
+
+    .block-image 
+        @include in-page-without-sidebar
+            picture
+                padding-bottom: offset(2)
+                padding-top: offset(2)
+            figure img
+                margin-bottom: 0
+                margin-left: $spacing-1
+                margin-right: $spacing-1
+                width: calc(100% - #{var(--grid-gutter)})
+                @include media-breakpoint-up(desktop)
+                    width: columns(8)
+                @include media-breakpoint-down(desktop)
+                    padding-bottom: $spacing-1
+                    padding-top: $spacing-1
+    .block-gallery 
+        @include in-page-with-or-without-sidebar
+            .gallery
+                @include grid(2, desktop)
+                align-items: inherit
+                figure
+                    padding-bottom: columns(2)
+                    padding-top: columns(2)
+                    &::after
+                        display: none
+                    img
+                        margin-bottom: 0
+                    &.cover
+                        // Remove strange grey area at the bottom on mobile
+                        line-height: 0
+                        figcaption
+                            // TODO @alex en fait c'est pas ça qu'il faut faire, c'est virer les [full] avec Hugo
+                            // cf https://github.com/noesya/coop.noesya.works/issues/1
+                            display: none
+                @include media-breakpoint-up(desktop)
+                    figure.cover
+                        position: relative
+                        picture
+                            bottom: 0
+                            left: 0
+                            height: 100%
+                            position: absolute
+                            right: 0
+                            top: 0
+                            img
+                                height: 100%
+                                object-fit: cover
+                                width: 100%
+                    figure:not(.cover) picture
+                        margin-left: auto
+                        margin-right: auto
+                        width: columns(2.65) // TODO CHECK
+                @include media-breakpoint-up(xxl)
+                    figure:not(.cover) picture
+                        width: columns(2.85) // TODO CHECK
+                @include media-breakpoint-down(desktop)
+                    display: block
+                    figure
+                        padding: $spacing-5
+                        &.cover
+                            padding: 0 !important
+                            picture 
+                                height: 100%
+                                img
+                                    display: initial
+                                    height: 100%
+                        &:not(.cover) 
+                            padding-bottom: $spacing-5
+                            padding-top: $spacing-5
+                            picture
+                                margin-left: auto
+                                margin-right: auto
+                                width: fit-content
+                            + figure:not(.cover)
+                                padding-top: 0
+
+    .block-gallery + .block-image,
+    .block-image + .block-gallery
+        padding-top: 0
+        @include media-breakpoint-down(desktop)
+        margin-top: -$spacing-5
+    @include media-breakpoint-up(desktop)
+        .block-image + .block-gallery
+            margin-top: -54px
+
+    .block-organizations,
+    .block-persons
+        .top
+            .block-title
+                text-align: center
+
+        .persons-grid
+            @include media-breakpoint-up(desktop)
+                justify-content: center
+
+
+    // .block-persons
+    //     @include media-breakpoint-down(desktop)
+    //         .persons
+    //             gap: calc(#{$spacing-3} + #{$spacing-2})
+    //     @include media-breakpoint-up(desktop)
+    //         .top
+    //             margin-bottom: $spacing-6
+    //         .avatar
+    //             width: columns(3)
+    //         @include in-page-with-or-without-sidebar
+    //             .persons
+    //                 @include grid(3, desktop)
+    //             .avatar
+    //                 width: columns(3)
+    //                 margin-bottom: 0
+    //             .description + .avatar
+    //                 margin-right: $spacing-3
+    //     .person
+    //         align-items: center
+    //         flex-direction: row 
+    //         .description
+    //             text-align: left
+
+    .block-organizations
+        .media
+            background: none
+        .organizations
+            display: flex !important
+            justify-content: center
+            column-gap: var(--grid-gutter)
+            flex-wrap: wrap
+            row-gap: half(var(--grid-gutter))
+            .organization
+                width: columns(6)
+                .organization-title
+                    @extend .sr-only
+                @include media-breakpoint-up(desktop)
+                    width: columns(2)
+
+    .block-chapter
+        &--no_background 
+            .block-title
+                @include h2
+
+        .chapter
+            @include in-page-with-or-without-sidebar
+                @include media-breakpoint-up(desktop)
+                    .text
+                        align-items: baseline
+                        display: flex
+                        width: 100%
+                        gap: var(--grid-gutter)
+                        .top 
+                            width: columns(6)
+                            + * 
+                                width: columns(6)
+        &.block-chapter--alt_background 
+        &.block-chapter--alt_background 
+            background: none
+            .text
+                @include in-page-with-or-without-sidebar
+                    display: block
+                    text-align: center
+                    .top, 
+                    .rich-text
+                        width: 100%
+                    .top
+                        margin-bottom: $spacing-6
+                    p + p 
+                        margin-top: $spacing-2
+                    @include media-breakpoint-down(desktop)
+                        margin-bottom: $spacing-5
+
+    .block-call_to_action
+        overflow: hidden
+        position: relative
+        figcaption
+            @extend .sr-only
+        
+        .call_to_action
+            .actions 
+                align-items: center
+                display: flex
+                justify-content: center
+                gap: var(--grid-gutter)
+                a
+                    @include hover-translate-icon
+                    @include icon(arrow-right-line, after)
+                    display: flex
+                    align-items: center
+                    margin: 0
+                    &:focus-visible
+                        outline-color: $block-call-to-action-accent-button-hover-background
+                    &::after
+                        margin-left: auto
+                        padding-left: $spacing-2
+            
+        .call_to_action--with-image
+            display: flex
+            justify-content: center
+            padding-top: 0
+            padding-bottom: 0
+            figure
+                bottom: 0
+                left: 0
+                position: absolute
+                top: 0
+                right: 0
+                margin-bottom: 0
+                figcaption
+                    display: none // credits are displayed above the cta
+                picture
+                    height: 100%
+                    width: 100%
+                img
+                    height: 100%
+                    object-fit: cover
+                    object-position: top
+                    
+
+        @include media-breakpoint-down(desktop)
+            .call_to_action
+                .actions
+                    z-index: 2
+                    position: relative
+                    flex-direction: column
+                    a
+                        margin-right: 0
+                        margin-top: 0
+                        width: columns(9)
+                        &:first-child
+                            margin-top: 0
+        
+        @include in-page-without-sidebar
+            .block-content
+                padding-top: $spacing-7
+                padding-bottom: $spacing-7
+            
+            .call_to_action
+                > div
+                    grid-column: 1/-1 !important
+            .actions
+                margin-top: 0
+                position: relative
+                text-align: center
+                z-index: 2
+                
+
+    .block-posts--list
+        @include in-page-without-sidebar
+            @include media-breakpoint-up(desktop)
+                .post
+                    .post-content
+                        margin-left: 0
+                    .media
+                        pointer-events: none
+                        opacity: 0
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        transition: opacity .2s ease
+                        width: columns(2)
+                        z-index: 100
+                    &:hover
+                        .media
+                            opacity: 1
