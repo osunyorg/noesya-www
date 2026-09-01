@@ -10,13 +10,22 @@ $post-date-size: pxToRem(46)
 $post-date-line-height: 120%
 
 .projects__page
-    @include switch-colors-to-light-theme
+    header#document-header 
+        a.logo 
+            transition: color .3s ease, opacity .35s
+            img 
+                transition: filter .3s ease
+            &.revert
+                color: white
+                img
+                    filter: invert(1)
     .hero
         height: 75vh
         margin-bottom: 0
         overflow: hidden
         padding-top: 0
         position: relative
+        color: var(--color-background)
         @include media-breakpoint-up(desktop)
             padding-bottom: $spacing-4
         .container, .content

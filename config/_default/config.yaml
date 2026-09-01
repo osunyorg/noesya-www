@@ -37,3 +37,18 @@ params:
       disabled: false
       in_hero:
         disabled: true
+  image_sizes:
+    sections:
+      projects:
+        hero:
+          mobile:   400
+          tablet:   1024
+          desktop:  1920
+        hero_single:
+          mobile:   400
+          tablet:   1024
+          desktop:  1920
+        item:
+          mobile:   350
+          tablet:   450
+          desktop:  900
