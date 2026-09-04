@@ -58,6 +58,9 @@ image:
 
 
 children:
+  - "pages/conseil/_index.html"
+  - "pages/sites/_index.html"
+  - "pages/applications/_index.html"
   - "pages/metiers/_index.html"
   - "pages/equipe/_index.html"
   - "pages/engagements/_index.html"
@@ -67,6 +70,18 @@ children:
   - "organizations/_index.html"
   - "files/_index.html"
 child_pages:
+  - permalink: "/conseil/"
+    path: "/pages/conseil"
+    slug: "conseil"
+    file: "content/fr/pages/conseil/_index.html"
+  - permalink: "/sites/"
+    path: "/pages/sites"
+    slug: "sites"
+    file: "content/fr/pages/sites/_index.html"
+  - permalink: "/applications/"
+    path: "/pages/applications"
+    slug: "applications"
+    file: "content/fr/pages/applications/_index.html"
   - permalink: "/metiers/"
     path: "/pages/metiers"
     slug: "metiers"
@@ -130,22 +145,22 @@ contents:
 
       layout: grid
       pages:
-        - permalink: "/metiers/conseil/"
-          path: "/pages/metiers/conseil"
+        - permalink: "/conseil/"
+          path: "/pages/conseil"
           slug: "conseil"
-          file: "content/fr/pages/metiers/conseil/_index.html"
+          file: "content/fr/pages/conseil/_index.html"
           name: >-
             Conseil honnête
-        - permalink: "/metiers/applications/"
-          path: "/pages/metiers/applications"
+        - permalink: "/applications/"
+          path: "/pages/applications"
           slug: "applications"
-          file: "content/fr/pages/metiers/applications/_index.html"
+          file: "content/fr/pages/applications/_index.html"
           name: >-
             Applications robustes
-        - permalink: "/metiers/sites/"
-          path: "/pages/metiers/sites"
+        - permalink: "/sites/"
+          path: "/pages/sites"
           slug: "sites"
-          file: "content/fr/pages/metiers/sites/_index.html"
+          file: "content/fr/pages/sites/_index.html"
           name: >-
             Sites soignés
         - permalink: "/metiers/formation/"
