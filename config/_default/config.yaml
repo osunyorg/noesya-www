@@ -31,7 +31,11 @@ params:
       summary:
         position: content
       meta:
-        position: none
+        position: hero
+        options:
+          share: false
+          taxonomies: false
+          with_labels: false
   components:
     lightbox:
       disabled: true
@@ -52,3 +56,6 @@ params:
           mobile:   350
           tablet:   450
           desktop:  900
+    blocks:
+      image:
+        desktop: 877

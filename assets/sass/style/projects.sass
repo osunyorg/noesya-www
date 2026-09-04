@@ -19,33 +19,15 @@ body.projects__page
                 img
                     filter: invert(1)
     .hero
+        align-items: flex-end
+        color: var(--color-background)
+        display: flex
         height: 75vh
         margin-bottom: 0
         overflow: hidden
         padding-top: 0
         position: relative
-        color: var(--color-background)
-        @include media-breakpoint-up(desktop)
-            padding-bottom: $spacing-4
-        .container, .content
-            height: 100%
-        .container .content
-            margin: 0
-            max-width: unset
-            padding: 0
         .content
-            align-items: flex-end
-            display: flex
-            justify-content: space-between
-            padding-left: $spacing-3
-            padding-right: $spacing-3
-            @include media-breakpoint-up(desktop)
-                padding: var(--grid-gutter)
-                max-width: var(--grid-max-width)
-                margin-left: auto
-                margin-right: auto
-            .hero-text
-                margin: $spacing-5 0
             figure
                 filter: brightness(70%)
                 height: 100%
@@ -55,80 +37,98 @@ body.projects__page
                 margin-right: 0
                 position: absolute
                 top: 0
-                right: 0
                 width: 100%
                 z-index: 1
-                a, picture
-                    display: block
-                    height: 100%
+                picture,
                 img
                     height: 100%
+                img
                     object-fit: cover
                 figcaption
-                    display: none
+                    @include sr-only
+
             .hero-text
+                margin: $spacing-5 0
                 position: relative
-                z-index: 2
                 width: 100%
-                hgroup
-                    color: white
-                    flex: 1
-                    z-index: 2
-                    @include media-breakpoint-up(desktop)   
-                        display: flex 
-                        justify-content: space-between
-                        h1
-                            font-size: $post-title-size
-                            line-height: $post-title-line-height
-                            width: columns(9)
-                            + p
-                                font-size: $post-date-size
-                                line-height: $post-date-line-height
-                    @include media-breakpoint-down(desktop)
-                        margin: 0
-                        h1 + p
-                            margin-top: $spacing-2
-    
+                z-index: 2
+                .projects-meta
+                    justify-content: flex-end
+                    margin-top: 0
+
+        @include media-breakpoint-up(desktop)
+            padding-bottom: $spacing-4
+            .hero-text
+                align-items: baseline
+                flex-direction: row
+                justify-content: space-between
+                h1
+                    font-size: $post-title-size
+                    line-height: $post-title-line-height
+                    width: columns(9)
+                .projects-meta
+                    justify-content: flex-end
+                    .year
+                        font-size: $post-date-size
+                        line-height: $post-date-line-height
+        
+        @include media-breakpoint-down(desktop)
+            .hero-text
+                gap: $spacing-2
+                .projects-meta
+                    .year
+                        @include body-text
+
     .block-features ul
-        // @include media-breakpoint-up(md)
-        //     @include grid(3)
         @include media-breakpoint-between(sm, md)
             li
                 max-width: columns(9)
-    .block-summary
-        // padding-top: $spacing-5 !important
-        padding-top: 0 !important
-        padding-bottom: 0 !important
+
+    .block.block-summary
+        padding-top: 0
+        padding-bottom: 0
         .lead
             p
                 @include h3
-        .lead + div
-            display: flex
-            justify-content: space-between
-            flex: 1
-            gap: var(--grid-gutter)
-            margin-top: 4px
-            picture img
-                min-width: 100px
-                margin-top: 6px
-            @include media-breakpoint-down(sm)
-                display: block
-            @include media-breakpoint-down(md)
-                picture img
-                    max-width: 100px
-        @include media-breakpoint-down(desktop)
-            .lead + div
-                margin-top: $spacing-5
-                picture 
-                    max-width: 120px
+        .hero-block-organization
+            .container
+                padding: 0
+            .block-title
+                text-align: left
+            .organization
+                .media
+                    padding: 0
+                    picture
+                        aspect-ratio: unset
+
         @include media-breakpoint-up(desktop)
             .block-content
+                align-items: baseline
                 display: flex
+                justify-content: space-between
                 gap: var(--grid-gutter)
             .lead
                 width: columns(8)
-                + div picture
-                    width: columns(1.5) // TODO CHECK
+            .hero-block-organization
+                width: columns(4)
+                .container,
+                .block
+                    margin: 0
+                    padding: 0
+                .container
+                    width: 100%
+                .organizations
+                    @include grid(1)
+                .organization
+                    width: offset(1)
+                
+        @include media-breakpoint-down(desktop)
+            .hero-block-organization
+                .organization
+                    .media
+                        img
+                            max-width: space(25)
+
     .projects-navigation
         align-items: center
         display: flex
@@ -332,17 +332,20 @@ body.projects__page
         .media
             background: none
         .organizations
-            display: flex !important
-            justify-content: center
-            column-gap: var(--grid-gutter)
-            flex-wrap: wrap
-            row-gap: half(var(--grid-gutter))
             .organization
                 width: columns(6)
                 .organization-title
                     @extend .sr-only
                 @include media-breakpoint-up(desktop)
                     width: columns(2)
+
+        &:not(.block-class-organisation)
+            .organizations
+                display: flex !important
+                justify-content: center
+                column-gap: var(--grid-gutter)
+                flex-wrap: wrap
+                row-gap: half(var(--grid-gutter))
 
     .block-chapter
         &--no_background 
