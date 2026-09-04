@@ -34,7 +34,7 @@ params:
         position: none
   components:
     lightbox:
-      disabled: false
+      disabled: true
       in_hero:
         disabled: true
   image_sizes:
