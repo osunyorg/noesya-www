@@ -1,6 +1,5 @@
 
 // New variables
-// TODO : should keep this ?
 $project-navigation-title: pxToRem(45)
 $project-navigation-text: pxToRem(26)
 
@@ -9,9 +8,9 @@ $post-title-line-height: 100%
 $post-date-size: pxToRem(46)
 $post-date-line-height: 120%
 
-.projects__page
+body.projects__page
     header#document-header 
-        a.logo 
+        a.logo
             transition: color .3s ease, opacity .35s
             img 
                 transition: filter .3s ease
@@ -351,22 +350,21 @@ $post-date-line-height: 120%
                 @include h2
 
         .chapter
-            @include in-page-with-or-without-sidebar
-                @include media-breakpoint-up(desktop)
-                    .text
-                        align-items: baseline
-                        display: flex
-                        width: 100%
-                        gap: var(--grid-gutter)
-                        .top 
+            @include media-breakpoint-up(desktop)
+                .text
+                    align-items: baseline
+                    display: flex
+                    width: 100%
+                    gap: var(--grid-gutter)
+                    .top 
+                        width: columns(6)
+                        + * 
                             width: columns(6)
-                            + * 
-                                width: columns(6)
         &.block-chapter--alt_background 
         &.block-chapter--alt_background 
             background: none
             .text
-                @include in-page-with-or-without-sidebar
+                @include media-breakpoint-up(desktop)
                     display: block
                     text-align: center
                     .top, 
@@ -376,8 +374,8 @@ $post-date-line-height: 120%
                         margin-bottom: $spacing-6
                     p + p 
                         margin-top: $spacing-2
-                    @include media-breakpoint-down(desktop)
-                        margin-bottom: $spacing-5
+                    // @include media-breakpoint-down(desktop)
+                    //     margin-bottom: $spacing-5
 
     .block-call_to_action
         overflow: hidden
@@ -439,7 +437,7 @@ $post-date-line-height: 120%
                         &:first-child
                             margin-top: 0
         
-        @include in-page-without-sidebar
+        @include media-breakpoint-up(desktop)
             .block-content
                 padding-top: $spacing-7
                 padding-bottom: $spacing-7
@@ -455,21 +453,20 @@ $post-date-line-height: 120%
                 
 
     .block-posts--list
-        @include in-page-without-sidebar
-            @include media-breakpoint-up(desktop)
-                .post
-                    .post-content
-                        margin-left: 0
+        @include media-breakpoint-up(desktop)
+            .post
+                .post-content
+                    margin-left: 0
+                .media
+                    pointer-events: none
+                    opacity: 0
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    transition: opacity .2s ease
+                    width: columns(2)
+                    z-index: 100
+                &:hover
                     .media
-                        pointer-events: none
-                        opacity: 0
-                        position: absolute
-                        top: 50%
-                        left: 50%
-                        transform: translate(-50%, -50%)
-                        transition: opacity .2s ease
-                        width: columns(2)
-                        z-index: 100
-                    &:hover
-                        .media
-                            opacity: 1
+                        opacity: 1
