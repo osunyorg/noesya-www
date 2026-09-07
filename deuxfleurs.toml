@@ -35,6 +35,10 @@ from = "/metiers/conseil/index.html"
 to = "/conseil/"
 
 [[redirects]]
+from = "/actualites/2021-09-01-olivia-simonet/index.html"
+to = "/actualites/2022-09-01-olivia-simonet/"
+
+[[redirects]]
 from = "/metiers/applications/index.html"
 to = "/applications/"
 
