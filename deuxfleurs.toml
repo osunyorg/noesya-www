@@ -15,6 +15,10 @@ for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
 Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
+from = "/actualites/2026-09-01-alexis-benoit/index.html"
+to = "/actualites/2021-09-01-alexis-benoit/"
+
+[[redirects]]
 from = "/actualites/2021-01-01-sebastien-gaya/index.html"
 to = "/actualites/2021-09-01-sebastien-gaya/"
 
