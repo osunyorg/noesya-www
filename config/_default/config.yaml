@@ -57,5 +57,9 @@ params:
           tablet:   450
           desktop:  900
     blocks:
+      call_to_action:
+        mobile:   400
+        tablet:   1024
+        desktop:  1920
       image:
         desktop: 877
