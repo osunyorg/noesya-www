@@ -318,7 +318,7 @@ body.projects__page
                     @include hover-translate-icon
                     @include icon(arrow-right-line, after)
                     --btn-font-family: #{$body-font-family}
-                    --btn-font-size: #{pxToRem(25)}
+                    --btn-font-size: var(--body-size)
                     --btn-hover-background: var(--color-accent)
                     --btn-hover-border: 1px solid var(--color-accent)
                     --btn-padding: #{space(4)} #{space(10)}
@@ -358,6 +358,9 @@ body.projects__page
             .block-content
                 padding-top: space(37)
                 padding-bottom: space(37)
+                .actions
+                    a
+                        --btn-font-size: #{pxToRem(25)}
     
     // testimonials
     .block-testimonials
