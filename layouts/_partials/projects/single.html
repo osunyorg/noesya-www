@@ -1,0 +1,24 @@
+{{ partial "projects/single/hero.html" . }}
+{{ partial "projects/single/pagefind.html" . }}
+
+<div class="document-content">
+  <meta itemprop="name" content="{{ safeHTML .Title }}">
+  <meta itemprop="url" content="{{ .Permalink }}">
+  {{ with .Params.summary }}<meta itemprop="description" content="{{ . | safeHTML }}">{{ end }}
+
+  {{ partial "projects/single/sidebar.html" . }}
+
+  {{ partial "projects/single/summary.html" (dict
+    "context" .
+    "block_wrapped" true
+  ) }}
+
+  {{ partial "contents/list.html" (dict
+    "context" .
+    "contents" .Params.contents
+  ) }}
+
+  {{ partial "projects/single/siblings-navigation.html" . }}
+
+  {{ partial "commons/single/hooks/before-content-end.html" . }}
+</div>
