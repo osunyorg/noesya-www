@@ -4,6 +4,9 @@ class Gallery {
         this.figures = document.querySelectorAll('figure');
         this.fullWidthText = '[full]';
         
+        if (!this.element) {
+            return;
+        }
         this.updateClasses();
     }
 
