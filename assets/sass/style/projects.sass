@@ -157,9 +157,11 @@ body.projects__page
 
     // BLOCKS
     // titles
-    .block
-        .top
-            margin-bottom: $spacing-6
+    .block        
+        @include media-breakpoint-up(desktop)
+            .top
+                margin-bottom: $spacing-6
+
     .block:not(.block-chapter--no_background) // no_bg chapter has h2 style
         .block-title
             @include h5
