@@ -295,8 +295,11 @@ body.projects__page
                 a
                     @include hover-translate-icon
                     @include icon(arrow-right-line, after)
+                    --btn-font-family: #{$body-font-family}
+                    --btn-font-size: #{pxToRem(25)}
                     --btn-hover-background: var(--color-accent)
                     --btn-hover-border: 1px solid var(--color-accent)
+                    --btn-padding: #{space(4)} #{space(10)}
                     align-items: center
                     display: flex
                     margin: 0
@@ -305,6 +308,7 @@ body.projects__page
                     &::after
                         margin-left: auto
                         padding-left: $spacing-2
+                        font-size: pxToRem(16)
             
         .call_to_action--with-image
             display: flex
@@ -356,6 +360,20 @@ body.projects__page
                     p
                         width: columns(4)
 
+    // persons
+    .block-persons--grid
+        @include media-breakpoint-up(desktop)
+            .persons
+                @include grid(3)
+                .person
+                    align-items: center
+                    flex-direction: row
+                    gap: space(8)
+                    text-align: left
+                    .avatar
+                        width: offset(1)
+
+    // posts (?)
     .block-posts--list
         @include media-breakpoint-up(desktop)
             .post
@@ -375,6 +393,7 @@ body.projects__page
                     .media
                         opacity: 1
 
+    // nav
     .projects-navigation
         align-items: center
         display: flex
