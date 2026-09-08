@@ -1,12 +1,13 @@
 class Gallery {
     constructor (selector) {
         this.element = document.querySelector(selector);
-        this.heroFigure = document.querySelector('.hero figure');
-        this.altPicture = this.element.querySelector('picture');
         
         if (!this.element) {
             return;
         }
+
+        this.heroFigure = document.querySelector('.hero figure');
+        this.altPicture = this.element.querySelector('picture');
 
         this.movePicture();
         this.destroyBlock();

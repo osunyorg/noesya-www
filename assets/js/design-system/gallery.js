@@ -1,12 +1,14 @@
 class Gallery {
     constructor (selector) {
         this.element = document.querySelector(selector);
-        this.figures = document.querySelectorAll('figure');
-        this.fullWidthText = '[full]';
         
         if (!this.element) {
             return;
         }
+        
+        this.figures = document.querySelectorAll('figure');
+        this.fullWidthText = '[full]';
+
         this.updateClasses();
     }
 
