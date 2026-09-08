@@ -1,3 +1,14 @@
+.page__home
+    --body-size: #{pxToRem(22)}
+    --body-line-height: #{pxToRem(36)}
+    .pages--grid
+        .page-title
+            @include body-text
+            + .page-description
+                margin-top: 0
+        .page-description
+            @include small
+
 .pages--grid
     @include in-page-without-sidebar
         grid-template-columns: repeat(2, 1fr)
