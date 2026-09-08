@@ -1,0 +1,28 @@
+@mixin hero-with-large-image
+    &.hero--with-image
+        @include media-breakpoint-up(desktop)
+            .hero-text,
+            figure,
+            h1
+                width: columns(6)
+
+@mixin hero-with-alt-image
+    &.hero--with-image
+        figure
+            position: relative
+            picture:last-of-type
+                position: absolute
+                height: 100%
+                opacity: 0
+                right: 0
+                top: 0
+                width: 100%
+            &:hover
+                picture:last-of-type
+                    opacity: 1
+
+        @include media-breakpoint-down(desktop)
+            .hero-text
+                margin-bottom: space(8)
+                .hero-meta
+                    margin-top: 0

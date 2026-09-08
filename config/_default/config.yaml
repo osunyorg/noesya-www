@@ -56,6 +56,9 @@ params:
           mobile:   350
           tablet:   450
           desktop:  900
+      persons:
+        hero_single:
+          desktop:  645
     blocks:
       call_to_action:
         mobile:   400
