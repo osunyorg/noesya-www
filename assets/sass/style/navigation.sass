@@ -1,0 +1,64 @@
+body, 
+body.projects__page
+    .block.block-siblings-navigation
+        background: var(--color-background-alt)
+        margin-bottom: 0
+        margin-top: 0 !important
+        padding-bottom: 0
+        padding-top: 0
+        position: relative
+        margin-bottom: -2px
+        ul
+            padding: 0
+        .siblings-navigation
+            border-top: 0
+            li
+                a, span
+                    @include h2
+                span
+                    color: var(--color-text-alt)
+                    margin-bottom: 0
+                    &::before,
+                    &::after
+                        content: none
+
+        @include media-breakpoint-up(md)
+            transition: background .3s ease
+            &::after
+                background: var(--color-border)
+                content: ''
+                height: 100%
+                left: 50%
+                position: absolute
+                top: 0
+                transform: translateX(-50%)
+                width: 0.5px
+            .siblings-navigation
+                li
+                    padding: space(32) 0
+                    position: static
+                    transition: color .3s ease
+                    &::before
+                        background: white
+                        content: ''
+                        cursor: pointer
+                        height: 100%
+                        left: 0
+                        mix-blend-mode: exclusion
+                        position: absolute
+                        top: 0
+                        transition: width 0.35s cubic-bezier(0.45, 0, 0.55, 1)
+                        width: 0
+                        z-index: 2
+                    &:hover
+                        &::before
+                            transition: width 3s cubic-bezier(0.45, 0, 0.55, 1)
+                            width: 50vw
+                    &.next::before
+                        left: 50vw
+                    &:only-child
+                        width: 50%
+                        background: red
+                        flex: unset
+                        &.next
+                            margin-left: offset(6)

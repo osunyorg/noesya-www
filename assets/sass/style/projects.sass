@@ -40,6 +40,8 @@ $post-date-line-height: 120%
         width: 0%
 
 body.projects__page
+    main
+        padding-bottom: 0
     // HEADER
     header#document-header 
         a.logo
@@ -397,61 +399,3 @@ body.projects__page
                     width: fit-content !important
                     p
                         width: columns(4)
-
-    // persons
-    .block-persons--grid
-        @include media-breakpoint-up(desktop)
-            .persons
-                @include grid(3)
-            .person
-                align-items: center
-                flex-direction: row
-                gap: space(8)
-                text-align: left
-                .avatar
-                    width: offset(1)
-
-    // nav
-    .projects-navigation
-        align-items: center
-        display: flex
-        font-size: $project-navigation-text
-        justify-content: center
-        min-height: 100vh
-        text-align: center
-        a
-            align-items: center
-            text-decoration: none
-        a,
-        .navigation
-            display: flex
-            flex-direction: column
-        .navigation
-            font-style: italic
-            position: relative
-            &::after
-                -webkit-animation: nav-hover-out 1s forwards
-                animation: nav-hover-out 1s forwards
-                background: black
-                bottom: -4px
-                content: ""
-                height: 1px
-                left: auto
-                position: absolute
-                right: 0
-                transform: width .3s ease
-                width: 0%
-                    
-        h3
-            @include h1
-            margin: $spacing-5 0 $spacing-2
-            + span
-                color: $color-text-alt
-
-        a:hover .navigation::after
-            -webkit-animation: nav-hover-in 1s forwards
-            animation: nav-hover-in 1s forwards
-
-        @include media-breakpoint-up(desktop)
-            h3
-                font-size: $project-navigation-title

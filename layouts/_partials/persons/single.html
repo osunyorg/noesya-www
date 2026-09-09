@@ -1,0 +1,28 @@
+{{ partial "persons/single/hero.html" . }}
+{{ partial "persons/single/pagefind.html" . }}
+
+<div class="document-content">
+  {{ partial "persons/single/sidebar.html" . }}
+
+  <div class="container">
+    {{ partial "persons/single/meta-data.html" . }}
+    {{ partial "persons/single/informations.html" . }}
+  </div>
+
+  {{ partial "contents/list.html" (dict
+    "context" .
+    "contents" .Params.contents
+  ) }}
+
+  {{ partial "persons/single/related.html" . }}
+
+  {{ if site.Params.persons.single.backlinks }}
+    {{ partial "contents/backlinks.html" . }}
+  {{ end }}
+
+  {{ partial "commons/single/siblings-navigation.html" (dict
+    "context" .
+    "previous_label" (i18n "projects.previous")
+    "next_label" (i18n "projects.next")
+  ) }}
+</div>
