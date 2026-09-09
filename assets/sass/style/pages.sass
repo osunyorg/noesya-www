@@ -5,6 +5,31 @@
                 @include h3
                 font-family: $body-font-family
                 font-style: italic
+
+    &.full-width
+        // call to action
+        .block-call_to_action
+            .call_to_action
+                align-items: center
+                display: flex
+                gap: calc(var(--column-width) / 2)
+                .actions
+                    margin-top: 0
+                    a
+                        @include link
+                        --btn-min-width: unset
+                        --btn-padding: 0
+                        margin: 0
+                        text-decoration-color: inherit
+                        &::after
+                                display: inline-block
+                                overflow: hidden
+                .description p,
+                .actions a
+                    @include body-text
+                figure
+                    order: -1
+                    width: calc(#{offset(1)} + (var(--column-width) / 2))
     
 .pages
     &--grid
