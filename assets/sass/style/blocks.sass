@@ -12,3 +12,46 @@
                     text-align: left
                 .avatar
                     width: offset(1)
+
+// pages
+.projects
+    .project
+        &-title
+            font-family: $body-font-family !important
+        &-description
+            color: var(--color-text-alt)
+        .media
+            img
+                filter: grayscale(1)
+
+        @include media-breakpoint-up(md)
+            .project-description
+                    @include h4
+                    font-family: $body-font-family
+
+    &--list
+        @include media-breakpoint-up(md)
+            .project
+                justify-content: flex-start
+                .project-content
+                    .project-description
+                        max-width: columns(4)
+                        .rich-text
+                            width: 100%
+                .media
+                    order: -1
+                    img
+                        aspect-ratio: 413 / 265
+            li
+                border-bottom: 0
+                padding: 0
+                + li
+                    margin-top: var(--grid-gutter)
+
+        @include in-page-without-sidebar
+            .project
+                .project-content
+                    .project-title
+                        @include h3
+                .media
+                    width: columns(4)
