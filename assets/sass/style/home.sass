@@ -1,4 +1,7 @@
 .page__home
+    --body-size: #{pxToRem(22)}
+    --body-line-height: #{pxToRem(36)}
+
     .hero
         .content
             .hero-text
@@ -36,6 +39,14 @@
                 .hero-image
                     width: columns(3)
                     margin-right: offset(1)
+
+    .pages--grid
+        .page-title
+            @include body-text
+            + .page-description
+                margin-top: 0
+        .page-description
+            @include small
 
     .block-features
         .feature
