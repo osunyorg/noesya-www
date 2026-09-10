@@ -1,14 +1,13 @@
-
 // projects
 .projects
     .project
-        &-title
-            font-family: $body-font-family !important
+        // &-title
+        //     font-family: $body-font-family !important
         &-description
             color: var(--color-text-alt)
-        .media
-            img
-                filter: grayscale(1)
+        // .media
+        //     img
+        //         filter: grayscale(1) --> trop générique, l'index des projets n'a pas d'image en n/b
 
         @include media-breakpoint-up(md)
             .project-description
@@ -42,3 +41,29 @@
                 .media
                     width: columns(4)
 
+    &--alternate
+        padding-left: offset(1)
+        padding-right: offset(1)
+        @include in-page-without-sidebar
+            li
+                width: columns(4)
+                + li
+                    margin-top: 0
+            .project
+                .project-title
+                    font-size: pxToRem(28) // TODO : set typo design system correctly
+                    line-height: 1.3
+                .project-content
+                    display: block
+                .project-meta
+                    margin-top: $spacing-2
+
+
+.projects__section
+    .hero
+        min-height: 0
+    .section-taxonomies-container
+        .taxonomies-list
+            .taxonomy-categories-list
+                display: flex
+                gap: $spacing-1
