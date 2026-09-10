@@ -48,17 +48,5 @@
         .page-description
             @include small
 
-    .block-features
-        .feature
-            .name
-                @include body-text
-                font-style: italic
-            .feature-description
-                margin-top: 0
-        @include media-breakpoint-up(desktop)
-            .features
-                grid-template-columns: repeat(2, 1fr) !important
-                row-gap: pxToRem(100) !important
-
     .block-title
         margin-bottom: pxToRem(100)
