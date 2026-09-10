@@ -6,10 +6,11 @@
         .content
             .hero-text
                 p
-                    font-style: italic
                     font-size: pxToRem(22)
+                    font-style: italic
                     line-height: pxToRem(37)
                     margin-bottom: pxToRem(60)
+
     @include media-breakpoint-down(desktop)
         .hero
             .content
@@ -23,6 +24,7 @@
                     margin-bottom: 0
                     width: 50%
                     margin-left: auto
+
     @include media-breakpoint-up(desktop)
         .hero
             .content
@@ -47,18 +49,6 @@
                 margin-top: 0
         .page-description
             @include small
-
-    .block-features
-        .feature
-            .name
-                @include body-text
-                font-style: italic
-            .feature-description
-                margin-top: 0
-        @include media-breakpoint-up(desktop)
-            .features
-                grid-template-columns: repeat(2, 1fr) !important
-                row-gap: pxToRem(100) !important
 
     .block-title
         margin-bottom: pxToRem(100)

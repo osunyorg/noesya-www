@@ -22,7 +22,6 @@
                 {{ $items = .CurrentSection.Pages.ByParam "year" }}
               {{ end }}
 
-
               {{ $previousPage := .PrevInSection }}
               {{ if not $previousPage }}
                 {{ range first 1 $items }}

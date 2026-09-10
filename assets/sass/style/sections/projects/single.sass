@@ -178,7 +178,7 @@ body.projects__page
 
     .block:not(.block-chapter--no_background) // no_bg chapter has h2 style
         .block-title
-            @include h5
+            @include h3
             font-family: $body-font-family
             font-style: italic
             text-transform: initial
@@ -191,8 +191,9 @@ body.projects__page
     // features
     .block-features
         @include media-breakpoint-between(sm, desktop)
-            ul li
-                max-width: columns(9)
+            ul 
+                li
+                    max-width: columns(9)
     
     @include media-breakpoint-up(desktop)
         .block
@@ -205,7 +206,7 @@ body.projects__page
     .block-image,
     .block-gallery
         figcaption
-            @include sr-only
+            display: none // credits are at the end
 
         @include media-breakpoint-up(desktop)
             figure
@@ -235,6 +236,7 @@ body.projects__page
                 img
                     height: 100%
                     width: 100%
+
         @include media-breakpoint-up(desktop)
             .gallery
                 @include grid(2)
@@ -255,8 +257,10 @@ body.projects__page
     .block-image + .block-gallery
         margin-top: 0
         padding-top: 0
+
         @include media-breakpoint-down(desktop)
             margin-top: -$spacing-5
+
         @include media-breakpoint-up(desktop)
             margin-top: calc(-1 * (var(--block-space-y) + #{space(13)}))
 
@@ -276,8 +280,8 @@ body.projects__page
 
         &:not(.block-class-organisation) // exlude hero organization block
             .organizations
-                display: flex
                 column-gap: var(--grid-gutter)
+                display: flex
                 flex-wrap: wrap
                 justify-content: center
                 row-gap: half(var(--grid-gutter))
@@ -302,6 +306,7 @@ body.projects__page
 
         &.block-chapter--alt_background
             background: none
+
             @include media-breakpoint-up(desktop)
                 .text
                     text-align: center

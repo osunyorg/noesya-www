@@ -1,13 +1,8 @@
 // projects
 .projects
     .project
-        // &-title
-        //     font-family: $body-font-family !important
         &-description
             color: var(--color-text-alt)
-        // .media
-        //     img
-        //         filter: grayscale(1) --> trop générique, l'index des projets n'a pas d'image en n/b
 
         @include media-breakpoint-up(md)
             .project-description
@@ -15,6 +10,13 @@
                     font-family: $body-font-family
 
     &--list
+        .project
+            .project-title
+                font-family: $body-font-family !important
+            .media
+                img
+                    filter: grayscale(1)
+
         @include media-breakpoint-up(md)
             .project
                 justify-content: flex-start
