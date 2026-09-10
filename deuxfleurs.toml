@@ -31,6 +31,10 @@ from = "/formation/index.html"
 to = "/metiers-1/formation/"
 
 [[redirects]]
+from = "/references/2026-gaite-lyrique/index.html"
+to = "/projets/2026-gaite-lyrique/"
+
+[[redirects]]
 from = "/metiers/sites/index.html"
 to = "/metiers-1/sites/"
 
