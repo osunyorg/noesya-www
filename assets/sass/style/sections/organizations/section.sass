@@ -3,5 +3,10 @@
         counter-reset: count 0
     li
         counter-increment: count 1
-        &::before
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        &::after
+            @include small
+            color: var(--color-text-alt)
             content: counter(count)
