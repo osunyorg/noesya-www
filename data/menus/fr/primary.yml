@@ -37,13 +37,13 @@ items:
   descendants_targets: []
   path: "/pages/formation"
   file: content/fr/pages/formation/_index.html
-- title: Équipe
-  slug: equipe
-  target: "/equipe/"
+- title: Coopérative
+  slug: cooperative
+  target: "/cooperative/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/equipe"
-  file: content/fr/pages/equipe/_index.html
+  path: "/pages/cooperative"
+  file: content/fr/pages/cooperative/_index.html
 

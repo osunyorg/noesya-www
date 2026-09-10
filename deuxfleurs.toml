@@ -39,6 +39,10 @@ from = "/actualites/2021-09-01-olivia-simonet/index.html"
 to = "/actualites/2022-09-01-olivia-simonet/"
 
 [[redirects]]
+from = "/equipe/index.html"
+to = "/cooperative/"
+
+[[redirects]]
 from = "/metiers/applications/index.html"
 to = "/applications/"
 
