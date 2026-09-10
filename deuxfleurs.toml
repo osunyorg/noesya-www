@@ -15,6 +15,10 @@ for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
 Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
+from = "/references/conseil/index.html"
+to = "/projets/conseil/"
+
+[[redirects]]
 from = "/conseil/index.html"
 to = "/metiers-1/conseil/"
 
@@ -29,6 +33,10 @@ to = "/actualites/2021-09-01-sebastien-gaya/"
 [[redirects]]
 from = "/formation/index.html"
 to = "/metiers-1/formation/"
+
+[[redirects]]
+from = "/references/2022-espeli/index.html"
+to = "/projets/2022-espeli/"
 
 [[redirects]]
 from = "/references/2026-gaite-lyrique/index.html"
@@ -49,6 +57,10 @@ to = "/metiers-1/sites/"
 [[redirects]]
 from = "/metiers/conseil/index.html"
 to = "/metiers-1/conseil/"
+
+[[redirects]]
+from = "/references/2026-fablab-a-lecole/index.html"
+to = "/projets/2026-fablab-a-lecole/"
 
 [[redirects]]
 from = "/actualites/2021-09-01-olivia-simonet/index.html"
