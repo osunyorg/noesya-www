@@ -36,6 +36,16 @@ params:
           share: false
           taxonomies: false
           with_labels: false
+    index:
+      layout: alternate
+      options:
+        categories: false
+        summary: false
+        year: true
+      taxonomies:
+        display: true
+        layout: inline # dropdown | inline
+        show_name: false
   components:
     lightbox:
       disabled: true
