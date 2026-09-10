@@ -1,0 +1,20 @@
+.persons__section
+    .persons
+        .person
+            .avatar
+                border-radius: 0
+
+// persons
+.block-persons--grid
+    @include media-breakpoint-up(desktop)
+        .persons
+            @include grid(3)
+            .person
+                align-items: center
+                flex-direction: row
+                gap: space(8)
+                .person-name,
+                .person-role
+                    text-align: left
+                .avatar
+                    width: offset(1)
