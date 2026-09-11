@@ -59,6 +59,10 @@ from = "/references/2026-atelier-narration-interactive/index.html"
 to = "/projets/2026-atelier-narration-interactive/"
 
 [[redirects]]
+from = "/organisations/marion-rebier/index.html"
+to = "/organisations/beelearning/"
+
+[[redirects]]
 from = "/references/2021-osuny/index.html"
 to = "/projets/2021-osuny/"
 
