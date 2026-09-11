@@ -22,7 +22,6 @@
                 justify-content: flex-start
                 .project-content
                     .project-description
-                        max-width: columns(4)
                         .rich-text
                             width: 100%
                 .media
@@ -34,6 +33,12 @@
                 padding: 0
                 + li
                     margin-top: var(--grid-gutter)
+
+        @include media-breakpoint-up(xl)
+            .project
+                .project-content
+                    .project-description
+                        max-width: columns(4)
 
         @include in-page-without-sidebar
             .project
