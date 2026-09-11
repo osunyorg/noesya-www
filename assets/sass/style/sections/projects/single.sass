@@ -206,7 +206,7 @@ body.projects__page
     .block-image,
     .block-gallery
         figcaption
-            display: none // credits are at the end
+            @include sr-only
 
         @include media-breakpoint-up(desktop)
             figure
@@ -298,7 +298,7 @@ body.projects__page
                         align-items: baseline
                         display: flex
                         gap: var(--grid-gutter)
-                        width: 100%
+                        width: 100% !important
                         .top
                             width: columns(5)
                         .rich-text
