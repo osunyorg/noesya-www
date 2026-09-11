@@ -23,8 +23,24 @@ from = "/conseil/index.html"
 to = "/metiers-1/conseil/"
 
 [[redirects]]
+from = "/references/2022-iut-bordeaux-montaigne/index.html"
+to = "/projets/2022-iut-bordeaux-montaigne/"
+
+[[redirects]]
+from = "/references/applications/index.html"
+to = "/projets/applications/"
+
+[[redirects]]
+from = "/references/2025-mmi-workshop/index.html"
+to = "/projets/2025-mmi-workshop/"
+
+[[redirects]]
 from = "/references/index.html"
 to = "/projets/"
+
+[[redirects]]
+from = "/references/2024-ecotheque/index.html"
+to = "/projets/2024-ecotheque/"
 
 [[redirects]]
 from = "/actualites/2021-01-01-sebastien-gaya/index.html"
@@ -37,6 +53,14 @@ to = "/metiers-1/formation/"
 [[redirects]]
 from = "/references/2022-espeli/index.html"
 to = "/projets/2022-espeli/"
+
+[[redirects]]
+from = "/references/2026-atelier-narration-interactive/index.html"
+to = "/projets/2026-atelier-narration-interactive/"
+
+[[redirects]]
+from = "/references/2021-osuny/index.html"
+to = "/projets/2021-osuny/"
 
 [[redirects]]
 from = "/references/2026-gaite-lyrique/index.html"
@@ -55,8 +79,16 @@ from = "/sites/index.html"
 to = "/metiers-1/sites/"
 
 [[redirects]]
+from = "/references/2025-campus-art-mediterranee/index.html"
+to = "/projets/2025-campus-art-mediterranee/"
+
+[[redirects]]
 from = "/metiers/conseil/index.html"
 to = "/metiers-1/conseil/"
+
+[[redirects]]
+from = "/references/2022-extension-numecogestes/index.html"
+to = "/projets/2022-extension-numecogestes/"
 
 [[redirects]]
 from = "/references/2026-fablab-a-lecole/index.html"
@@ -67,8 +99,28 @@ from = "/actualites/2021-09-01-olivia-simonet/index.html"
 to = "/actualites/2022-09-01-olivia-simonet/"
 
 [[redirects]]
+from = "/references/2023-referentiel-de-competences-mmi/index.html"
+to = "/projets/2023-referentiel-de-competences-mmi/"
+
+[[redirects]]
+from = "/references/2025-rennes-ville-et-metropole/index.html"
+to = "/projets/2025-rennes-ville-et-metropole/"
+
+[[redirects]]
+from = "/references/sites/index.html"
+to = "/projets/sites/"
+
+[[redirects]]
 from = "/equipe/index.html"
 to = "/cooperative/"
+
+[[redirects]]
+from = "/references/2023-ecosysteme-de-la-mode/index.html"
+to = "/projets/2023-ecosysteme-de-la-mode/"
+
+[[redirects]]
+from = "/references/2025-observatoire-citoyen-de-la-publicite/index.html"
+to = "/projets/2025-observatoire-citoyen-de-la-publicite/"
 
 [[redirects]]
 from = "/metiers/applications/index.html"
@@ -76,9 +128,17 @@ to = "/metiers-1/applications/"
 
 [[redirects]]
 from = "/references/applicaitons/index.html"
-to = "/references/applications/"
+to = "/projets/applications/"
 
 [[redirects]]
 from = "/applications/index.html"
 to = "/metiers-1/applications/"
+
+[[redirects]]
+from = "/references/formation/index.html"
+to = "/projets/formation/"
+
+[[redirects]]
+from = "/references/2021-ensemble-a-table/index.html"
+to = "/projets/2021-ensemble-a-table/"
 
