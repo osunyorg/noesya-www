@@ -71,6 +71,9 @@
         min-height: 0
     .section-taxonomies-container
         .taxonomies-list
+            &--inline
+                grid-template-columns: repeat(1, 1fr)
             .taxonomy-categories-list
                 display: flex
                 gap: $spacing-1
+                flex-wrap: wrap
