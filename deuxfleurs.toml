@@ -83,6 +83,10 @@ from = "/references/2025-campus-art-mediterranee/index.html"
 to = "/projets/2025-campus-art-mediterranee/"
 
 [[redirects]]
+from = "/organisations/academie-des-arts/index.html"
+to = "/organisations/academie-des-beaux-arts/"
+
+[[redirects]]
 from = "/metiers/conseil/index.html"
 to = "/metiers-1/conseil/"
 
