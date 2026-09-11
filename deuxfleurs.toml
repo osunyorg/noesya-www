@@ -87,6 +87,10 @@ from = "/organisations/academie-des-arts/index.html"
 to = "/organisations/academie-des-beaux-arts/"
 
 [[redirects]]
+from = "/organisations/taltech/index.html"
+to = "/organisations/tallinn-university-of-technology/"
+
+[[redirects]]
 from = "/metiers/conseil/index.html"
 to = "/metiers-1/conseil/"
 
@@ -105,6 +109,10 @@ to = "/actualites/2022-09-01-olivia-simonet/"
 [[redirects]]
 from = "/references/2023-referentiel-de-competences-mmi/index.html"
 to = "/projets/2023-referentiel-de-competences-mmi/"
+
+[[redirects]]
+from = "/organisations/mathieu-jahnich/index.html"
+to = "/organisations/mj-conseil/"
 
 [[redirects]]
 from = "/references/2025-rennes-ville-et-metropole/index.html"
