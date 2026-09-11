@@ -10,8 +10,6 @@
         .block-chapter
             margin-top: space(50)
             .chapter
-                .text
-
                 @include media-breakpoint-up(desktop)
                     .text
                         align-items: baseline
@@ -21,17 +19,30 @@
                         width: 100%
                         .block-title
                             @include h2
-                            width: columns(4)
+                            width: columns(3)
                         .rich-text
                             margin-left: auto
+                            width: columns(8)
+
+                @include media-breakpoint-up(xl)
+                    .text
+                        .block-title
+                            width: columns(4)
+                        .rich-text
                             width: columns(7)
 
         // testimonials
         .block-testimonials
-            .block-content
-                padding-left: offset(4)
-                padding-right: offset(1)
-                blockquote
-                    text-align: center
             + .block-chapter
                 margin-top: var(--block-space-y)
+
+            @include media-breakpoint-up(desktop)
+                .block-content
+                    padding-left: offset(3)
+                    padding-right: offset(1)
+                    blockquote
+                        text-align: center
+
+            @include media-breakpoint-up(xl)
+                .block-content
+                    padding-left: offset(4)
