@@ -49,11 +49,13 @@ body.projects__page
             transition: color .3s ease, opacity .35s
             img 
                 transition: filter .3s ease
-            &.revert
-                color: white
+        &.revert
+            color: white
+            a.logo
                 img
                     filter: invert(1)
-
+            .header-button
+                --color-text: white
     // HERO
     .hero
         align-items: flex-end
