@@ -14,7 +14,9 @@ class Gallery {
 
     updateClasses () {
         this.figures.forEach( function (figure) {
+            this.figcaption = figure.querySelector('figcaption');
             if (figure.innerText.includes(this.fullWidthText)) {
+                this.figcaption.setAttribute('aria-hidden', 'true');
                 figure.removeAttribute("aria-label");
                 figure.classList.add("cover");
             } 
