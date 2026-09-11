@@ -6,15 +6,20 @@
 
 // persons
 .block-persons--grid
-    @include media-breakpoint-up(desktop)
-        .persons
-            @include grid(3)
-            .person
-                align-items: center
-                flex-direction: row
-                gap: space(8)
-                .person-name,
-                .person-role
-                    text-align: left
-                .avatar
-                    width: offset(1)
+    &, 
+    &.block-with-long-text
+        @include in-page-without-sidebar
+            .persons
+                .person
+                    align-items: center
+                    flex-direction: row
+                    gap: space(8)
+                    .person-name,
+                    .person-role
+                        text-align: left
+                    .avatar
+                        width: offset(1)
+
+            @include media-breakpoint-up(xl)
+                .persons
+                    @include grid(3)

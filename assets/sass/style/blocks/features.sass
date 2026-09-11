@@ -1,16 +1,17 @@
-
-
 .block-features
-    &.block-class-manifesto
-        .features
-            .feature
-                .name
-                    @include body-text
-                    font-style: italic
-                .feature-description
-                    margin-top: 0
+    .features
+        .feature
+            .name
+                @include body-text
+                font-style: italic
 
+    &.block-class-manifesto
         @include media-breakpoint-up(desktop)
             .features
                 grid-template-columns: repeat(2, 1fr) !important
                 row-gap: pxToRem(100) !important
+                .feature
+                    .name
+                        font-size: pxToRem(30)
+                    .feature-description
+                        margin-top: space(8)

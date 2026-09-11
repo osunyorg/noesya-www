@@ -8,8 +8,8 @@
 
     &.full-width
         // call to action
-        .block-call_to_action
-            .call_to_action
+        .block-call_to_action--no_background
+            .call_to_action--with-image
                 align-items: center
                 display: flex
                 gap: calc(var(--column-width) / 2)
@@ -19,6 +19,12 @@
                         @include link
                         --btn-min-width: unset
                         --btn-padding: 0
+                        --btn-background: none
+                        --btn-border: none
+                        --btn-color: var(--color-text)
+                        --btn-hover-background: var(--color-background)
+                        --btn-hover-border: none
+                        --btn-hover-color: inherit
                         margin: 0
                         text-decoration-color: inherit
                         &::after

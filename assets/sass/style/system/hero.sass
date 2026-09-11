@@ -29,4 +29,7 @@
 
 .hero
     @include hero-with-large-image
-    
+
+    @include media-breakpoint-up(desktop)
+        .hero-text
+            width: columns(7)
