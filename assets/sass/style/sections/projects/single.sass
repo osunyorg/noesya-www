@@ -295,16 +295,17 @@ body.projects__page
                 @include h2
 
             @include media-breakpoint-up(desktop)
-                .chapter
-                    .text
-                        align-items: baseline
-                        display: flex
-                        gap: var(--grid-gutter)
-                        width: 100% !important
-                        .top
-                            width: columns(5)
-                        .rich-text
-                            flex: 1
+                &.block-titled
+                    .chapter
+                        .text
+                            align-items: baseline
+                            display: flex
+                            gap: var(--grid-gutter)
+                            width: 100% !important
+                            .top
+                                width: columns(5)
+                            .rich-text
+                                flex: 1
 
         &.block-chapter--alt_background
             background: none
