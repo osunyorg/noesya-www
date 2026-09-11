@@ -308,16 +308,18 @@ body.projects__page
             background: none
 
             @include media-breakpoint-up(desktop)
-                .text
-                    text-align: center
-                    &,
-                    .top, 
-                    .rich-text
+                .chapter
+                    .text
+                        text-align: center
                         width: 100%
-                    .top
-                        margin-bottom: $spacing-6
-                    p + p 
-                        margin-top: $spacing-2
+                        &,
+                        .top, 
+                        .rich-text
+                            width: 100%
+                        .top
+                            margin-bottom: $spacing-6
+                        p + p 
+                            margin-top: $spacing-2
 
     // call to action (landscape image as background)
     .block-call_to_action
