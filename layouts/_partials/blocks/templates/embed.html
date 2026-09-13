@@ -1,0 +1,42 @@
+{{ if eq .block.data.code "[publications]" }}
+  {{ $block := .block }}
+  {{ $publications := partial "publications/helpers/FilterByAnrProjectReferences" (site.GetPage "/publications").Pages }}
+  {{ $publications = first 3 $publications.ByDate.Reverse }}
+
+  {{ $items := slice }}
+  {{ range $publications }}
+    {{ $items = $items | append (dict "path" .Path) }}
+  {{ end }}
+
+  {{ partial "blocks/templates/publications.html" (dict "block" (dict
+    "top" $block.top
+    "ranks" $block.ranks
+    "data" (dict "publications" $items)
+  )) }}
+{{ else }}
+  {{ $block := .block }}
+  {{ $block_class := partial "blocks/helpers/GetClass" .block }}
+  {{ $html_id := .html_id }}
+
+  {{ with .block.data }}
+    <div class="{{ $block_class }}">
+      <div class="container">
+        <div class="block-content">
+          {{ partial "blocks/top.html" $block.top }}
+          {{ partial "blocks/templates/embed/hooks/after-top.html" $block }}
+
+          {{- if .code }}
+            {{ safeHTML .code }}
+          {{ end -}}
+
+          {{ partial "commons/transcription.html" ( dict
+            "html_id" $html_id
+            "title" .transcription_title
+            "transcription" .transcription
+          ) }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+
