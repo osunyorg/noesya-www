@@ -20,7 +20,7 @@ to = "/projets/conseil/"
 
 [[redirects]]
 from = "/conseil/index.html"
-to = "/metiers-1/conseil/"
+to = "/metiers/conseil/"
 
 [[redirects]]
 from = "/references/2022-iut-bordeaux-montaigne/index.html"
@@ -33,6 +33,10 @@ to = "/projets/applications/"
 [[redirects]]
 from = "/references/2025-mmi-workshop/index.html"
 to = "/projets/2025-mmi-workshop/"
+
+[[redirects]]
+from = "/metiers-1/sites/index.html"
+to = "/metiers/sites/"
 
 [[redirects]]
 from = "/references/index.html"
@@ -48,7 +52,7 @@ to = "/actualites/2021-09-01-sebastien-gaya/"
 
 [[redirects]]
 from = "/formation/index.html"
-to = "/metiers-1/formation/"
+to = "/metiers/formation/"
 
 [[redirects]]
 from = "/references/2022-espeli/index.html"
@@ -71,16 +75,8 @@ from = "/references/2026-gaite-lyrique/index.html"
 to = "/projets/2026-gaite-lyrique/"
 
 [[redirects]]
-from = "/metiers/sites/index.html"
-to = "/metiers-1/sites/"
-
-[[redirects]]
-from = "/metiers/formation/index.html"
-to = "/metiers-1/formation/"
-
-[[redirects]]
 from = "/sites/index.html"
-to = "/metiers-1/sites/"
+to = "/metiers/sites/"
 
 [[redirects]]
 from = "/references/2025-campus-art-mediterranee/index.html"
@@ -91,16 +87,16 @@ from = "/organisations/academie-des-arts/index.html"
 to = "/organisations/academie-des-beaux-arts/"
 
 [[redirects]]
+from = "/metiers-1/formation/index.html"
+to = "/metiers/formation/"
+
+[[redirects]]
 from = "/organisations/taltech/index.html"
 to = "/organisations/tallinn-university-of-technology/"
 
 [[redirects]]
 from = "/metiers-1/index.html"
 to = "/metiers/"
-
-[[redirects]]
-from = "/metiers/conseil/index.html"
-to = "/metiers-1/conseil/"
 
 [[redirects]]
 from = "/references/2022-extension-numecogestes/index.html"
@@ -117,6 +113,10 @@ to = "/actualites/2022-09-01-olivia-simonet/"
 [[redirects]]
 from = "/references/2023-referentiel-de-competences-mmi/index.html"
 to = "/projets/2023-referentiel-de-competences-mmi/"
+
+[[redirects]]
+from = "/metiers-1/applications/index.html"
+to = "/metiers/applications/"
 
 [[redirects]]
 from = "/organisations/mathieu-jahnich/index.html"
@@ -139,12 +139,12 @@ from = "/references/2023-ecosysteme-de-la-mode/index.html"
 to = "/projets/2023-ecosysteme-de-la-mode/"
 
 [[redirects]]
-from = "/references/2025-observatoire-citoyen-de-la-publicite/index.html"
-to = "/projets/2025-observatoire-citoyen-de-la-publicite/"
+from = "/metiers-1/conseil/index.html"
+to = "/metiers/conseil/"
 
 [[redirects]]
-from = "/metiers/applications/index.html"
-to = "/metiers-1/applications/"
+from = "/references/2025-observatoire-citoyen-de-la-publicite/index.html"
+to = "/projets/2025-observatoire-citoyen-de-la-publicite/"
 
 [[redirects]]
 from = "/references/applicaitons/index.html"
@@ -152,7 +152,7 @@ to = "/projets/applications/"
 
 [[redirects]]
 from = "/applications/index.html"
-to = "/metiers-1/applications/"
+to = "/metiers/applications/"
 
 [[redirects]]
 from = "/references/formation/index.html"
