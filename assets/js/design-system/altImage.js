@@ -1,4 +1,4 @@
-class Gallery {
+class AltImage {
     constructor (selector) {
         this.element = document.querySelector(selector);
         
@@ -22,4 +22,4 @@ class Gallery {
     }
 }
 
-export default new Gallery('.block-class-portrait-alt');
+export default new AltImage('.block-class-portrait-alt');

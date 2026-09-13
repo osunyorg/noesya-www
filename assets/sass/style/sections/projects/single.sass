@@ -222,12 +222,29 @@ body.projects__page
     // image
     .block-image 
         @include media-breakpoint-up(desktop)
-            figure
-                picture
-                    padding-bottom: space(35)
-                    padding-top: space(35)
-                img
-                    width: columns(8)
+            .container
+                &::after
+                    content: "+"
+                    margin: 0 auto
+                    display: block
+                    text-align: center
+                    padding-top: 20px
+                    cursor: pointer
+                .block-content
+                    max-height: 1340px
+                    overflow: hidden
+                    figure
+                        picture
+                            padding-bottom: offset(2)
+                            padding-top: offset(2)
+                        img
+                            width: columns(8)
+            &--expanded
+                .container
+                    &::after
+                        display: none
+                    .block-content
+                        max-height: none
 
     // gallery
     .block-gallery
