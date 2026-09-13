@@ -2,7 +2,7 @@
   {{ $block := .block }}
   {{ $publications_page := site.GetPage "/publications" }}
   {{ $publications := partial "publications/helpers/FilterByAnrProjectReferences" $publications_page.Pages }}
-  {{ $publications = first 5 $publications.ByDate.Reverse }}
+  {{ $publications = first 3 $publications.ByDate.Reverse }}
 
   {{ $items := slice }}
   {{ range $publications }}
