@@ -1,0 +1,13 @@
+.block-pages
+    &.block-class-with-numbers
+        .pages
+            counter-reset: item
+            .page
+                .page-title
+                    &::before
+                        counter-increment: item
+                        content: counters(item, ".") ". "
+                        display: block
+                        font-family: $heading-font-family
+                        font-size: pxToRem(60)
+                        line-height: 1
