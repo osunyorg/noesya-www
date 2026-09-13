@@ -95,6 +95,10 @@ from = "/organisations/taltech/index.html"
 to = "/organisations/tallinn-university-of-technology/"
 
 [[redirects]]
+from = "/metiers-1/index.html"
+to = "/metiers/"
+
+[[redirects]]
 from = "/metiers/conseil/index.html"
 to = "/metiers-1/conseil/"
 
