@@ -10,7 +10,7 @@ header_text: >-
 url: "/"
 slug: ""
 date: 2026-08-29T15:40:23+02:00
-lastmod: 2026-09-13T09:04:10+02:00
+lastmod: 2026-09-13T09:07:13+02:00
 meta:
   hugo:
     permalink: "/"
@@ -19,7 +19,7 @@ meta:
     slug: ""
   dates:
     created_at: 2026-08-29T15:40:23+02:00
-    updated_at: 2026-09-13T09:04:10+02:00
+    updated_at: 2026-09-13T09:07:13+02:00
     published_at: 2026-08-29T15:40:23+02:00
 search:
   id: "0e7cdfa5-471a-4c52-a5cb-1c9c6b825d7e"
@@ -31,7 +31,7 @@ search:
     Accueil
 
   body: >-
-    <p>Ce que nous faisons  <br> Publications scientifiques récentes </p>
+    <p>Nous faisons...  <br> Nous sommes...  <br> Nous contribuons...  </p>
 
 breadcrumbs:
   - title: >-
@@ -40,7 +40,7 @@ breadcrumbs:
 design:
   full_width: true
   toc:
-    present: false
+    present: true
     offcanvas: true
 
 
@@ -96,9 +96,9 @@ contents:
   - kind: block
     template: title
     title: >-
-      Ce que nous faisons
+      Nous faisons...
     slug: >-
-      ce-que-nous-faisons
+      nous-faisons
     ranks:
       base: 2
       self: 2
@@ -106,7 +106,7 @@ contents:
       active: true
       title: 
         value: >-
-          Ce que nous faisons
+          Nous faisons...
         heading: 2
 
     data:
@@ -162,20 +162,83 @@ contents:
 
 
   - kind: block
-    template: embed
+    template: title
     title: >-
-      Publications scientifiques récentes
+      Nous sommes...
     slug: >-
-      publications-scientifiques-recentes
+      nous-sommes
     ranks:
-      base: 3
-      self: 3
+      base: 2
+      self: 2
     top:
       active: true
       title: 
         value: >-
-          Publications scientifiques récentes
-        heading: 3
+          Nous sommes...
+        heading: 2
+
+    data:
+      layout: classic
+
+
+  - kind: block
+    template: pages
+
+
+    ranks:
+      base: 3
+      children: 3
+    top:
+      active: false
+
+    data:
+      options:
+        image: true
+        subtitle: true
+        categories: false
+        main_summary: true
+        summary: true
+
+      layout: large
+      pages:
+        - permalink: "/cooperative/"
+          path: "/pages/cooperative"
+          slug: "cooperative"
+          file: "content/fr/pages/cooperative/_index.html"
+          name: >-
+            Coopérative
+
+      quantity: 1
+
+
+  - kind: block
+    template: title
+    title: >-
+      Nous contribuons...
+    slug: >-
+      nous-contribuons
+    ranks:
+      base: 2
+      self: 2
+    top:
+      active: true
+      title: 
+        value: >-
+          Nous contribuons...
+        heading: 2
+
+    data:
+      layout: classic
+
+
+  - kind: block
+    template: embed
+
+
+    ranks:
+      base: 3
+    top:
+      active: false
 
     data:
       code: >-
