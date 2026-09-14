@@ -5,9 +5,8 @@
             .page
                 .page-title
                     &::before
-                        counter-increment: item
-                        content: counters(item, ".") ". "
+                        @include h1
                         display: block
-                        font-family: $heading-font-family
-                        font-size: pxToRem(60)
+                        content: counters(item, ".") ". "
+                        counter-increment: item
                         line-height: 1
