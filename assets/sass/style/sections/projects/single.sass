@@ -1,17 +1,3 @@
-
-// New variables
-$project-navigation-title: pxToRem(45)
-$project-navigation-text: pxToRem(26)
-
-$summary-size: pxToRem(36)
-$summary-line-height: 130%
-$summary-font-family: $heading-font-family
-
-$post-title-size: pxToRem(75)
-$post-title-line-height: 100%
-$post-date-size: pxToRem(46)
-$post-date-line-height: 120%
-
 // ANIMATIONS
 @keyframes nav-hover-in
     0%
@@ -43,6 +29,7 @@ $post-date-line-height: 120%
 body.projects__page
     main
         padding-bottom: 0
+
     // HEADER
     header#document-header 
         a.logo
@@ -56,6 +43,7 @@ body.projects__page
                     filter: invert(1)
             .header-button
                 --color-text: white
+
     // HERO
     .hero
         align-items: flex-end
@@ -139,7 +127,7 @@ body.projects__page
         @include media-breakpoint-up(xl)
             .lead
                 p
-                    font-family: $summary-font-family
+                    font-family: $heading-font-family
                     font-size: $summary-size
                     line-height: $summary-line-height
 
@@ -220,16 +208,16 @@ body.projects__page
                         margin: auto
 
     // image
-    .block-image 
+    .block-image
         @include media-breakpoint-up(desktop)
             .container
                 &::after
                     content: "+"
-                    margin: 0 auto
-                    display: block
-                    text-align: center
-                    padding-top: 20px
                     cursor: pointer
+                    display: block
+                    margin: 0 auto
+                    padding-top: 20px
+                    text-align: center
                 .block-content
                     max-height: 1340px
                     overflow: hidden
