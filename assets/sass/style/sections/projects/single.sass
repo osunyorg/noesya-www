@@ -330,10 +330,13 @@ body.projects__page
         .call_to_action
             .actions
                 a
+                    --btn-border: none
+                    --btn-hover-border: none
                     @include hover-translate-icon
                     @include icon(arrow-right-line, after)
-                    font-size: var(--meta-size)
-                    line-height: var(--meta-line-height)
+                    font-family: $heading-font-family !important
+                    font-size: var(--meta-size) !important
+                    line-height: var(--meta-line-height) !important
                     margin: 0
                     &::after
                         margin-left: $spacing-2
@@ -362,41 +365,48 @@ body.projects__page
                 padding-top: 0
                 .actions
                     a
-                        background: var(--color-background)
-                        border: none
-                        color: var(--color-text)
-                        padding: 0
-                        &:hover
-                            background: var(--color-background)
-                            border: none
-                            color: var(--color-text)
-                            
+                        --btn-background: var(--color-background)
+                        --btn-hover-background: var(--color-background)
+                        --btn-color: var(--color-text)
+                        --btn-hover-color: var(--color-text)
+                        --btn-padding: 0
         &--accent_background
             overflow: hidden
             position: relative
             figcaption
                 display: none // credits are above
             .call_to_action
-                .actions 
-                    align-items: center
-                    display: flex
-                    justify-content: center
-                    gap: var(--grid-gutter)
+                .actions
                     position: relative
                     z-index: 2
                     a
-                        --btn-hover-background: var(--color-accent)
-                        --btn-hover-border: 1px solid var(--color-accent)
-                        --btn-padding: #{space(4)} #{space(8)}
+                        --btn-background: var(--color-background)
+                        --btn-hover-background: var(--color-text)
+                        --btn-padding: #{space(4)} #{space(6)} #{space(4)} #{space(8)}
+                        // Boutons supplémentaires
+                        background: var(--btn-background)
+                        color: var(--btn-color)
+                        padding: var(--btn-padding) !important
+                        transition: background 0.3s ease, border 0.3s ease, color 0.3s ease
+                        &:hover,
                         &:focus-visible
-                            outline-color: var(--btn-hover-background)
+                            background: var(--color-text)
+                            border: none
+                            color: var(--color-background)
+                            text-decoration: none
+                        &:focus-visible
+                            outline-color: var(--btn-hover-background) !important
             @include media-breakpoint-down(desktop)
-                padding-top: $spacing-5
-                padding-bottom: $spacing-5
+                padding-top: $spacing-6
+                padding-bottom: $spacing-6
                 picture, img
                     height: 100%
                 img
                     object-fit: cover
+                .block-content
+                    .actions
+                        a
+                            margin: $spacing-1 0
 
             @include media-breakpoint-up(desktop)
                 --block-space-y: #{space(29)}
@@ -405,6 +415,10 @@ body.projects__page
                     padding-top: 16rem
                     padding-bottom: 16rem
                     .actions
+                        align-items: center
+                        display: flex
+                        justify-content: center
+                        gap: var(--grid-gutter)
                         a
                             --btn-font-size: #{pxToRem(25)}
     
