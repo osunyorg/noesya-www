@@ -3,5 +3,6 @@ import './design-system/altImage';
 import './design-system/revertHeader';
 import './design-system/gallery';
 import './design-system/hoverNavigation';
+import './design-system/postParagraphs';
 import './design-system/footer';
 import './design-system/projectHugeImages';
