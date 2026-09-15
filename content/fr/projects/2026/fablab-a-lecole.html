@@ -15,7 +15,7 @@ meta:
     slug: "fablab-a-lecole"
   dates:
     created_at: 2026-08-30T09:24:03+02:00
-    updated_at: 2026-08-30T09:28:34+02:00
+    updated_at: 2026-09-15T11:47:31+02:00
     published_at: 2026-08-30T09:24:03+02:00
 search:
   id: "9c7c4398-5916-4a1c-807c-14c839f8a6e3"
@@ -26,7 +26,8 @@ search:
   title: >-
     Fablab à l'école
 
-
+  body: >-
+    <p>L'organisation </p>
 
 year: 2026
 date: 2026-01-01
@@ -78,9 +79,46 @@ taxonomies:
 
 
 contents_reading_time:
-  seconds: 0
+  seconds: 1
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: organizations
+    title: >-
+      L'organisation
+    slug: >-
+      l-organisation
+    ranks:
+      base: 2
+      self: 2
+      children: 3
+    html_class: "block-class-organisation"
+    top:
+      active: true
+      title: 
+        value: >-
+          L'organisation
+        heading: 2
+
+    data:
+      layout: grid
+
+      options:
+        link: false
+        logo: true
+        summary: false
+        address: false
+        filters: false
+
+      organizations:
+        - permalink: "/organisations/universcience/"
+          path: "/organizations/universcience"
+          slug: "universcience"
+          file: "content/fr/organizations/universcience.html"
+
+      quantity: 1
+
+
 
 ---
