@@ -19,6 +19,10 @@ from = "/references/conseil/index.html"
 to = "/projets/conseil/"
 
 [[redirects]]
+from = "/projets/2025-mmi-workshop/index.html"
+to = "/projets/2021-mmi-workshop/"
+
+[[redirects]]
 from = "/conseil/index.html"
 to = "/metiers/conseil/"
 
@@ -32,7 +36,7 @@ to = "/projets/applications/"
 
 [[redirects]]
 from = "/references/2025-mmi-workshop/index.html"
-to = "/projets/2025-mmi-workshop/"
+to = "/projets/2021-mmi-workshop/"
 
 [[redirects]]
 from = "/metiers-1/sites/index.html"
@@ -59,8 +63,12 @@ from = "/references/2022-espeli/index.html"
 to = "/projets/2022-espeli/"
 
 [[redirects]]
+from = "/projets/2026-atelier-narration-interactive/index.html"
+to = "/projets/2021-atelier-narration-interactive/"
+
+[[redirects]]
 from = "/references/2026-atelier-narration-interactive/index.html"
-to = "/projets/2026-atelier-narration-interactive/"
+to = "/projets/2021-atelier-narration-interactive/"
 
 [[redirects]]
 from = "/organisations/marion-rebier/index.html"
@@ -125,6 +133,10 @@ to = "/organisations/mj-conseil/"
 [[redirects]]
 from = "/references/2025-rennes-ville-et-metropole/index.html"
 to = "/projets/2025-rennes-ville-et-metropole/"
+
+[[redirects]]
+from = "/projets/2020-atelier-narration-interactive/index.html"
+to = "/projets/2021-atelier-narration-interactive/"
 
 [[redirects]]
 from = "/references/sites/index.html"
