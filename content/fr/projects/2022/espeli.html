@@ -15,7 +15,7 @@ meta:
     slug: "espeli"
   dates:
     created_at: 2026-08-30T09:23:40+02:00
-    updated_at: 2026-08-30T09:38:37+02:00
+    updated_at: 2026-09-15T11:53:05+02:00
     published_at: 2026-08-30T09:23:40+02:00
 search:
   id: "f32d953c-4d6c-4572-8da0-7af485fe2072"
@@ -26,7 +26,8 @@ search:
   title: >-
     Espeli
 
-
+  body: >-
+    <p>L'organisation </p>
 
 year: 2022
 date: 2022-01-01
@@ -78,9 +79,46 @@ taxonomies:
 
 
 contents_reading_time:
-  seconds: 0
+  seconds: 1
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: organizations
+    title: >-
+      L'organisation
+    slug: >-
+      l-organisation
+    ranks:
+      base: 2
+      self: 2
+      children: 3
+    html_class: "block-class-organisation"
+    top:
+      active: true
+      title: 
+        value: >-
+          L'organisation
+        heading: 2
+
+    data:
+      layout: grid
+
+      options:
+        link: false
+        logo: true
+        summary: false
+        address: false
+        filters: false
+
+      organizations:
+        - permalink: "/organisations/direction-departementale-des-territoires-haute-garonne/"
+          path: "/organizations/direction-departementale-des-territoires-haute-garonne"
+          slug: "direction-departementale-des-territoires-haute-garonne"
+          file: "content/fr/organizations/direction-departementale-des-territoires-haute-garonne.html"
+
+      quantity: 1
+
+
 
 ---
