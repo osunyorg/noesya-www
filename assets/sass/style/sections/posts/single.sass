@@ -6,6 +6,8 @@
     // BLOCKS
     &,
     &.full-width
+        .blocks
+            counter-reset: note
         //features
         .block-features
             background: var(--color-background-alt)
@@ -85,13 +87,29 @@
                                     position: absolute
                                     right: 0
                                     top: 7px
+                            .note
+                                position: static
+                                &__content
+                                    background: none
+                                    display: block
+                                    left: calc(-1 * #{offset(3)})
+                                    padding: 0
+                                    width: columns(3)
+                                    &::before
+                                        content: counters(note, ".") ". "
+                                        counter-increment: note
+                                    &, a
+                                        color: var(--color-text)
 
                 @include media-breakpoint-up(xl)
                     .text
                         .block-title
                             width: columns(4)
                         .rich-text
-                            width: columns(7)
+                            width: columns(8)
+                            .note
+                                &__content
+                                    left: calc(-1 * #{offset(4)})
 
                 @include media-breakpoint-down(desktop)
                     .paragraph-count
