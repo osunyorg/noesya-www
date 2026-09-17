@@ -10,6 +10,7 @@ class PostsNotes {
         this.titles = document.querySelectorAll('h2');
         this.lineHeight = 58.5;
         this.y = 0;
+        this.breakpoint = 992;
 
         // 1. on vérifie si la note superpose un autre élément : si oui on la baisse
         // - titres - OK
@@ -26,25 +27,36 @@ class PostsNotes {
 
     init () {
         this.notes.forEach((note, index) => {
-            var parent = note.offsetParent, // on prend le p avec `position: relative` comme référence pour le `top`
-                previousNote = null;
-            
-            if (index > 0) {
-                previousNote = this.notes[index - 1]; // si on n'est pas dans la première note, alors on récupère la précédente
+            if (window.innerWidth >= this.breakpoint) {
+                this.replaceNotes(note, index);
+            } 
+            else {
+                window.addEventListener('scroll', function () {
+                    this.updateVisibility(note)
+                }.bind(this));
             }
-            
-            this.y = this.getTop(note) - this.getTop(parent); // on récupère la position de la note dans le paragraphe
-            
-            this.titles.forEach((title) => {
-                this.testTitleOverlap(parent, title);
-            });
-
-            if (previousNote) {
-                this.preventOverlap(previousNote);
-            }
-
-            note.style.top = `${this.y}px`; // on applique la position à la note une fois les titres testés
         });
+    }
+
+    replaceNotes (note, index) {
+        var parent = note.offsetParent, // on prend le p avec `position: relative` comme référence pour le `top`
+            previousNote = null;
+        
+        this.y = this.getTop(note) - this.getTop(parent); // on récupère la position de la note dans le paragraphe
+        
+        this.titles.forEach((title) => {
+            this.testTitleOverlap(parent, title);
+        });
+        
+        if (index > 0) {
+            previousNote = this.notes[index - 1]; // si on n'est pas dans la première note, alors on récupère la précédente
+        }
+
+        if (previousNote) {
+            this.preventOverlap(previousNote);
+        }
+
+        note.style.top = `${this.y}px`; // on applique la position à la note une fois les titres testés
     }
 
     testTitleOverlap (parent, title) {
@@ -65,15 +77,23 @@ class PostsNotes {
             distance = previousNote.offsetHeight + safer; // hauteur de la note + sécurité
         
         if (previousNoteTop == this.y) {
-            console.log('overlap')
             this.y = Math.max(this.y, this.y + distance);
         }
+    }
+
+    updateVisibility (note) {
+        var noteTrigger = note.closest('.note'),
+            noteTriggerTop = noteTrigger.getBoundingClientRect().top,
+            offset = window.innerHeight * 0.5;
+        
+        console.log(noteTriggerTop)
+        
+        this.isVisible = noteTriggerTop > 0 && noteTriggerTop < offset;
     }
 
     getTop (element) {
         return element.getBoundingClientRect().top + window.scrollY;
     }
-
 }
 
 export default new PostsNotes('.posts__page');
