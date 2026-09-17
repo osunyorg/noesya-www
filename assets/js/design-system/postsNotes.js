@@ -1,4 +1,4 @@
-class NotesInPosts {
+class PostsNotes {
     constructor (selector) {
         this.element = document.querySelector(selector);
         
@@ -13,7 +13,8 @@ class NotesInPosts {
 
         // 1. on vérifie si la note superpose un autre élément : si oui on la baisse
         // - titres - OK
-        // - autres notes
+        // - autres notes - OK
+        // alignement horizontal correct - help
         
         // 2. mobile : 
         // on fixe les notes en bas de l'écran
@@ -24,20 +25,26 @@ class NotesInPosts {
     }
 
     init () {
-        this.notes.forEach((note) => {
-            var parent = note.offsetParent; // on prend le p avec `position: relative` comme référence pour le `top`
+        this.notes.forEach((note, index) => {
+            var parent = note.offsetParent, // on prend le p avec `position: relative` comme référence pour le `top`
+                previousNote = null;
+            
+            if (index > 0) {
+                previousNote = this.notes[index - 1]; // si on n'est pas dans la première note, alors on récupère la précédente
+            }
+            
             this.y = this.getTop(note) - this.getTop(parent); // on récupère la position de la note dans le paragraphe
-
+            
             this.titles.forEach((title) => {
                 this.testTitleOverlap(parent, title);
             });
 
+            if (previousNote) {
+                this.preventOverlap(previousNote);
+            }
+
             note.style.top = `${this.y}px`; // on applique la position à la note une fois les titres testés
         });
-    }
-
-    getTop (element) {
-        return element.getBoundingClientRect().top + window.scrollY;
     }
 
     testTitleOverlap (parent, title) {
@@ -52,6 +59,21 @@ class NotesInPosts {
         }
     }
 
+    preventOverlap (previousNote) {
+        var previousNoteTop = (previousNote.style.top).replace('px', ''), // on récupère la valeur css `top` à laquelle on enlève `px`
+            safer = 10, // même valeur de sécurité
+            distance = previousNote.offsetHeight + safer; // hauteur de la note + sécurité
+        
+        if (previousNoteTop == this.y) {
+            console.log('overlap')
+            this.y = Math.max(this.y, this.y + distance);
+        }
+    }
+
+    getTop (element) {
+        return element.getBoundingClientRect().top + window.scrollY;
+    }
+
 }
 
-export default new NotesInPosts('.posts__page');
+export default new PostsNotes('.posts__page');
