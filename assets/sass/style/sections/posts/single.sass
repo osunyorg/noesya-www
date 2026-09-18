@@ -6,8 +6,6 @@
     // BLOCKS
     &,
     &.full-width
-        .blocks
-            counter-reset: note
         //features
         .block-features
             background: var(--color-background-alt)
@@ -66,22 +64,7 @@
         .block-chapter
             margin-top: space(50)
             .chapter
-                .note
-                    &__call
-                        background: none
-                        display: inline
-                        font-feature-settings: "sups" 1, "ordn" 1
-                        font-style: italic
-                        line-height: var(--meta-line-height)
-                        padding: 0
-                        vertical-align: super
-                    &__content
-                        display: block
-                        &, a
-                            color: var(--color-text)
-
                 @include media-breakpoint-up(desktop)
-                    position: relative
                     .text
                         align-items: baseline
                         display: flex
@@ -101,18 +84,10 @@
                                     position: absolute
                                     right: 0
                                     padding-top: 0.7em
-                            .note
-                                position: static
-                                &__content
-                                    background: none
-                                    left: 0
-                                    padding: 0
-                                    padding-top: 0.4em
-                                    width: columns(3)
-                                    &::before
-                                        content: counters(note, ".") ". "
-                                        counter-increment: note
-
+                    .note
+                        &__content
+                            left: 0
+                            right: auto
                 @include media-breakpoint-up(xl)
                     .text
                         .block-title
@@ -123,21 +98,6 @@
                 @include media-breakpoint-down(desktop)
                     .paragraph-count
                         display: none
-                    .note
-                        &__content
-                            background: var(--color-background-alt)
-                            bottom: calc(var(--grid-gutter) / 2)
-                            left: calc(var(--grid-gutter) / 2)
-                            right: calc(var(--grid-gutter) / 2)
-                            width: auto
-                            padding: $spacing-1
-                            position: fixed
-                            transform: translateY(calc(100% + var(--grid-gutter)))
-                            transition: 0.25s cubic-bezier(0.45, 0, 0.55, 1)
-                            // opacity: 0
-                            &.is-visible
-                                transform: translateY(0%)
-                                opacity: 1
 
         // testimonials
         .block-testimonials

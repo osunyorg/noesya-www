@@ -1,3 +1,6 @@
+.blocks
+    counter-reset: note
+
 .block-chapter
     @include in-page-without-sidebar
         .chapter
@@ -37,3 +40,47 @@
                     width: 100% !important
             a
                 @include  link
+
+    // Notes
+    .chapter
+        .note
+            &__call
+                background: none
+                display: inline
+                font-feature-settings: "sups" 1, "ordn" 1
+                font-style: italic
+                line-height: var(--meta-line-height)
+                padding: 0
+                vertical-align: super
+            &__content
+                display: block
+                &, a
+                    color: var(--color-text)
+        @include media-breakpoint-up(desktop)
+            position: relative
+            .note
+                position: static
+                &__content
+                    background: none
+                    right: 0
+                    left: auto
+                    padding: 0
+                    padding-top: 0.4em
+                    width: columns(3)
+                    &::before
+                        content: counters(note, ".") ". "
+                        counter-increment: note
+        @include media-breakpoint-down(desktop)
+            .note
+                &__content
+                    background: var(--color-background-alt)
+                    bottom: calc(var(--grid-gutter) / 2)
+                    left: calc(var(--grid-gutter) / 2)
+                    right: calc(var(--grid-gutter) / 2)
+                    width: auto
+                    padding: $spacing-1
+                    position: fixed
+                    transform: translateY(calc(100% + var(--grid-gutter)))
+                    transition: transform 0.25s cubic-bezier(0.45, 0, 0.55, 1)
+                    &.is-visible
+                        transform: translateY(0%)
