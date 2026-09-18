@@ -13,7 +13,7 @@ class PostParagraphs {
 
     addCounterToParagraphs () {
         this.paragraphs.forEach( function (paragraph, index) {
-            paragraph.innerHTML += `<span class="paragraph-count">§${index + 1}</span>`
+            paragraph.innerHTML = `<span class="paragraph-count">§${index + 1}</span>` + paragraph.innerHTML;
         }.bind(this));
     }
 }
