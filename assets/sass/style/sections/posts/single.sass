@@ -6,6 +6,8 @@
     // BLOCKS
     &,
     &.full-width
+        .blocks
+            counter-reset: note
         //features
         .block-features
             background: var(--color-background-alt)
@@ -64,7 +66,21 @@
         .block-chapter
             margin-top: space(50)
             .chapter
+                .note
+                    &__call
+                        background: none
+                        display: inline
+                        font-feature-settings: "sups" 1, "ordn" 1
+                        font-style: italic
+                        padding: 0
+                        vertical-align: super
+                    &__content
+                        display: block
+                        &, a
+                            color: var(--color-text)
+
                 @include media-breakpoint-up(desktop)
+                    position: relative
                     .text
                         align-items: baseline
                         display: flex
@@ -77,25 +93,47 @@
                             margin-left: auto
                             width: columns(9)
                             p
-                                position: relative
                                 padding-right: offset(1)
                                 .paragraph-count
                                     @include small
                                     color: var(--color-text-alt)
                                     position: absolute
                                     right: 0
-                                    top: 7px
+                                    padding-top: 0.7em
+                                    // top: 7px
+                            .note
+                                position: static
+                                &__content
+                                    background: none
+                                    left: 0
+                                    padding: 0
+                                    padding-top: 0.4em
+                                    width: columns(3)
+                                    &::before
+                                        content: counters(note, ".") ". "
+                                        counter-increment: note
 
                 @include media-breakpoint-up(xl)
                     .text
                         .block-title
                             width: columns(4)
                         .rich-text
-                            width: columns(7)
+                            width: columns(8)
 
                 @include media-breakpoint-down(desktop)
                     .paragraph-count
                         display: none
+                    .note
+                        &__content
+                            background: var(--color-background-alt)
+                            bottom: 0
+                            left: 0
+                            padding: space() $spacing-1
+                            position: fixed
+                            transform: translateY(100%)
+                            transition: transform 0.25s cubic-bezier(0.45, 0, 0.55, 1)
+                            &.is-visible
+                                transform: translateY(0%)
 
         // testimonials
         .block-testimonials
