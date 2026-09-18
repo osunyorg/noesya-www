@@ -42,13 +42,17 @@
                     width: columns(3)
                     margin-right: offset(1)
 
-    // .pages--grid
-    //     .page-title
-    //         @include body-text
-    //         + .page-description
-    //             margin-top: 0
-    //     .page-description
-    //         @include small
+    .pages--grid
+        .page-title
+            @include body-text
+            + .page-description
+                margin-top: 0
+        .page-description
+            @include small
 
-    .block-title
-        margin-bottom: pxToRem(100)
+    // .block-title
+    //     margin-bottom: pxToRem(100)
+
+    // breakpoint à 1400 pour 4 items sur la grille
+        // aorg dégage
+            // grid gutter à 20
