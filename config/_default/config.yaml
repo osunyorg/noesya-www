@@ -43,9 +43,7 @@ params:
         summary: false
         year: true
       taxonomies:
-        display: true
-        layout: inline # dropdown | inline
-        show_name: false
+        display: false
   components:
     lightbox:
       disabled: true

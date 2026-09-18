@@ -46,8 +46,12 @@
         .pages--grid
             .page-title
                 @include body-text
+                // &::after
+                //     @include icon-site("rounded-arrow")
             .page-description
                 @include small
+
+            // article:not(:has(.more)) [class$="-title"]
 
             @include media-breakpoint-up(desktop)
                 .page-title
