@@ -47,12 +47,15 @@
         .pages--grid
             .page-title
                 @include body-text
-                &::before
-                    margin-bottom: $spacing-2
-                + .page-description
-                    margin-top: space(4)
             .page-description
                 @include small
 
+            @include media-breakpoint-up(desktop)
+                .page-title
+                    &::before
+                        margin-bottom: $spacing-2
+                    + .page-description
+                        margin-top: space(4)
+                        
             @include media-breakpoint-up(xxl)
                 @include grid(4)
