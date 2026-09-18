@@ -444,3 +444,11 @@ body.projects__page
                     width: fit-content !important
                     p
                         width: columns(4)
+
+// DARKMODE
+@media (prefers-color-scheme: dark)
+    body.projects__page
+        .hero
+            color: var(--color-text)
+            html.has-menu-opened &
+                --color-text: var(--color-background)
