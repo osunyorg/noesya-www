@@ -46,12 +46,16 @@
         .pages--grid
             .page-title
                 @include body-text
-                // &::after
-                //     @include icon-site("rounded-arrow")
+                a
+                    display: flex
+                    align-items: center
+                    text-decoration: underline
+                    text-decoration-thickness: 0.5px
+                    &::after
+                        @include icon-site("rounded-arrow")
+                        overflow: hidden
             .page-description
                 @include small
-
-            // article:not(:has(.more)) [class$="-title"]
 
             @include media-breakpoint-up(desktop)
                 .page-title
