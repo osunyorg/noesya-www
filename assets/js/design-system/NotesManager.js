@@ -1,12 +1,12 @@
 window.osuny = window.osuny || {};
 
-window.osuny.PostNotesManager = function (element) {
-    this.notes = window.osuny.page.getComponents('postNote');
+window.osuny.NotesManager = function () {
+    this.notes = window.osuny.page.getComponents('Note');
     window.addEventListener('scroll', this.update.bind(this));
     this.update();
 }; 
 
-window.osuny.PostNotesManager.prototype.update = function () {
+window.osuny.NotesManager.prototype.update = function () {
     var nearest = null,
         i;
     for (i = this.notes.length - 1; i >= 0; i -= 1) {
@@ -20,7 +20,7 @@ window.osuny.PostNotesManager.prototype.update = function () {
 };
 
 window.osuny.page.registerComponent({
-    name: 'postNotesManager',
-    selector: '.posts__page',
-    klass: window.osuny.PostNotesManager
+    name: 'NotesManager',
+    selector: 'main',
+    klass: window.osuny.NotesManager
 });

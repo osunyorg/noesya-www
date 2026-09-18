@@ -1,7 +1,9 @@
 import { isMobile } from '../theme/utils/breakpoints';
 
-window.osuny.PostNote = function (element) {
-    window.osuny.Note.call(this, element);
+var OriginalNote = window.osuny.Note;
+
+window.osuny.Note = function (element) {
+    OriginalNote.call(this, element);
 
     this.chapter = this.note.closest('.chapter');
     window.addEventListener('resize', this.update.bind(this));
@@ -10,9 +12,9 @@ window.osuny.PostNote = function (element) {
     this.update();
 };
 
-window.osuny.PostNote.prototype = window.osuny.Note.prototype;
+window.osuny.Note.prototype = OriginalNote.prototype;
 
-window.osuny.PostNote.prototype.update = function () {
+window.osuny.Note.prototype.update = function () {
     if (!isMobile()) {
         this.setPosition();
     } else {
@@ -21,7 +23,7 @@ window.osuny.PostNote.prototype.update = function () {
     this.setVisibility();
 };
 
-window.osuny.PostNote.prototype.setVisibility = function () {
+window.osuny.Note.prototype.setVisibility = function () {
     var anchorTop = this.call.getBoundingClientRect().top,
         offset = window.innerHeight * 0.5;
 
@@ -29,16 +31,16 @@ window.osuny.PostNote.prototype.setVisibility = function () {
 }
 
 // Mobile mode
-window.osuny.PostNote.prototype.show = function () {
+window.osuny.Note.prototype.show = function () {
     this.content.classList.add('is-visible');
 };
 
-window.osuny.PostNote.prototype.hide = function () {
+window.osuny.Note.prototype.hide = function () {
     this.content.classList.remove('is-visible');
 };
 
 // Desktop mode
-window.osuny.PostNote.prototype.setPosition = function () {
+window.osuny.Note.prototype.setPosition = function () {
     this.minTop = 0;
     this.avoidOverlapTitle();
     this.avoidOverlapNotes();
@@ -47,14 +49,14 @@ window.osuny.PostNote.prototype.setPosition = function () {
     this.content.style.top = top + "px";
 };
 
-window.osuny.PostNote.prototype.avoidOverlapTitle = function () {
+window.osuny.Note.prototype.avoidOverlapTitle = function () {
     var title = this.chapter.querySelector('.block-title');
     if (title) {
         this.minTop = title.offsetHeight;
     }
 };
 
-window.osuny.PostNote.prototype.avoidOverlapNotes = function () {
+window.osuny.Note.prototype.avoidOverlapNotes = function () {
     var notes = this.chapter.querySelectorAll('.note'),
         isAfter = false;
 
@@ -67,14 +69,14 @@ window.osuny.PostNote.prototype.avoidOverlapNotes = function () {
         if (noteContent === this.content) {
             isAfter = true;
         } else {
-            this.minTop = Math.max(this.minTop, noteCall.offsetTop + noteContent.offsetHeight);
+            this.minTop = Math.max(this.minTop, noteContent.offsetTop + noteContent.offsetHeight);
         }
 
     }.bind(this));
 };
 
 window.osuny.page.registerComponent({
-    name: 'postNote',
-    selector: '.posts__page .note',
-    klass: window.osuny.PostNote
+    name: 'Note',
+    selector: '.note',
+    klass: window.osuny.Note
 });
