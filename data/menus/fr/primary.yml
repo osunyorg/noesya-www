@@ -1,24 +1,42 @@
 ---
 title: Menu principal
 items:
-- title: Clients
-  slug: clients
-  target: "/clients/"
+- title: Conseil honnête
+  slug: conseil-honnete
+  target: "/metiers/conseil/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/clients"
-  file: content/fr/pages/clients/_index.html
-- title: Métiers
-  slug: metiers
-  target: "/metiers/"
+  path: "/pages/metiers/conseil"
+  file: content/fr/pages/metiers/conseil/_index.html
+- title: Sites soignés
+  slug: sites-soignes
+  target: "/metiers/sites/"
   kind: page
   new_tab: false
   children: []
   descendants_targets: []
-  path: "/pages/metiers"
-  file: content/fr/pages/metiers/_index.html
+  path: "/pages/metiers/sites"
+  file: content/fr/pages/metiers/sites/_index.html
+- title: Applications robustes
+  slug: applications-robustes
+  target: "/metiers/applications/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/metiers/applications"
+  file: content/fr/pages/metiers/applications/_index.html
+- title: Formation engagée
+  slug: formation-engagee
+  target: "/metiers/formation/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/metiers/formation"
+  file: content/fr/pages/metiers/formation/_index.html
 - title: Projets
   slug: projets
   target: "/projets/"
@@ -28,6 +46,15 @@ items:
   descendants_targets: []
   path: "/projects"
   file: content/fr/projects/_index.html
+- title: Clients
+  slug: clients
+  target: "/clients/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/clients"
+  file: content/fr/pages/clients/_index.html
 - title: Coopérative
   slug: cooperative
   target: "/cooperative/"
