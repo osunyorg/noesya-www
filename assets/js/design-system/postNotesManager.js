@@ -17,8 +17,6 @@ window.osuny.PostNotesManager.prototype.update = function () {
             this.notes[i].hide();
         }
     }
-
-    console.log(nearest);
 };
 
 window.osuny.page.registerComponent({
