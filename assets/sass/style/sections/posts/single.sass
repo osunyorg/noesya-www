@@ -114,3 +114,32 @@
             @include media-breakpoint-up(xl)
                 .block-content
                     padding-left: offset(4)
+
+        // images
+        .block-image
+            figure
+                picture
+                    img
+                        filter: grayscale(1)
+                &:hover
+                    img
+                        filter: grayscale(0)
+            @include media-breakpoint-up(desktop)
+                figure
+                    margin-left: offset(4)
+                    picture 
+                        margin: 0
+                    &.image-portrait
+                        picture img
+                            width: columns(7)
+                        figcaption
+                            display: flex
+                            align-items: flex-end
+                            text-align: left
+                            margin-left: space(5)
+                            text-orientation: mixed
+                            writing-mode: sideways-lr
+                            width: columns(1)
+                            margin-left: var(--grid-gutter)
+                            p
+                                margin: 0

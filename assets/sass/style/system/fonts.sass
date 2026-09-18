@@ -1,0 +1,14 @@
+// icons
+@font-face
+    font-display: block
+    font-family: 'icons'
+    font-style: normal
+    font-weight: 400
+    src: url('/assets/fonts/icomoon/icomoon.woff') format("woff")
+
+// mixin for icons
+@mixin icon-site($icon)
+    @include icon
+    font-family: 'icons' !important
+    content: map-get($icons-site, $icon) !important
+    margin-left: space()

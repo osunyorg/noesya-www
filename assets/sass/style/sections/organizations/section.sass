@@ -1,12 +1,10 @@
 .organizations--list
-    ul
-        counter-reset: count 0
-    li
-        counter-increment: count 1
-        display: flex
-        align-items: baseline
-        justify-content: space-between
-        &::after
-            @include small
-            color: var(--color-text-alt)
-            content: counter(count)
+    @include media-breakpoint-down(desktop)
+        > li
+            padding-bottom: var(--grid-gutter)
+            padding-top: var(--grid-gutter)
+        .organization
+            &,
+            &:not(.with-summaries) 
+                .organization-title // to be fixed in theme#1612
+                    @include h4

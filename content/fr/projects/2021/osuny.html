@@ -15,7 +15,7 @@ meta:
     slug: "osuny"
   dates:
     created_at: 2026-08-30T09:19:13+02:00
-    updated_at: 2026-09-17T12:27:24+02:00
+    updated_at: 2026-09-18T16:48:53+02:00
     published_at: 2026-08-30T09:19:13+02:00
 search:
   id: "b09619cf-8dcb-432a-8682-d13daf886765"
@@ -28,7 +28,7 @@ search:
   summary: >-
     <p>Création du commun numérique</p>
   body: >-
-      <p>En savoir plus sur osuny, CMS d'intérêt général <br>https://www.osuny.org</p>
+    <p>L'organisation </p>  <p>  </p>  <p>En savoir plus sur osuny, CMS d'intérêt général <br>https://www.osuny.org</p>
 
 year: 2021
 date: 2021-09-01
@@ -80,10 +80,47 @@ taxonomies:
 
 
 contents_reading_time:
-  seconds: 4
+  seconds: 5
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: organizations
+    title: >-
+      L'organisation
+    slug: >-
+      l-organisation
+    ranks:
+      base: 2
+      self: 2
+      children: 3
+    html_class: "block-class-organisation"
+    top:
+      active: true
+      title: 
+        value: >-
+          L'organisation
+        heading: 2
+
+    data:
+      layout: grid
+
+      options:
+        link: false
+        logo: true
+        summary: false
+        address: false
+        filters: false
+
+      organizations:
+        - permalink: ""
+          path: "/organizations/osuny"
+          slug: "osuny"
+          file: "content/fr/organizations/osuny.html"
+
+      quantity: 1
+
+
   - kind: block
     template: chapter
 

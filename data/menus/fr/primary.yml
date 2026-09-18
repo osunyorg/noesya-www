@@ -1,15 +1,6 @@
 ---
 title: Menu principal
 items:
-- title: Clients
-  slug: clients
-  target: "/clients/"
-  kind: page
-  new_tab: false
-  children: []
-  descendants_targets: []
-  path: "/pages/clients"
-  file: content/fr/pages/clients/_index.html
 - title: Métiers
   slug: metiers
   target: "/metiers/"
@@ -28,6 +19,15 @@ items:
   descendants_targets: []
   path: "/projects"
   file: content/fr/projects/_index.html
+- title: Clients
+  slug: clients
+  target: "/clients/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/clients"
+  file: content/fr/pages/clients/_index.html
 - title: Coopérative
   slug: cooperative
   target: "/cooperative/"
