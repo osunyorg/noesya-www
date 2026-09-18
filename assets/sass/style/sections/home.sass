@@ -28,9 +28,7 @@
     @include media-breakpoint-up(desktop)
         .hero
             .content
-                padding-top: 0
                 .hero-text
-                    padding-top: pxToRem(100)
                     &, h1
                         width: columns(7)
                     p
@@ -39,8 +37,9 @@
                         line-height: pxToRem(38)
                         margin-top: $spacing-3
                 .hero-image
-                    width: columns(3)
+                    margin-top: calc(-1 * #{$spacing-5})
                     margin-right: offset(1)
+                    width: columns(3)
     
     &,
     &.full-width
@@ -56,6 +55,6 @@
                         margin-bottom: $spacing-2
                     + .page-description
                         margin-top: space(4)
-                        
+
             @include media-breakpoint-up(xxl)
                 @include grid(4)
