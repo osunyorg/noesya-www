@@ -198,7 +198,7 @@ body.projects__page
 
         @include media-breakpoint-up(desktop)
             figure
-                background: $color-background-alt
+                background: var(--color-background-alt)
                 picture
                     margin: 0
                     width: 100%
@@ -208,6 +208,14 @@ body.projects__page
     // image
     .block-image
         @include media-breakpoint-up(desktop)
+            .container
+                .block-content
+                    figure
+                        picture
+                            padding-bottom: offset(2)
+                            padding-top: offset(2)
+                        img
+                            width: columns(8)
             &.image-portrait
                 .container
                     &::after
@@ -220,12 +228,6 @@ body.projects__page
                     .block-content
                         max-height: 1340px
                         overflow: hidden
-                        figure
-                            picture
-                                padding-bottom: offset(2)
-                                padding-top: offset(2)
-                            img
-                                width: columns(8)
             &--expanded
                 .container
                     &::after
