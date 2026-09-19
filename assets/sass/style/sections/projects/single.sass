@@ -208,23 +208,24 @@ body.projects__page
     // image
     .block-image
         @include media-breakpoint-up(desktop)
-            .container
-                &::after
-                    content: "+"
-                    cursor: pointer
-                    display: block
-                    margin: 0 auto
-                    padding-top: 20px
-                    text-align: center
-                .block-content
-                    max-height: 1340px
-                    overflow: hidden
-                    figure
-                        picture
-                            padding-bottom: offset(2)
-                            padding-top: offset(2)
-                        img
-                            width: columns(8)
+            &.image-portrait
+                .container
+                    &::after
+                        content: "+"
+                        cursor: pointer
+                        display: block
+                        margin: 0 auto
+                        padding-top: 20px
+                        text-align: center
+                    .block-content
+                        max-height: 1340px
+                        overflow: hidden
+                        figure
+                            picture
+                                padding-bottom: offset(2)
+                                padding-top: offset(2)
+                            img
+                                width: columns(8)
             &--expanded
                 .container
                     &::after
