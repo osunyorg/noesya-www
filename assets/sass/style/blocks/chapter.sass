@@ -74,12 +74,14 @@
             .note
                 &__content
                     background: var(--color-background-alt)
-                    bottom: calc(var(--grid-gutter) / 2)
-                    left: calc(var(--grid-gutter) / 2)
-                    right: calc(var(--grid-gutter) / 2)
+                    border-radius: 4px
+                    bottom: var(--grid-gutter)
+                    left: var(--grid-gutter)
+                    right: var(--grid-gutter)
                     width: auto
                     padding: $spacing-1
                     position: fixed
+                    text-align: center
                     transform: translateY(calc(100% + var(--grid-gutter)))
                     transition: transform 0.25s cubic-bezier(0.45, 0, 0.55, 1)
                     &.is-visible
