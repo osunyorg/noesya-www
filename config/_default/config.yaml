@@ -27,6 +27,14 @@ params:
           updated_at: false
           with_labels: true
   projects:
+    index:
+      layout: grid
+      options:
+        categories: false
+        summary: false
+        year: true
+      taxonomies:
+        display: false
     single:
       summary:
         position: content
@@ -36,14 +44,6 @@ params:
           share: false
           taxonomies: false
           with_labels: false
-    index:
-      layout: alternate
-      options:
-        categories: false
-        summary: false
-        year: true
-      taxonomies:
-        display: false
   components:
     lightbox:
       disabled: true

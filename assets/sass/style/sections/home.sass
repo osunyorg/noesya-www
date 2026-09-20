@@ -1,15 +1,16 @@
 .page__home
-    --body-size: #{pxToRem(22)}
-    --body-line-height: #{pxToRem(36)}
+    
+    // --body-size: #{pxToRem(22)}
+    // --body-line-height: #{pxToRem(36)}
 
-    .hero
-        .content
-            .hero-text
-                p
-                    font-size: pxToRem(22)
-                    font-style: italic
-                    line-height: pxToRem(37)
-                    margin-bottom: pxToRem(60)
+    // .hero
+    //     .content
+    //         .hero-text
+    //             p
+    //                 font-size: pxToRem(22)
+    //                 font-style: italic
+    //                 line-height: pxToRem(37)
+    //                 margin-bottom: pxToRem(60)
 
     @include media-breakpoint-down(desktop)
         .hero
@@ -54,14 +55,25 @@
                     &::after
                         @include icon-site("rounded-arrow")
                         overflow: hidden
-            .page-description
-                @include small
-
+            @include media-breakpoint-down(desktop)
+                > li + li
+                    margin-top: $spacing-3
+                .page
+                    margin-left: offset(2)
+                .page-title
+                    font-size: pxToRem(22)
+                    &::before
+                        position: absolute
+                        left: offset(-2)
+                        top: pxToRem(15)
+                    a
+                        margin-top: space(2)
             @include media-breakpoint-up(desktop)
                 .page-title
                     &::before
                         margin-bottom: $spacing-2
                     + .page-description
+                        @include small
                         margin-top: space(4)
 
             @include media-breakpoint-up(xxl)
