@@ -46,6 +46,7 @@ body.projects__page
                         left: 0
                         mix-blend-mode: exclusion
                         position: absolute
+                        pointer-events: none
                         top: 0
                         transition: width 0.35s cubic-bezier(0.45, 0, 0.55, 1)
                         width: 0
@@ -58,7 +59,11 @@ body.projects__page
                         left: 50vw
                     &:only-child
                         width: 50%
-                        background: red
                         flex: unset
                         &.next
                             margin-left: offset(6)
+
+.projects_page,
+.ancestor-experience
+    main
+        padding-bottom: 0 !important

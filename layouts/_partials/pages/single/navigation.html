@@ -1,0 +1,34 @@
+{{ with .Params.contents }}
+  {{ range $index, $content := . }}
+    {{ if in site.Params.blocks.ignored "block-class-pages-navigation" }}
+      {{ if eq .template "pages" }}
+        <div class="block block-siblings-navigation">
+          <div class="container">
+            <div class="block-content">
+              <nav class="siblings-navigation" aria-label="{{ i18n "commons.pagination.between.posts" }}">
+                <ul>
+                  {{ with .data }}
+                  {{ range first 1 .pages }} 
+                    {{ $prev_page := site.GetPage .path }}
+                    {{ partial "commons/single/siblings-navigation/previous.html" (dict
+                      "label" (i18n "posts.previous")
+                      "page" $prev_page
+                    ) }}
+                  {{ end }}
+                  {{ range last 1 .pages }} 
+                    {{ $next_page := site.GetPage .path }}
+                    {{ partial "commons/single/siblings-navigation/next.html" (dict
+                      "label" (i18n "posts.next")
+                      "page" $next_page
+                    ) }}
+                  {{ end }}
+                {{ end }}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

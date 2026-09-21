@@ -16,11 +16,6 @@
     ) }}
   {{ else }}
     {{ partial "pages/partials/children.html" . }}
-  {{ end }}
-
-  {{ partial "commons/single/siblings-navigation.html" (dict
-    "context" .
-    "previous_label" (i18n "projects.previous")
-    "next_label" (i18n "projects.next")
-  ) }}
+  {{ end }}  
+  {{ partial "pages/single/navigation.html" . }}
 </div>

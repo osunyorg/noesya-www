@@ -6,6 +6,7 @@ params:
   blocks:
     ignored:
       - block-class-organisation
+      - block-class-pages-navigation
   home:
     head:
       title: site
