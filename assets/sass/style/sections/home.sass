@@ -45,36 +45,5 @@
     &,
     &.full-width
         .pages--grid
-            .page-title
-                @include body-text
-                a
-                    display: flex
-                    align-items: center
-                    text-decoration: underline
-                    text-decoration-thickness: 0.5px
-                    &::after
-                        @include icon-site("rounded-arrow")
-                        overflow: hidden
-            @include media-breakpoint-down(desktop)
-                > li + li
-                    margin-top: $spacing-3
-                .page
-                    margin-left: offset(2)
-                .page-title
-                    font-size: pxToRem(22)
-                    &::before
-                        position: absolute
-                        left: offset(-2)
-                        top: pxToRem(15)
-                    a
-                        margin-top: space(2)
-            @include media-breakpoint-up(desktop)
-                .page-title
-                    &::before
-                        margin-bottom: $spacing-2
-                    + .page-description
-                        @include small
-                        margin-top: space(4)
-
             @include media-breakpoint-up(xxl)
                 @include grid(4)
