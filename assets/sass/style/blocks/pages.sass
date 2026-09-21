@@ -10,6 +10,12 @@
                         content: counters(item, ".") ". "
                         counter-increment: item
                         line-height: 1
+                        margin-bottom: $spacing-2
+
+            @include media-breakpoint-down(desktop)
+                .page-title
+                    a
+                        margin-top: space(2)
 
     .pages--grid
         .page-title
@@ -21,6 +27,7 @@
                 text-decoration-thickness: 0.5px
                 &::after
                     overflow: hidden
+                    margin-left: $spacing-1
 
         @include media-breakpoint-down(desktop)
             > li + li
@@ -29,16 +36,12 @@
                 margin-left: offset(2)
             .page-title
                 font-size: pxToRem(22)
-                &::before
+                a::before
                     position: absolute
                     left: offset(-2)
                     top: pxToRem(15)
-                a
-                    margin-top: space(2)
+
         @include media-breakpoint-up(desktop)
-            .page-title
-                &::before
-                    margin-bottom: $spacing-2
-                + .page-description
-                    @include small
-                    margin-top: space(4)
+            .page-title + .page-description
+                @include small
+                margin-top: space(4)

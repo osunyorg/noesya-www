@@ -56,6 +56,9 @@
                     color: inherit
             &__content
                 display: block
+                &::before
+                    content: counters(note, ".") ". "
+                    counter-increment: note
                 &, a
                     color: var(--color-text)
             &--active
@@ -73,9 +76,7 @@
                     padding: 0
                     padding-top: 0.4em
                     width: columns(3)
-                    &::before
-                        content: counters(note, ".") ". "
-                        counter-increment: note
+
         @include media-breakpoint-down(desktop)
             .note
                 &__content
