@@ -47,15 +47,21 @@
             &__call
                 background: none
                 display: inline
-                font-feature-settings: "sups" 1, "ordn" 1
-                font-style: italic
+                font-size: pxToRem(12)
                 line-height: var(--meta-line-height)
                 padding: 0
+                pointer-events: none
                 vertical-align: super
+                &:hover
+                    color: inherit
             &__content
                 display: block
                 &, a
                     color: var(--color-text)
+            &--active
+                .note__call
+                    color: inherit
+
         @include media-breakpoint-up(desktop)
             position: relative
             .note
