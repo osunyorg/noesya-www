@@ -10,9 +10,6 @@
         // call to action
         .block-call_to_action--no_background
             .call_to_action--with-image
-                align-items: center
-                display: flex
-                gap: calc(var(--column-width) / 2)
                 .actions
                     margin-top: 0
                     a
@@ -35,4 +32,19 @@
                     @include body-text
                 figure
                     order: -1
-                    width: calc(#{offset(1)} + (var(--column-width) / 2))
+                    width: columns(6)
+
+                @include media-breakpoint-down(desktop)
+                    figure
+                        margin-bottom: $spacing-1
+                        figcaption
+                            margin-top: space()
+                        .credit
+                            margin-left: unset
+
+                @include media-breakpoint-up(desktop)
+                    align-items: center
+                    display: flex
+                    gap: calc(var(--column-width) / 2)
+                    figure
+                        width: calc(#{offset(1)} + (var(--column-width) / 2))
