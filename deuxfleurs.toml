@@ -47,6 +47,10 @@ from = "/references/index.html"
 to = "/projets/"
 
 [[redirects]]
+from = "/actualites/veille/index.html"
+to = "https://commun.osuny.org/actualites/revues-de-litterature/"
+
+[[redirects]]
 from = "/references/2024-ecotheque/index.html"
 to = "/projets/2024-ecotheque/"
 
@@ -169,6 +173,10 @@ to = "/metiers/applications/"
 [[redirects]]
 from = "/references/formation/index.html"
 to = "/projets/formation/"
+
+[[redirects]]
+from = "/actualites/carnet-de-recherche/index.html"
+to = "https://commun.osuny.org/actualites/carnet-de-recherche/"
 
 [[redirects]]
 from = "/references/2021-ensemble-a-table/index.html"
