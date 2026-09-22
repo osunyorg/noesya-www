@@ -63,6 +63,10 @@ from = "/formation/index.html"
 to = "/metiers/formation/"
 
 [[redirects]]
+from = "/organisations/categories/clients/index.html"
+to = "/organisations/categories/client/"
+
+[[redirects]]
 from = "/references/2022-espeli/index.html"
 to = "/projets/2022-espeli/"
 
