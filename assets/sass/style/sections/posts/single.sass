@@ -144,3 +144,17 @@
                             margin-left: var(--grid-gutter)
                             p
                                 margin: 0
+
+        // galeries
+        .block-gallery
+            figure
+                picture
+                    img
+                        filter: grayscale(1)
+                &:hover
+                    img
+                        filter: grayscale(0)
+            &--grid
+                @include media-breakpoint-up(desktop)
+                    .block-content
+                        padding-left: offset(4)
