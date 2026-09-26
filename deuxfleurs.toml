@@ -31,6 +31,10 @@ from = "/references/2022-iut-bordeaux-montaigne/index.html"
 to = "/projets/2022-iut-bordeaux-montaigne/"
 
 [[redirects]]
+from = "/metiers/applications/perennite-et-securite/index.html"
+to = "/cooperative/continuite-reversibilite-securite/"
+
+[[redirects]]
 from = "/references/applications/index.html"
 to = "/projets/applications/"
 
@@ -111,6 +115,10 @@ from = "/organisations/taltech/index.html"
 to = "/organisations/tallinn-university-of-technology/"
 
 [[redirects]]
+from = "/metiers/applications/continuite-reversibilite-securite/index.html"
+to = "/cooperative/continuite-reversibilite-securite/"
+
+[[redirects]]
 from = "/metiers-1/index.html"
 to = "/metiers/"
 
@@ -141,6 +149,10 @@ to = "/organisations/mj-conseil/"
 [[redirects]]
 from = "/references/2025-rennes-ville-et-metropole/index.html"
 to = "/projets/2025-rennes-ville-et-metropole/"
+
+[[redirects]]
+from = "/continuite-reversibilite-securite/index.html"
+to = "/cooperative/continuite-reversibilite-securite/"
 
 [[redirects]]
 from = "/projets/2020-atelier-narration-interactive/index.html"
