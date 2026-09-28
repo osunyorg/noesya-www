@@ -1,0 +1,47 @@
+{{ $block := .block }}
+{{ $context := .context }}
+{{ $html_id := .html_id }}
+
+
+{{ with .block.data }}
+  <div class="block block-organizations block-organizations-alphabet">
+    <div class="container">
+      <div class="block-content">
+        {{ $organizations := partial "helpers/objects/GetFromPathSlice" .organizations }}
+
+        {{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+        {{ $by_letter := dict }}
+        {{ range $organizations }}
+          {{ $organization := . }}
+          {{ $first_letter := upper ( substr $organization.Name 0 1 ) }}
+
+          {{/*  Set specific chars here  */}}
+          {{/*  TODO : rewrite this to remove accent  */}}
+          {{ if not (in $letters $first_letter) }}
+            {{ if in (slice "É" "é") $first_letter }}
+              {{ $first_letter = "E" }}
+            {{ else }}
+              {{ $first_letter = "" }}
+            {{ end }}
+          {{ end }}
+
+          {{ $new_list := slice $organization }}
+          {{ with index $by_letter $first_letter }}
+            {{ $new_list = . | append $organization }}
+          {{ end }}
+          {{ $by_letter = merge $by_letter (dict $first_letter $new_list) }}
+        {{ end }}
+        <ol class="alphabet-list">
+          {{ range $key, $items := $by_letter }}
+            <p><span class="letter">{{ $key }}</span> comme...</p>
+            <ol>
+              {{ range $items }}
+                <li class="organization">{{ .Name }}</li>
+              {{ end }}
+            </ol>
+          {{ end }}
+        </ol>
+      </div>
+    </div>
+  </div>
+{{ end }}

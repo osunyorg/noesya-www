@@ -1,0 +1,19 @@
+{{ $block := .block }}
+{{ $publications_page := site.GetPage "/publications" }}
+{{ $publications := partial "publications/helpers/FilterByAnrProjectReferences" $publications_page.Pages }}
+{{ $publications = first 3 $publications.ByDate.Reverse }}
+
+{{ $items := slice }}
+{{ range $publications }}
+  {{ $items = $items | append (dict "path" .Path) }}
+{{ end }}
+
+{{ partial "blocks/templates/publications.html" (dict "block" (dict
+  "top" $block.top
+  "ranks" $block.ranks
+  "data" (dict "publications" $items)
+)) }}
+
+<div class="container">
+  <a href="{{ $publications_page.Permalink }}">Voir toutes les publications</a>
+</div>
