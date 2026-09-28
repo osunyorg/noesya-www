@@ -198,3 +198,7 @@ to = "https://commun.osuny.org/actualites/carnet-de-recherche/"
 from = "/references/2021-ensemble-a-table/index.html"
 to = "/projets/2021-ensemble-a-table/"
 
+[[redirects]]
+from = "/actualites/index.html"
+to = "/entretiens/"
+
