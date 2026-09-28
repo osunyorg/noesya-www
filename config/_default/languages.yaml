@@ -15,17 +15,6 @@ fr:
             contact@noesya.coop
           value: >-
             mailto:contact@noesya.coop
-      social_networks:
-        github:
-          label: >-
-            noesya
-          value: >-
-            https://github.com/noesya
-        linkedin:
-          label: >-
-            noesyacoop
-          value: >-
-            https://www.linkedin.com/company/noesyacoop/
 
   taxonomies:
     administrator: administrators
