@@ -47,6 +47,14 @@ from = "/metiers-1/sites/index.html"
 to = "/metiers/sites/"
 
 [[redirects]]
+from = "/actualites/2026-09-22-arnaud-levy/index.html"
+to = "/entretiens/2026-09-22-arnaud-levy/"
+
+[[redirects]]
+from = "/actualites/2021-09-01-sebastien-gaya/index.html"
+to = "/entretiens/2021-09-01-sebastien-gaya/"
+
+[[redirects]]
 from = "/references/index.html"
 to = "/projets/"
 
@@ -60,7 +68,7 @@ to = "/projets/2024-ecotheque/"
 
 [[redirects]]
 from = "/actualites/2021-01-01-sebastien-gaya/index.html"
-to = "/actualites/2021-09-01-sebastien-gaya/"
+to = "/entretiens/2021-09-01-sebastien-gaya/"
 
 [[redirects]]
 from = "/formation/index.html"
@@ -99,6 +107,10 @@ from = "/sites/index.html"
 to = "/metiers/sites/"
 
 [[redirects]]
+from = "/actualites/2026-09-22-pierre-andre-boissinot/index.html"
+to = "/entretiens/2026-09-22-pierre-andre-boissinot/"
+
+[[redirects]]
 from = "/references/2025-campus-art-mediterranee/index.html"
 to = "/projets/2025-campus-art-mediterranee/"
 
@@ -123,6 +135,10 @@ from = "/metiers-1/index.html"
 to = "/metiers/"
 
 [[redirects]]
+from = "/actualites/2022-09-01-olivia-simonet/index.html"
+to = "/entretiens/2022-09-01-olivia-simonet/"
+
+[[redirects]]
 from = "/references/2022-extension-numecogestes/index.html"
 to = "/projets/2022-extension-numecogestes/"
 
@@ -131,8 +147,12 @@ from = "/references/2026-fablab-a-lecole/index.html"
 to = "/projets/2026-fablab-a-lecole/"
 
 [[redirects]]
+from = "/actualites/2026-09-18-arnaud-bridou/index.html"
+to = "/entretiens/2026-09-18-arnaud-bridou/"
+
+[[redirects]]
 from = "/actualites/2021-09-01-olivia-simonet/index.html"
-to = "/actualites/2022-09-01-olivia-simonet/"
+to = "/entretiens/2022-09-01-olivia-simonet/"
 
 [[redirects]]
 from = "/references/2023-referentiel-de-competences-mmi/index.html"
@@ -181,6 +201,10 @@ to = "/projets/2025-observatoire-citoyen-de-la-publicite/"
 [[redirects]]
 from = "/references/applicaitons/index.html"
 to = "/projets/applications/"
+
+[[redirects]]
+from = "/actualites/2021-09-01-alexis-benoit/index.html"
+to = "/entretiens/2021-09-01-alexis-benoit/"
 
 [[redirects]]
 from = "/applications/index.html"
