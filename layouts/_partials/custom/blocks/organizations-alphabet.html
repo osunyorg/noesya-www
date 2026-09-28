@@ -33,12 +33,14 @@
         {{ end }}
         <ol class="alphabet-list">
           {{ range $key, $items := $by_letter }}
-            <p><span class="letter">{{ $key }}</span> comme...</p>
-            <ol>
-              {{ range $items }}
-                <li class="organization">{{ .Name }}</li>
-              {{ end }}
-            </ol>
+            <li>
+              <p><span class="letter">{{ $key }}</span> <span>comme</span></p>
+              <ol>
+                {{ range $items }}
+                  <li class="organization">{{ .Name }}</li>
+                {{ end }}
+              </ol>
+            </li>
           {{ end }}
         </ol>
       </div>

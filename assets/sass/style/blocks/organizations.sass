@@ -1,2 +1,38 @@
 .block-organizations-alphabet
-    
+    .alphabet-list
+        > li
+            + li
+                margin-top: pxToRem(100)
+            > p
+                @include small
+                .letter
+                    @include h1
+            .organization
+                // TODO : cleanup with typo system
+                font-family: $body-font-family
+                padding: $spacing-2 0
+                border-bottom: var(--border-width) solid var(--color-text)
+
+    @include media-breakpoint-up(md)
+        .alphabet-list
+            > li
+                display: flex
+                gap: var(--grid-gutter)
+                > p 
+                    display: flex
+                    gap: var(--grid-gutter)
+                    width: columns(2)
+                    .letter
+                        font-size: pxToRem(128)
+                        width: columns(1)
+                        text-align: right
+                > ol
+                    flex-grow: 1
+                    margin-top: -0.72em
+                .organization
+                    // TODO : cleanup with typo system
+                    font-size: pxToRem(38)
+                    line-height: pxToRem(45)
+                    font-family: $body-font-family
+                    &:first-child
+                        padding-top: 0
