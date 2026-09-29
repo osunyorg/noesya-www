@@ -21,24 +21,23 @@
     body:not(.projects__page) &
         &--alt_background
             .block-content
-                @include h5
+                @include h3
                 .chapter
                     display: block
-                    .text
-                        .top
-                            margin-bottom: $spacing-2
-                            overflow: hidden
-                            .block-title
-                                align-items: baseline
-                                color: var(--color-text-alt)
-                                display: flex
-                                font-size: var(--meta-size)
-                                gap: $spacing-2
-                                &::after
-                                    background: var(--color-border)
-                                    content: ""
-                                    height: 1px
-                                    flex: 1
+
+            .block-title
+                @include small
+
+            @include media-breakpoint-up(desktop)
+                .text
+                    display: flex
+                    align-items: baseline
+                    gap: var(--grid-gutter)
+                    width: columns(12) !important
+                    .top
+                        width: columns(2)
+                    .rich-text
+                        flex: 1
 
     &--no_background
         .block-content
