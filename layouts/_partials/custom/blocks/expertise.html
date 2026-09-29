@@ -1,0 +1,29 @@
+{{ $options := .options }}
+
+{{ with .block.data }}
+
+  {{ $heading_level := .heading_level }}
+  <ul class="pages pages--large">
+    {{ $pages := partial "helpers/objects/GetFromPathSlice" .pages }}
+    {{ range $pages }}
+      {{ range $index, $block := where .Params.contents "html_class" "block-class-questions" }}
+        {{ with $block.data }}
+          {{ $block_class := partial "blocks/helpers/GetClass" $block }}
+          <div class="{{ $block_class }}">
+            <div class="container">
+              <div class="block-content">
+                <div class="chapter">
+                  <div class="text">
+                    {{ partial "blocks/top.html" $block.top }}
+                    {{ partial "blocks/templates/chapter/text.html" . }}
+                    {{ partial "blocks/templates/chapter/notes.html" . }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

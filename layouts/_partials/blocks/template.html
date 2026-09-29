@@ -10,6 +10,12 @@
     "context" .context
     "html_id" .html_id
   ) }}
+{{ else if and (eq .block.template "pages") (eq .block.html_class "block-class-expertise") }}
+  {{ partial "custom/blocks/expertise.html" (dict
+    "block" .block
+    "context" .context
+    "html_id" .html_id
+  ) }}
 {{ else }}
   {{ $template := printf "blocks/templates/%s.html" .block.template }}
   {{ if templates.Exists ( printf "_partials/%s" $template ) }}

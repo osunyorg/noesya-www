@@ -17,5 +17,7 @@
   {{ else }}
     {{ partial "pages/partials/children.html" . }}
   {{ end }}  
-  {{ partial "pages/single/navigation.html" . }}
+  {{ if eq .Params.bodyclass "ancestor-expertise" }}
+    {{ partial "pages/single/navigation.html" . }}
+  {{ end }}
 </div>
