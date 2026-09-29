@@ -1,7 +1,27 @@
 .publications
+    .publication
+        &-meta,
+        &-authors
+            color: var(--color-text)
+        &-authors
+            font-style: italic
+        
+        &:not(:last-child)
+            border-color: var(--color-text)
+
     @include in-page-without-sidebar
         &,
         .publications-link
             margin-left: offset(2)
             margin-right: offset(2)
 
+        .publication
+            align-items: baseline
+            display: flex
+            &::after
+                content: none
+            &-content
+                width: columns(5)
+            &-authors
+                flex: 1
+                text-align: right
