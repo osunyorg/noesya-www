@@ -10,7 +10,7 @@
         {{ $pages := partial "helpers/objects/GetFromPathSlice" .pages }}
         {{ if $pages }}
           {{ if eq $block.html_class "block-class-expertise" }}
-            {{ partial (printf "pages/partials/layouts/expertise.html" $layout $layout) (dict
+            {{ partial "pages/partials/layouts/expertise.html" (dict
               "pages" $pages
               "heading_level" $block.ranks.children
               "options" .options

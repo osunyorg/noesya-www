@@ -1,4 +1,4 @@
-body:not(.projects__page) // un peu dommage
+.persons__page // un peu dommage
     .block-testimonials // TODO: j'ai appliqué le style des personnes à tous les témoignages, est-ce juste ?
         .block-content
             .testimonial
@@ -10,7 +10,9 @@ body:not(.projects__page) // un peu dommage
         + .block-title
             margin-top: 0 !important
 
-    .block:last-child.block-testimonials
-        figure
-            border-bottom: 0
-            padding-bottom: 0
+body:not(.persons__page, .projects__page)
+    &.full-width
+        .block-testimonials
+            figure
+                margin-left: offset(2)
+                width: columns(8)
