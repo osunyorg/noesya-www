@@ -1,0 +1,39 @@
+.block-projects
+    &--large
+        .project
+            &-content
+                position: absolute
+                right: space(10)
+                top: 50%
+                transform: translateY(-50%)
+                width: unset
+            &-description
+                color: var(--color-background)
+                a
+                    @include h2
+                    color: inherit
+            .media
+                margin: 0
+                &::before
+                    content: ''
+                    background: rgba(0,0,0,0.6)
+                    bottom: 0
+                    left: 0
+                    pointer-events: none
+                    position: absolute
+                    right: 0
+                    top: 0
+
+        @include media-breakpoint-down(desktop)
+            .project
+                &-content
+                    left: var(--grid-gutter)
+
+        @include in-page-without-sidebar
+            article
+                margin-left: offset(2)
+                .project-description
+                    text-align: right
+            .project
+                .media
+                    width: columns(10)
