@@ -3,7 +3,6 @@
 
 <ul class="pages pages--large">
   {{ range .pages }}
-  {{ .Params.path }}
     {{ range $index, $block := where .Params.contents "html_class" "block-class-questions" }}
       {{ with $block.data }}
         {{ $block_class := partial "blocks/helpers/GetClass" $block }}
