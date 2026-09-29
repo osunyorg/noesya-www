@@ -31,15 +31,28 @@
                                     height: 1px
                                     flex: 1
 
+    &--no_background
+        .block-content
+            padding-left: offset(2)
+
     &--accent_background
         .block-content
             @include h2
-            .chapter
-                display: block
-                .text
-                    width: 100% !important
+            .block-title
+                @include small
             a
                 @include  link
+
+            @include in-page-without-sidebar
+                .text
+                    align-items: baseline
+                    display: flex
+                    gap: var(--grid-gutter)
+                    width: 100%
+                    .top
+                        width: columns(2)
+                    .rich-text
+                        flex: 1
 
     // Notes
     .chapter

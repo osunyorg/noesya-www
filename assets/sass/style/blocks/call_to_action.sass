@@ -1,0 +1,49 @@
+
+.block-call_to_action    
+    &.block-class-image-as-background
+        .block-content
+            position: relative
+            overflow: hidden
+        .call_to_action
+            padding-bottom: 0
+            padding-top: 0
+            > div
+                position: relative
+                z-index: 2
+                .block-title
+                    @include h2
+                .description p
+                    @include body-text
+                .actions a
+                    @include small
+            figure
+                bottom: 0
+                left: 0
+                position: absolute
+                top: 0
+                right: 0
+                margin-bottom: 0
+                img, picture
+                    height: 100%
+                img
+                    object-fit: cover
+
+        @include in-page-without-sidebar
+            .block-content
+                padding-top: space(203)
+                padding-bottom: space(15)
+            .call_to_action
+                > div
+                    display: flex
+                    gap: var(--grid-gutter)
+                    grid-column: 1 / 13 
+                    justify-content: space-between
+                    position: relative
+                    z-index: 2
+
+        @include media-breakpoint-down(desktop)
+            .container
+                padding-left: 0
+                padding-right: 0
+                .block-content
+                    padding: space(50) var(--grid-gutter) space(15)
