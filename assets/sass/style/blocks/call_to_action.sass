@@ -48,10 +48,11 @@
                     position: relative
                     z-index: 2
 
-        .page__home &
-            .block-content
-                padding-top: space(203)
-                padding-bottom: space(15)
+        @include media-breakpoint-up(desktop)
+            .page__home &
+                .block-content
+                    padding-top: space(203)
+                    padding-bottom: space(15)
 
         @include media-breakpoint-down(desktop)
             .container
