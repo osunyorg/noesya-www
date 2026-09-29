@@ -15,6 +15,10 @@ for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
 Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
+from = "/metiers/applications/index.html"
+to = "/expertise/applications/"
+
+[[redirects]]
 from = "/references/conseil/index.html"
 to = "/projets/conseil/"
 
@@ -24,7 +28,7 @@ to = "/projets/2021-mmi-workshop/"
 
 [[redirects]]
 from = "/conseil/index.html"
-to = "/metiers/conseil/"
+to = "/expertise/conseil/"
 
 [[redirects]]
 from = "/references/2022-iut-bordeaux-montaigne/index.html"
@@ -33,6 +37,10 @@ to = "/projets/2022-iut-bordeaux-montaigne/"
 [[redirects]]
 from = "/metiers/index.html"
 to = "/expertise/"
+
+[[redirects]]
+from = "/metiers/sites/index.html"
+to = "/expertise/sites/"
 
 [[redirects]]
 from = "/metiers/applications/perennite-et-securite/index.html"
@@ -48,7 +56,7 @@ to = "/projets/2021-mmi-workshop/"
 
 [[redirects]]
 from = "/metiers-1/sites/index.html"
-to = "/metiers/sites/"
+to = "/expertise/sites/"
 
 [[redirects]]
 from = "/actualites/2026-09-22-arnaud-levy/index.html"
@@ -76,7 +84,7 @@ to = "/entretiens/2021-09-01-sebastien-gaya/"
 
 [[redirects]]
 from = "/formation/index.html"
-to = "/metiers/formation/"
+to = "/expertise/formation/"
 
 [[redirects]]
 from = "/organisations/categories/clients/index.html"
@@ -103,12 +111,16 @@ from = "/references/2021-osuny/index.html"
 to = "/projets/2021-osuny/"
 
 [[redirects]]
+from = "/metiers/conseil/index.html"
+to = "/expertise/conseil/"
+
+[[redirects]]
 from = "/references/2026-gaite-lyrique/index.html"
 to = "/projets/2026-gaite-lyrique/"
 
 [[redirects]]
 from = "/sites/index.html"
-to = "/metiers/sites/"
+to = "/expertise/sites/"
 
 [[redirects]]
 from = "/actualites/2026-09-22-pierre-andre-boissinot/index.html"
@@ -124,7 +136,7 @@ to = "/organisations/academie-des-beaux-arts/"
 
 [[redirects]]
 from = "/metiers-1/formation/index.html"
-to = "/metiers/formation/"
+to = "/expertise/formation/"
 
 [[redirects]]
 from = "/organisations/taltech/index.html"
@@ -164,11 +176,15 @@ to = "/projets/2023-referentiel-de-competences-mmi/"
 
 [[redirects]]
 from = "/metiers-1/applications/index.html"
-to = "/metiers/applications/"
+to = "/expertise/applications/"
 
 [[redirects]]
 from = "/organisations/mathieu-jahnich/index.html"
 to = "/organisations/mj-conseil/"
+
+[[redirects]]
+from = "/metiers/formation/index.html"
+to = "/expertise/formation/"
 
 [[redirects]]
 from = "/references/2025-rennes-ville-et-metropole/index.html"
@@ -196,7 +212,7 @@ to = "/projets/2023-ecosysteme-de-la-mode/"
 
 [[redirects]]
 from = "/metiers-1/conseil/index.html"
-to = "/metiers/conseil/"
+to = "/expertise/conseil/"
 
 [[redirects]]
 from = "/references/2025-observatoire-citoyen-de-la-publicite/index.html"
@@ -212,7 +228,7 @@ to = "/entretiens/2021-09-01-alexis-benoit/"
 
 [[redirects]]
 from = "/applications/index.html"
-to = "/metiers/applications/"
+to = "/expertise/applications/"
 
 [[redirects]]
 from = "/references/formation/index.html"
