@@ -9,6 +9,16 @@
     &.full-width
         // call to action
         .block-call_to_action--no_background
+            .block-content
+                padding-top: 0
+                padding-bottom: 0
+            .call_to_action
+                figure
+                    img
+                        border-radius: 100%
+                    figcaption
+                        display: none
+            
             .call_to_action--with-image
                 .actions
                     margin-top: 0
@@ -34,17 +44,19 @@
                     order: -1
                     width: columns(6)
 
-                @include media-breakpoint-down(desktop)
+            @include media-breakpoint-down(desktop)
+                .call_to_action--with-image
                     figure
                         margin-bottom: $spacing-1
-                        figcaption
-                            margin-top: space()
-                        .credit
-                            margin-left: unset
 
-                @include media-breakpoint-up(desktop)
-                    align-items: center
-                    display: flex
-                    gap: calc(var(--column-width) / 2)
-                    figure
-                        width: calc(#{offset(1)} + (var(--column-width) / 2))
+            @include media-breakpoint-up(desktop)
+                .call_to_action
+                    margin-left: offset(2)
+                    margin-right: offset(2)
+
+                    &--with-image
+                        align-items: center
+                        display: flex
+                        gap: calc(var(--column-width) / 2)
+                        figure
+                            width: calc(#{offset(1)} + (var(--column-width) / 2))
