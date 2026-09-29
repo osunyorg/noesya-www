@@ -12,7 +12,10 @@
 
 body:not(.persons__page, .projects__page)
     &.full-width
-        .block-testimonials
-            figure
-                margin-left: offset(2)
-                width: columns(8)
+        @include media-breakpoint-up(desktop)
+            .block-testimonials
+                blockquote
+                    @include h3
+                figure
+                    margin-left: offset(2)
+                    width: columns(8)
