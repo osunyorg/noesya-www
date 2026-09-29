@@ -1,5 +1,16 @@
+@mixin flex-text
+    align-items: baseline
+    display: flex
+    gap: var(--grid-gutter)
+    width: 100%
+    .top
+        width: columns(2)
+    .rich-text
+        flex: 1
+    
 .blocks
     counter-reset: note
+    counter-reset: expertise
 
 .block-chapter
     @include in-page-without-sidebar
@@ -14,8 +25,6 @@
                 .chapter
                     display: block
                     .text
-                        border-bottom: 1px solid var(--color-border)
-                        padding-bottom: $spacing-3
                         .top
                             margin-bottom: $spacing-2
                             overflow: hidden
@@ -45,14 +54,28 @@
 
             @include in-page-without-sidebar
                 .text
-                    align-items: baseline
-                    display: flex
-                    gap: var(--grid-gutter)
-                    width: 100%
-                    .top
-                        width: columns(2)
-                    .rich-text
-                        flex: 1
+                    @include flex-text
+    
+    .block-class-expertise &
+        .container
+            padding: 0
+
+        .top
+            &::before
+                content: counters(expertise, ".") ". "
+                counter-increment: expertise
+                font-size: space(32)
+                line-height: 1
+            h2
+                @include sr-only
+
+        @include in-page-without-sidebar
+            .text
+                @include flex-text
+                .top
+                    align-self: flex-start
+                .rich-text
+                    @include h3
 
     // Notes
     .chapter
