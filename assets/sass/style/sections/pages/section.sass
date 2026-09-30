@@ -62,18 +62,19 @@
 
 
 .ancestor-expertise
-    .block-chapter
-        &--no_background
-            .block-content
-                padding-left: offset(2)
+    @include media-breakpoint-up(desktop)
+        .block-chapter
+            &--no_background
+                .block-content
+                    padding-left: offset(2)
 
-        @include in-page-without-sidebar
             .chapter
                 .text
-                    width: columns(8)
+                    width: columns(8) !important
 
 .page-expertise,
 .ancestor-expertise
-    .block-title--classic
-        h2
-            padding-left: offset(2)
+    @include media-breakpoint-up(desktop)
+        .block-title--classic
+            h2
+                padding-left: offset(2)

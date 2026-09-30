@@ -7,13 +7,12 @@
         width: columns(2)
     .rich-text
         flex: 1
-    
+
 .blocks
     counter-reset: note
     counter-reset: expertise
 
 .block-chapter
-
     body:not(.projects__page) &
         &--alt_background
             .block-content
@@ -26,14 +25,12 @@
 
             @include media-breakpoint-up(desktop)
                 .text
-                    display: flex
-                    align-items: baseline
-                    gap: var(--grid-gutter)
+                    @include flex-text
                     width: columns(12) !important
-                    .top
-                        width: columns(2)
-                    .rich-text
-                        flex: 1
+
+            @include media-breakpoint-down(desktop)
+                .top
+                    margin-bottom: $spacing-3
 
     &--accent_background
         .block-content
@@ -46,6 +43,10 @@
             @include in-page-without-sidebar
                 .text
                     @include flex-text
+
+        @include media-breakpoint-down(desktop)
+            .top
+                margin-bottom: $spacing-3
     
     .block-class-expertise &
         .container
