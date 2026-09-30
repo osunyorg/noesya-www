@@ -1,3 +1,12 @@
-.block-title
+.block.block-title
     &.block-class-reset
         display: none
+        + .block
+            margin-top: var(--heading-margin-top)
+
+    &--collapsed
+        align-items: center
+        &[aria-expanded="false"]::after
+            border-bottom-color: var(--color-text) !important
+        &::before
+            font-size: pxToRem(61)
