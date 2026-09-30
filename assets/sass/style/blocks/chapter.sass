@@ -14,6 +14,27 @@
 
 .block-chapter
 
+    body:not(.projects__page) &
+        &--alt_background
+            .block-content
+                @include h3
+                .chapter
+                    display: block
+
+            .block-title
+                @include small
+
+            @include media-breakpoint-up(desktop)
+                .text
+                    display: flex
+                    align-items: baseline
+                    gap: var(--grid-gutter)
+                    width: columns(12) !important
+                    .top
+                        width: columns(2)
+                    .rich-text
+                        flex: 1
+
     &--accent_background
         .block-content
             @include h2
