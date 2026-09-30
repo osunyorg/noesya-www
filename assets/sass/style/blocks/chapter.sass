@@ -121,3 +121,8 @@
                     transition: transform 0.25s cubic-bezier(0.45, 0, 0.55, 1)
                     &.is-visible
                         transform: translateY(0%)
+
+        body.posts__page &
+            @include media-breakpoint-up(desktop)
+                .note__content
+                    width: columns(3)
