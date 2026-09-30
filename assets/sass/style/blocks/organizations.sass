@@ -7,6 +7,8 @@
                 @include small
                 .letter
                     @include h1
+                    font-size: pxToRem(80)
+                    margin-right: $spacing-1
             .organization
                 // TODO : cleanup with typo system
                 font-family: $body-font-family
@@ -16,19 +18,19 @@
     @include media-breakpoint-up(md)
         .alphabet-list
             > li
-                display: flex
-                gap: var(--grid-gutter)
-                > p 
+                > p
                     display: flex
                     gap: var(--grid-gutter)
                     width: columns(2)
+                    position: sticky
+                    top: pxToRem(100)
+                    margin-left: pxToRem(-10)
                     .letter
                         font-size: pxToRem(128)
                         width: columns(1)
-                        text-align: right
                 > ol
-                    flex-grow: 1
-                    margin-top: -0.72em
+                    padding-left: offset(2)
+                    margin-top: pxToRem(-95)
                 .organization
                     // TODO : cleanup with typo system
                     font-size: pxToRem(38)
