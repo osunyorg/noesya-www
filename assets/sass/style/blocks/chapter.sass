@@ -13,35 +13,6 @@
     counter-reset: expertise
 
 .block-chapter
-    @include in-page-without-sidebar
-        .chapter
-            .text
-                width: columns(8)
-
-    body:not(.projects__page) &
-        &--alt_background
-            .block-content
-                @include h3
-                .chapter
-                    display: block
-
-            .block-title
-                @include small
-
-            @include media-breakpoint-up(desktop)
-                .text
-                    display: flex
-                    align-items: baseline
-                    gap: var(--grid-gutter)
-                    width: columns(12) !important
-                    .top
-                        width: columns(2)
-                    .rich-text
-                        flex: 1
-
-    &--no_background
-        .block-content
-            padding-left: offset(2)
 
     &--accent_background
         .block-content

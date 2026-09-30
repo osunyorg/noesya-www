@@ -59,3 +59,42 @@
                         gap: calc(var(--column-width) / 2)
                         figure
                             width: calc(#{offset(1)} + (var(--column-width) / 2))
+
+
+.ancestor-expertise
+    .block-chapter
+        &--no_background
+            .block-content
+                padding-left: offset(2)
+
+        @include in-page-without-sidebar
+            .chapter
+                .text
+                    width: columns(8)
+
+.page-expertise,
+.ancestor-expertise
+    .block-title--classic
+        h2
+            padding-left: offset(2)
+
+    .block-chapter
+        &--alt_background
+            .block-content
+                @include h3
+                .chapter
+                    display: block
+
+            .block-title
+                @include small
+
+            @include media-breakpoint-up(desktop)
+                .text
+                    display: flex
+                    align-items: baseline
+                    gap: var(--grid-gutter)
+                    width: columns(12) !important
+                    .top
+                        width: columns(2)
+                    .rich-text
+                        flex: 1
