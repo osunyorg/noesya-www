@@ -1,5 +1,5 @@
-.posts__page // un peu dommage
-    .block-testimonials // TODO: j'ai appliqué le style des personnes à tous les témoignages, est-ce juste ?
+.posts__page
+    .block-testimonials
         .block-content
             .testimonial
                 border-bottom: 1px solid var(--color-border)
@@ -12,10 +12,16 @@
 
 body:not(.posts__page, .projects__page)
     &.full-width
+        .block-testimonials
+            blockquote
+                font-style: normal
+            .signature
+                @include h3
+
         @include media-breakpoint-up(desktop)
             .block-testimonials
-                blockquote
-                    @include h3
                 figure
                     margin-left: offset(2)
                     width: columns(8)
+                figcaption
+                    margin-top: space(11)
