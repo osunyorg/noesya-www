@@ -25,5 +25,6 @@
             h2
                 max-width: 100%
                 text-align: center
-            + .block
-                margin-top: space(20)
+            &:not(.block-class-alt-background)
+                + .block
+                    margin-top: space(20)

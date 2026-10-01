@@ -8,12 +8,11 @@
   {{ $items = $items | append (dict "path" .Path) }}
 {{ end }}
 
+<div class="container publications-link">
+  <a href="{{ $publications_page.Permalink }}">Voir toutes les publications</a>
+</div>
 {{ partial "blocks/templates/publications.html" (dict "block" (dict
   "top" $block.top
   "ranks" $block.ranks
   "data" (dict "publications" $items)
 )) }}
-
-<div class="container" class="publications-link">
-  <a href="{{ $publications_page.Permalink }}">Voir toutes les publications</a>
-</div>
