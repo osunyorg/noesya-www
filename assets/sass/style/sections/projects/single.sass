@@ -1,29 +1,30 @@
 // ANIMATIONS
-@keyframes nav-hover-in
-    0%
-        left: 0
-        right: auto
-        width: 0%
-    99%
-        left: 0
-        right: auto
-    100%
-        right: 0
-        left: auto
-        width: 100%
+// TODO: obsolete ?
+// @keyframes nav-hover-in
+//     0%
+//         left: 0
+//         right: auto
+//         width: 0%
+//     99%
+//         left: 0
+//         right: auto
+//     100%
+//         right: 0
+//         left: auto
+//         width: 100%
 
-@keyframes nav-hover-out
-    0%
-        right: 0
-        left: auto
-        width: 100%
-    99%
-        left: auto
-        right: 0
-    100%
-        left: 0
-        right: auto
-        width: 0%
+// @keyframes nav-hover-out
+//     0%
+//         right: 0
+//         left: auto
+//         width: 100%
+//     99%
+//         left: auto
+//         right: 0
+//     100%
+//         left: 0
+//         right: auto
+//         width: 0%
 
 // SINGLE
 body.projects__page
@@ -33,9 +34,9 @@ body.projects__page
     // HEADER
     header#document-header 
         a.logo
-            transition: color .3s ease, opacity .35s
+            transition: color $color-duration ease, opacity .35s
             img 
-                transition: filter .3s ease
+                transition: filter $color-duration ease
         &.revert
             color: white
             a.logo
@@ -47,7 +48,7 @@ body.projects__page
     // HERO
     .hero
         align-items: flex-end
-        color: var(--color-background)
+        color: $color-background // Force white text to avoid black text on image
         display: flex
         height: 75vh
         margin-bottom: 0
@@ -386,7 +387,7 @@ body.projects__page
                         background: var(--btn-background)
                         color: var(--btn-color)
                         padding: var(--btn-padding) !important
-                        transition: background 0.3s ease, border 0.3s ease, color 0.3s ease
+                        transition: background  $color-duration ease, border  $color-duration ease, color  $color-duration ease
                         &:hover,
                         &:focus-visible
                             background: var(--color-text)
@@ -448,9 +449,10 @@ body.projects__page
                         width: columns(4)
 
 // DARKMODE
-@media (prefers-color-scheme: dark)
-    body.projects__page
-        .hero
-            color: var(--color-text)
-            html.has-menu-opened &
-                --color-text: var(--color-background)
+// TODO : remove for simply push white color sass variable
+// @media (prefers-color-scheme: dark)
+//     body.projects__page
+//         .hero
+//             color: var(--color-text)
+//             html.has-menu-opened &
+//                 --color-text: var(--color-background)
