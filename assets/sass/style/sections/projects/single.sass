@@ -312,6 +312,15 @@ body.projects__page
                         p + p 
                             margin-top: $spacing-2
 
+        &.block-chapter--accent_background
+            .text
+                @include lead
+            @include media-breakpoint-up(desktop)
+                .chapter
+                    .text
+                        @include lead
+                        width: columns(10)
+
     // call to action (landscape image as background)
     .block-call_to_action
         .call_to_action
@@ -321,14 +330,14 @@ body.projects__page
                     @include icon(arrow-right-line, after)
                     --btn-border: none
                     --btn-hover-border: none
-                    font-family: $heading-font-family !important
-                    font-size: var(--meta-size) !important
-                    line-height: var(--meta-line-height) !important
+                    font-family: $body-font-family !important
+                    font-size: var(--small-size) !important
+                    line-height: var(--small-line-height) !important
                     margin: 0
                     &::after
                         margin-left: $spacing-2
-                        font-size: var(--meta-size)
-                        line-height: var(--meta-line-height)
+                        font-size: var(--small-size)
+                        line-height: var(--small-line-height)
             &--with-image
                 display: flex
                 justify-content: center
@@ -341,22 +350,25 @@ body.projects__page
                     top: 0
                     right: 0
                     margin-bottom: 0
+
         &--no_background
             margin-top: 0
             padding-bottom: 0
             padding-top: 0
             @include media-breakpoint-up(desktop)
-                margin-top: space(-30)
+                margin-top: space(-20)
             .block-content
                 padding-bottom: 0
                 padding-top: 0
                 .actions
                     a
+                        @include small
                         --btn-background: var(--color-background)
                         --btn-hover-background: var(--color-background)
                         --btn-color: var(--color-text)
                         --btn-hover-color: var(--color-text)
                         --btn-padding: 0
+
         &--accent_background
             overflow: hidden
             position: relative

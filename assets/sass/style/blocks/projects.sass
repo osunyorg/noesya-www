@@ -29,6 +29,14 @@
                 &-content
                     left: var(--grid-gutter)
 
+        @include media-breakpoint-up(desktop)
+            .project
+                .more
+                    opacity: 0
+                    transition: opacity $arrow-duration $arrow-ease-transition
+                &:hover .more
+                    opacity: 1
+
         @include in-page-without-sidebar
             article
                 margin-left: offset(2)
