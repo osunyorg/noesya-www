@@ -1,3 +1,9 @@
+@mixin disabled-page($child)
+    .pages
+        > li:nth-child(#{$child}) *
+            color: $color-disabled
+            pointer-events: none
+        
 .pages__section
     .hero
         hgroup.has-lead
@@ -76,6 +82,16 @@
         
         &:last-child
             margin-bottom: calc(-1 * #{$spacing-5})
+
+    .block-class-expertises-navigation
+        &.block-class-disable-1
+            @include disabled-page(1)
+        &.block-class-disable-2
+            @include disabled-page(2)
+        &.block-class-disable-3
+            @include disabled-page(3)
+        &.block-class-disable-4
+            @include disabled-page(4)
 
 
     @include media-breakpoint-up(desktop)
