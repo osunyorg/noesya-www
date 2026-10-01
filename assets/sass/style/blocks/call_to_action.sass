@@ -1,8 +1,7 @@
 
 .block-call_to_action    
     &.block-class-image-as-background
-        .block-content
-            position: relative
+        position: relative
         .call_to_action
             padding-bottom: 0
             padding-top: 0
@@ -42,6 +41,10 @@
             .call_to_action
                 color: var(--color-text) !important
 
+        &.block-class-large
+            .block-content
+                position: relative
+
         @include in-page-without-sidebar
             background-color: transparent
             .block-content
@@ -58,7 +61,7 @@
                     z-index: 2
 
         @include media-breakpoint-up(desktop)
-            .page__home &
+            &.block-class-large
                 .block-content
                     padding-top: space(203)
                     padding-bottom: space(15)
