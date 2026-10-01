@@ -28,3 +28,9 @@
             &:not(.block-class-alt-background)
                 + .block
                     margin-top: space(20)
+
+    &.block-class-left-title
+        @include media-breakpoint-up(desktop)
+            h2
+                position: absolute
+                width: columns(4)

@@ -6,12 +6,16 @@
                 font-style: italic
 
     &.block-class-manifesto
+        .feature
+            .name,
+            .feature-description
+                @include h3
+            .name
+                color: var(--color-text-alt)
+
         @include media-breakpoint-up(desktop)
+            padding-top: pxToRem(15)
             .features
-                grid-template-columns: repeat(2, 1fr) !important
-                row-gap: pxToRem(100) !important
-                .feature
-                    .name
-                        font-size: pxToRem(30)
-                    .feature-description
-                        margin-top: space(8)
+                grid-template-columns: repeat(1, 1fr) !important
+                row-gap: $spacing-5 !important
+                padding-left: offset(4)
