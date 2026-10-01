@@ -44,3 +44,10 @@
                 margin-left: offset(2)
                 .project
                     width: columns(8)
+
+@media (prefers-color-scheme: dark)
+    .block-projects--large
+        .project-content
+            .project-description,
+            .project-title
+                color: var(--color-text)

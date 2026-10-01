@@ -38,6 +38,10 @@
                 img
                     object-fit: cover
 
+        html.has-menu-opened &
+            .call_to_action
+                color: var(--color-text) !important
+
         @include in-page-without-sidebar
             background-color: transparent
             .block-content
@@ -65,3 +69,13 @@
                 padding-right: 0
                 .block-content
                     padding: space(50) var(--grid-gutter) space(15)
+
+@media (prefers-color-scheme: dark)
+    .block-call_to_action.block-class-image-as-background
+        .call_to_action
+            color: var(--color-text)
+            .actions
+                a:first-child
+                    --btn-color: var(--color-background)
+                    --btn-background: var(--color-text)
+                    --btn-border: var(--border-width) solid var(--color-text)
