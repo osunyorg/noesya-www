@@ -1,4 +1,6 @@
 .organizations--list
+    > li:where(:not(last-child))
+        border-color: var(--color-text)
     @include media-breakpoint-down(desktop)
         > li
             padding-bottom: var(--grid-gutter)
