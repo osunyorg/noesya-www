@@ -15,6 +15,15 @@
             &::before
                 font-size: pxToRem(61)
 
-.block.block-class-small-title
-    .block-title
-        @include small
+.block
+    &.block-class-small-title
+        .block-title
+            @include small
+
+    &.block-class-centered
+        @include in-page-without-sidebar
+            h2
+                max-width: 100%
+                text-align: center
+            + .block
+                margin-top: space(20)

@@ -20,20 +20,12 @@
     .pages--grid
         .page-title
             @include h4
-            a
-                display: flex
-                align-items: center
-                text-decoration: underline
-                text-decoration-thickness: 0.5px
-                &::after
-                    overflow: hidden
-                    margin-left: $spacing-1
 
         @include media-breakpoint-down(desktop)
             > li + li
                 margin-top: $spacing-3
-            .page
-                margin-left: offset(2)
+            // .page
+            //     margin-left: offset(2)
             .page-title
                 font-size: pxToRem(22)
                 a::before

@@ -46,5 +46,18 @@
     &,
     &.full-width
         .pages--grid
-            @include media-breakpoint-up(xxl)
+            @include media-breakpoint-up(xl)
                 @include grid(4)
+            
+            @include media-breakpoint-up(desktop)
+                .page
+                    @include icon(arrow-right-line, after)
+                    @include hover-translate-icon
+                    height: 100%
+                    text-align: center
+                    &-title
+                        a::after
+                            content: none !important
+                    &-description
+                        margin-bottom: space(6)
+                        flex: 1
