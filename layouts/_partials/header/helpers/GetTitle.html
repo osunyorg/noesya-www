@@ -4,7 +4,6 @@
   {{ $title = printf "%s <span>%s</span>" $title . }}
 {{ end }}
 
-{{ $title = replace $title "[" "<sup>" }}
-{{ $title = replace $title "]" "</sup>" }}
+{{ $title = $title | markdownify }}
 
 {{ return $title }}
