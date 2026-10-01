@@ -99,6 +99,35 @@
             &.block-pages
                 padding-bottom: space(33)
 
+.page-expertise
+    .block-class-questions
+        .top
+            &::before
+                @include large-number-or-letter
+                content: counters(expertise, ".") ". "
+                counter-increment: expertise
+            h2
+                @include sr-only
+
+        .call_to_action
+            @include h4
+            margin-top: $spacing-2
+            a
+                @include icon(arrow-right-line, after)
+                @include hover-translate-icon
+        
+        @include media-breakpoint-up(desktop)
+            .text
+                @include flex-text
+                .top
+                    align-self: flex-start
+                .rich-text
+                    @include lead
+
+            .call_to_action
+                margin-top: space(15)
+                margin-left: offset(2)
+
 .page-expertise,
 .ancestor-expertise
     @include media-breakpoint-up(desktop)

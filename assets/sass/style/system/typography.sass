@@ -1,4 +1,12 @@
+@mixin large-number-or-letter
+    font-size: $letter-size-desktop
+    line-height: $letter-line-height-desktop
+    font-family: $heading-font-family
+
 .block
     p
         a
             text-decoration-color: inherit
+
+    .block-title
+        @include h3

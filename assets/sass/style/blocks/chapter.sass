@@ -1,13 +1,3 @@
-@mixin flex-text
-    align-items: baseline
-    display: flex
-    gap: var(--grid-gutter)
-    width: 100%
-    .top
-        width: columns(2)
-    .rich-text
-        flex: 1
-
 .blocks
     counter-reset: note
     counter-reset: expertise
@@ -16,7 +6,7 @@
     body:not(.projects__page) &
         &--alt_background
             .block-content
-                @include h3
+                @include lead
                 .chapter
                     display: block
 
@@ -47,27 +37,6 @@
         @include media-breakpoint-down(desktop)
             .top
                 margin-bottom: $spacing-3
-    
-    .block-class-expertise &
-        .container
-            padding: 0
-
-        .top
-            &::before
-                content: counters(expertise, ".") ". "
-                counter-increment: expertise
-                font-size: space(32)
-                line-height: 1
-            h2
-                @include sr-only
-
-        @include in-page-without-sidebar
-            .text
-                @include flex-text
-                .top
-                    align-self: flex-start
-                .rich-text
-                    @include h3
 
     // Notes
     .chapter
@@ -126,3 +95,9 @@
             @include media-breakpoint-up(desktop)
                 .note__content
                     width: columns(3)
+
+// cas des notes dans les blocs encapsulés dans un titre
+.collapse .block-chapter
+    @include media-breakpoint-up(desktop)
+        .note__content
+            width: columns(3)
