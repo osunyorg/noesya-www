@@ -1,9 +1,8 @@
 
 .block-call_to_action    
     &.block-class-image-as-background
-        position: relative
-        overflow: hidden
         .block-content
+            position: relative
         .call_to_action
             padding-bottom: 0
             padding-top: 0
@@ -40,6 +39,11 @@
                     object-fit: cover
 
         @include in-page-without-sidebar
+            background-color: transparent
+            .block-content
+                margin: 0
+                overflow: hidden
+
             .call_to_action
                 > div
                     display: flex
