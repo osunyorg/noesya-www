@@ -37,3 +37,21 @@
             .page-title + .page-description
                 @include small
                 margin-top: space(4)
+
+    &.block-class-expertises-navigation
+        .pages
+            @include in-page-without-sidebar
+                .page
+                    @include icon(arrow-right-line, after)
+                    @include hover-translate-icon
+                    height: 100%
+                    text-align: center
+                    &-title
+                        a::after
+                            content: none !important
+                    &-description
+                        margin-bottom: space(6)
+                        flex: 1
+
+                @include media-breakpoint-up(xl)
+                    @include grid(4)
