@@ -8,7 +8,7 @@ window.osuny.Note = function (element) {
     this.chapter = this.note.closest('.chapter');
 
     // Set current text index before note content
-    this.content.innerHTML = "<span class='note__index'>" + this.call.innerText + "." + "</span>" + this.content.innerHTML;
+    this.content.innerHTML = "<span class='note__index'>" + this.call.innerText + "." + "</span><span>" + this.content.innerHTML + "</span>";
 
     window.addEventListener('resize', this.update.bind(this));
     window.addEventListener('load', this.update.bind(this));
