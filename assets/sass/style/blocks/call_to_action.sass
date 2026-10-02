@@ -4,6 +4,8 @@
         a[target="_blank"]:not(.icon)
             @include icon(arrow-right-line, after, true)
             @include hover-translate-icon
+            &::after
+                margin-left: space()
 
     &.block-class-image-as-background
         position: relative
