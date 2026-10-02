@@ -14,7 +14,7 @@
               <div class="block-content">
                 <div class="chapter">
                   <div class="text">
-                    {{ partial "blocks/top.html" $block.top }}
+                    {{ partial "blocks/top.html" (dict "active" true) }}
                     {{ partial "blocks/templates/chapter/text.html" . }}
                   </div>
                   <div class="call_to_action">
