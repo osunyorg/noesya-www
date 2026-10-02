@@ -49,11 +49,10 @@
                 &:hover
                     color: inherit
             &__content
-                display: block
-                padding-left: 1em
+                display: flex
+                gap: 0.2em
                 .note__index
-                    position: absolute
-                    left: 0
+                    min-width: 0.8em
                 &, a
                     color: var(--color-text)
             &--active
@@ -69,6 +68,7 @@
                     right: 0
                     left: auto
                     padding-bottom: 0
+                    padding-left: 0
                     padding-right: 0
                     padding-top: 0.4em
                     width: columns(2)
