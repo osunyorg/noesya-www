@@ -67,6 +67,14 @@
                 .project-meta
                     margin-top: $spacing-2
 
+    &--grid
+        .project
+            time
+                color: var(--color-text)
+            .media
+                margin-bottom: pxToRem(14)
+        @include media-breakpoint-up(desktop)
+            row-gap: space(15)
 
 .projects__section
     .hero
