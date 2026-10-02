@@ -1,6 +1,6 @@
 .blocks
     counter-reset: note
-    counter-reset: expertise
+    // counter-reset: expertise // TODO : oups ça casse les notes ça
 
 .block-chapter
     body:not(.projects__page) &
@@ -29,7 +29,7 @@
             .block-title
                 @include small
             a
-                @include  link
+                @include link
 
             @include in-page-without-sidebar
                 .text
