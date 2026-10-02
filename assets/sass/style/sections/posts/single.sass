@@ -120,35 +120,41 @@
             figure
                 picture
                     img
+                        transition: filter $color-duration
                         filter: grayscale(1)
                 &:hover
                     img
                         filter: grayscale(0)
             @include media-breakpoint-up(desktop)
+
                 figure
                     margin-left: offset(4)
-                    display: flex
+                    flex-direction: column
                     picture
                         margin: 0
                         margin-right: auto
-                    picture,
-                    img
+                    // figcaption
+                    //     align-items: flex-end
+                    //     display: flex
+                    //     gap: $spacing-2
+                    //     justify-content: flex-start
+                    //     margin-left: var(--grid-gutter)
+                    //     margin-top: 0
+                    //     text-align: left
+                    //     text-orientation: mixed
+                    //     width: columns(1) !important
+                    //     writing-mode: sideways-lr
+                    //     p
+                    //         margin: 0
+                    //     *
+                    //         flex: unset
+                    &.image-portrait
                         width: columns(7)
-                    figcaption
-                        align-items: flex-end
-                        display: flex
-                        gap: $spacing-2
-                        justify-content: flex-start
-                        margin-left: var(--grid-gutter)
-                        margin-top: 0
-                        text-align: left
-                        text-orientation: mixed
-                        width: columns(1) !important
-                        writing-mode: sideways-lr
-                        p
-                            margin: 0
-                        *
-                            flex: unset
+
+                    &.image-landscape
+                        width: columns(8)
+
+
         // galeries
         .block-gallery
             figure
