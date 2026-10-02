@@ -5,11 +5,14 @@
             .feature-description
                 @include lead
             .name
-                color: var(--color-text-alt)
+                color: $color-title-alt
+            .feature-description
+                margin-top: 0
 
         @include media-breakpoint-up(desktop)
+            margin-bottom: space(45)
             padding-top: pxToRem(15)
             .features
                 grid-template-columns: repeat(1, 1fr) !important
-                row-gap: $spacing-5 !important
                 padding-left: offset(4)
+                row-gap: $spacing-5 !important
