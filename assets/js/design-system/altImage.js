@@ -1,7 +1,7 @@
 class AltImage {
     constructor (selector) {
         this.element = document.querySelector(selector);
-        
+
         if (!this.element) {
             return;
         }
