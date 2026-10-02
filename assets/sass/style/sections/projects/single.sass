@@ -76,7 +76,7 @@ body.projects__page
                     @include sr-only
 
             .hero-text
-                margin: $spacing-5 0
+                margin: 0 0 space(2)
                 position: relative
                 width: 100%
                 z-index: 2
@@ -132,9 +132,9 @@ body.projects__page
                         aspect-ratio: unset
 
         @include media-breakpoint-up(desktop)
-
+            margin-top: $spacing-3
             > .container > .block-content
-                padding-bottom: var(--grid-gutter)
+                padding-bottom: $spacing-3
                 .top
                     margin-bottom: 0
 
@@ -168,22 +168,18 @@ body.projects__page
                             max-width: space(25)
 
     // BLOCKS
-    // titles
-    .block        
+    .blocks 
         @include media-breakpoint-up(desktop)
-            .top
-                margin-bottom: $spacing-6
+            > .block:not(.block-call_to_action)
+                padding-top: space(26)
+                padding-bottom: space(26)
+                .top
+                    margin-bottom: $spacing-6
 
-    .block:not(.block-chapter--no_background) // no_bg chapter has h2 style
-        .block-title
-            @include h3
-            font-family: $body-font-family
-            font-style: italic
-            text-transform: initial
-
-    .block-organizations,
+    //persons
     .block-persons
         .block-title
+            @include h2
             text-align: center
 
     // features
@@ -192,11 +188,6 @@ body.projects__page
             ul 
                 li
                     max-width: columns(9)
-    
-    @include media-breakpoint-up(desktop)
-        .block
-            padding-top: space(26)
-            padding-bottom: space(26)
 
     // gallery & image
     .block-image,
@@ -276,8 +267,18 @@ body.projects__page
                 column-gap: var(--grid-gutter)
                 display: flex
                 flex-wrap: wrap
-                justify-content: center
                 row-gap: half(var(--grid-gutter))
+            .organization
+                width: unset
+                .media
+                    margin-bottom: 0
+                    padding: 0
+                    picture
+                        aspect-ratio: unset
+                    img
+                        height: pxToRem(68)
+                        width: auto
+                        object-fit: none
 
     // chapter
     .block-chapter
@@ -288,6 +289,7 @@ body.projects__page
             @include media-breakpoint-up(desktop)
                 &.block-titled
                     .chapter
+                        padding-top: 0
                         .text
                             align-items: baseline
                             display: flex
@@ -301,17 +303,8 @@ body.projects__page
         &.block-chapter--alt_background
             @include media-breakpoint-up(desktop)
                 .chapter
-                    .text
-                        text-align: center
-                        width: 100%
-                        &,
-                        .top, 
-                        .rich-text
-                            width: 100%
-                        .top
-                            margin-bottom: $spacing-6
-                        p + p 
-                            margin-top: $spacing-2
+                    p + p 
+                        margin-top: $spacing-2
 
         &.block-chapter--accent_background
             .text
@@ -447,6 +440,25 @@ body.projects__page
                     width: fit-content !important
                     p
                         width: columns(4)
+
+    .collapse
+        .block
+            .block-title
+                @include h3
+
+        .block-chapter
+            padding-top: 0 !important
+            .text
+                flex-direction: column
+                gap: 0 !important
+
+            @include media-breakpoint-up(desktop)
+                &:first-child
+                    margin-top: 0 !important
+                .top
+                    margin-bottom: space(8)
+                .rich-text
+                    width: columns(8)
 
 // DARKMODE
 // TODO : remove for simply push white color sass variable
