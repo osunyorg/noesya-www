@@ -6,9 +6,14 @@ window.osuny.Note = function (element) {
     OriginalNote.call(this, element);
 
     this.chapter = this.note.closest('.chapter');
+
+    // Set current text index before note content
+    this.content.innerHTML = this.call.innerText + ". " + this.content.innerHTML;
+
     window.addEventListener('resize', this.update.bind(this));
     window.addEventListener('load', this.update.bind(this));
     window.addEventListener('scroll', this.update.bind(this));
+    
     this.update();
 };
 
@@ -63,8 +68,7 @@ window.osuny.Note.prototype.avoidOverlapNotes = function () {
     notes.forEach(function (note) {
         if (isAfter) return;
 
-        var noteContent = note.querySelector('.note__content'),
-            noteCall = note.querySelector('.note__call');
+        var noteContent = note.querySelector('.note__content');
 
         if (noteContent === this.content) {
             isAfter = true;

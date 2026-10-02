@@ -1,7 +1,3 @@
-.blocks
-    counter-reset: note
-    // counter-reset: expertise // TODO : oups ça casse les notes ça
-
 .block-chapter
     body:not(.projects__page) &
         &--alt_background
@@ -54,9 +50,6 @@
                     color: inherit
             &__content
                 display: block
-                &::before
-                    content: counters(note, ".") ". "
-                    counter-increment: note
                 &, a
                     color: var(--color-text)
             &--active

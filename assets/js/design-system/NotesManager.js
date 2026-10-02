@@ -4,6 +4,8 @@ window.osuny.NotesManager = function () {
     this.notes = window.osuny.page.getComponents('Note');
     window.addEventListener('scroll', this.update.bind(this));
     this.update();
+
+    // this.setIndex();
 }; 
 
 window.osuny.NotesManager.prototype.update = function () {
@@ -18,6 +20,12 @@ window.osuny.NotesManager.prototype.update = function () {
         }
     }
 };
+
+// window.osuny.NotesManager.prototype.setIndex = function () {
+//     this.notes.forEach(function (note, index) {
+//         note.content.innerHTML = index + ". " + note.content.innerHTML;
+//     });
+// };
 
 window.osuny.page.registerComponent({
     name: 'NotesManager',
