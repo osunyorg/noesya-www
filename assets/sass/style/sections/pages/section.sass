@@ -28,7 +28,6 @@
                 .actions
                     margin-top: 0
                     a
-                        @include link
                         --btn-min-width: unset
                         --btn-padding: 0
                         --btn-background: none
@@ -42,9 +41,12 @@
                         &::after
                                 display: inline-block
                                 overflow: hidden
-                .description p,
+                .description p
+                    @include h3
                 .actions a
                     @include body-text
+                    &::after
+                        margin-left: space()
                 figure
                     order: -1
                     width: columns(6)
