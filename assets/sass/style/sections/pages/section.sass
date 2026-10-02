@@ -1,3 +1,8 @@
+.pages
+    &--grid
+        @include in-page-without-sidebar
+            grid-template-columns: repeat(2, 1fr)
+
 @mixin disabled-page($child)
     .pages
         > li:nth-child(#{$child}) *
@@ -142,7 +147,7 @@
             @include h4
             margin-top: $spacing-2
             a
-                @include icon(arrow-right-line, after)
+                @include icon(arrow-right-line, after, true)
                 @include hover-translate-icon
         
         @include media-breakpoint-up(desktop)
