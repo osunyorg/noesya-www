@@ -7,17 +7,26 @@ window.noesya.Reveal = function (element) {
 }; 
 
 window.noesya.Reveal.prototype.init = function () {
-  const observer = new IntersectionObserver(this.show.bind(this));
-  observer.observe(this.element);
+  const observer = new IntersectionObserver(this.show.bind(this), {
+    rootMargin: "0px 0px -20% 0px"
+  });
+  this.element.querySelectorAll('p, .name').forEach(function (element) {
+    observer.observe(element);
+  });
 };
 
-window.noesya.Reveal.prototype.show = function () {
-  console.log('show');
-  this.element.classList.add('is-revealed');
+window.noesya.Reveal.prototype.show = function (entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-revealed');
+    } else {
+      // entry.target.classList.remove('is-revealed');
+    }
+  });
 };
 
 window.osuny.page.registerComponent({
     name: 'Reveal',
-    selector: '.block-class-reveal, .block-class-manifesto',
+    selector: '.block-class-reveal',
     klass: window.noesya.Reveal
 });
