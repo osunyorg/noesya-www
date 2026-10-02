@@ -129,6 +129,7 @@
         counter-reset: expertise
 
     .block-class-questions
+        padding-bottom: 0 !important
         .top
             &::before
                 @include large-number-or-letter
@@ -155,6 +156,11 @@
             .call_to_action
                 margin-top: space(15)
                 margin-left: offset(2)
+                width: columns(5)
+                a
+                    @include button-accent
+                    --btn-padding: #{$spacing-2} #{pxToRem(30)}
+                    margin-top: space(8)
 
 .page-expertise,
 .ancestor-expertise

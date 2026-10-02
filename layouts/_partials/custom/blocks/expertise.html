@@ -18,7 +18,8 @@
                     {{ partial "blocks/templates/chapter/text.html" . }}
                   </div>
                   <div class="call_to_action">
-                    <a href="{{ $page.Permalink }}">En savoir plus</a>
+                    {{ $page.Params.summary | safeHTML }}
+                    <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
                   </div>
                 </div>
               </div>
