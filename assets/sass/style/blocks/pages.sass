@@ -59,3 +59,8 @@
                     .page-description
                         padding-left: $spacing-2
                         padding-right: $spacing-2
+
+        @include media-breakpoint-up(desktop)
+            &:last-child
+                body.page__home &
+                    margin-bottom: space(41)
