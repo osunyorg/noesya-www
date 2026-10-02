@@ -151,6 +151,9 @@
             a
                 @include icon(arrow-right-line, after, true)
                 @include hover-translate-icon
+                &::after
+                    margin-left: space()
+                    vertical-align: middle
         
         @include media-breakpoint-up(desktop)
             .text
