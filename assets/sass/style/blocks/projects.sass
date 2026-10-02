@@ -1,12 +1,18 @@
 .block-projects
     &--large
         .project
+            position: relative
             &-content
+                bottom: 0
                 position: absolute
-                right: space(10)
-                top: 50%
-                transform: translateY(-50%)
-                width: unset
+                display: flex
+                align-items: center
+                left: 0
+                padding: space(10)
+                right: 0
+                top: 0
+                width: unset !important
+                z-index: 3
             &-description
                 color: var(--color-background)
                 a
