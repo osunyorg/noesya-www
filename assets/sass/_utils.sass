@@ -1,9 +1,14 @@
 @mixin flex-text
     align-items: baseline
     display: flex
+    flex-wrap: wrap
     gap: var(--grid-gutter)
     width: 100%
     .top
         width: columns(2)
-    .rich-text
+    .rich-text:not(.notes)
         flex: 1
+    .notes
+        margin-left: offset(2)
+        width: 100%
+    
