@@ -7,11 +7,22 @@
                 p
                     margin: 0
             .name
-                color: var(--color-text-alt)
+                color: $color-title-alt
+            .feature-description
+                margin-top: 0
+        &.block-class-reveal
+            .name, p
+                opacity: 0
+                // transform: translateY(0.5em)
+                transition: 0.9s ease
+                &.is-revealed
+                    opacity: 1
+                    // transform: translateY(0)
 
         @include media-breakpoint-up(desktop)
+            margin-bottom: space(45)
             padding-top: pxToRem(15)
             .features
                 grid-template-columns: repeat(1, 1fr) !important
-                row-gap: $spacing-5 !important
                 padding-left: offset(4)
+                row-gap: $spacing-5 !important
