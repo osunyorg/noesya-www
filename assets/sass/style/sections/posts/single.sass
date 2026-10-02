@@ -128,23 +128,27 @@
             @include media-breakpoint-up(desktop)
                 figure
                     margin-left: offset(4)
+                    display: flex
                     picture 
                         margin: 0
-                    &.image-portrait
-                        picture img
-                            width: columns(7)
-                        figcaption
-                            display: flex
-                            align-items: flex-end
-                            text-align: left
-                            margin-left: space(5)
-                            text-orientation: mixed
-                            writing-mode: sideways-lr
-                            width: columns(1)
-                            margin-left: var(--grid-gutter)
-                            p
-                                margin: 0
-
+                    picture,
+                    img
+                        width: columns(7)
+                    figcaption
+                        align-items: flex-end
+                        display: flex
+                        gap: $spacing-2
+                        justify-content: flex-start
+                        margin-left: var(--grid-gutter)
+                        margin-top: 0
+                        text-align: left
+                        text-orientation: mixed
+                        width: columns(1) !important
+                        writing-mode: sideways-lr
+                        p
+                            margin: 0
+                        *
+                            flex: unset
         // galeries
         .block-gallery
             figure
