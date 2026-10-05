@@ -237,6 +237,7 @@ body.projects__page
     .block-organizations
         .media
             background: none
+
         .organizations
             .organization
                 width: columns(6)
@@ -260,14 +261,21 @@ body.projects__page
                     picture
                         aspect-ratio: unset
                     img
+                        filter: grayscale(1)
                         height: pxToRem(68)
+                        object-fit: contain 
+                        transition: filter $color-duration
                         width: auto
-                        object-fit: none
-            @include media-breakpoint-up(desktop)
+                        max-width: 170px
+
+                &:hover img
+                    filter: grayscale(0)
+
+            @include media-breakpoint-down(desktop)
                 .organization
                     .media
                         img
-                            object-fit: cover !important
+                            max-width: columns(4)
 
     // chapter
     .block-chapter
