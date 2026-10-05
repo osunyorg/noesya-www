@@ -74,4 +74,5 @@ params:
         tablet:   1024
         desktop:  1920
       image:
+        mobile: 750
         desktop: 1000

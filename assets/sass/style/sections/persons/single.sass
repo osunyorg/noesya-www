@@ -17,3 +17,11 @@ body.persons__page
             &.hero--with-image
                 figure
                     width: 100%
+
+.persons
+    &--grid
+        @include media-breakpoint-down(desktop)
+            .person
+                align-items: center
+                .avatar
+                    order: -1
