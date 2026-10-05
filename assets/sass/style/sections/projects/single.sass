@@ -74,11 +74,13 @@ body.projects__page
                         line-height: $post-date-line-height
         
         @include media-breakpoint-down(desktop)
-            .hero-text
-                gap: $spacing-2
-                .projects-meta
-                    .year
-                        @include body-text
+            .content
+                .hero-text
+                    gap: $spacing-2
+                    margin-bottom: space(4)
+                    .projects-meta
+                        .year
+                            @include body-text
 
     // SUMMARY
     .block.block-summary
@@ -109,7 +111,6 @@ body.projects__page
                 padding-bottom: $spacing-3
                 .top
                     margin-bottom: 0
-
             .block-content
                 align-items: baseline
                 display: flex
@@ -134,9 +135,17 @@ body.projects__page
             &, .block
                 margin-bottom: var(--grid-gutter)
             .hero-block-organization
+                .block-content
+                    align-items: baseline
+                    display: flex
+                    justify-content: space-between
+                    gap: var(--grid-gutter)
+                .organizations--grid
+                    grid-template-columns: repeat(1, 1fr)
                 .organization
                     .media
                         img
+                            margin-left: auto
                             max-width: space(25)
 
     // BLOCKS
