@@ -62,6 +62,19 @@ body.projects__page
                             margin-left: offset(6)
 
 .projects_page,
-.ancestor-experience
+.ancestor-experience,
+.publications__page
     main
         padding-bottom: 0 !important
+
+.publications__page
+    .siblings-container
+        padding: 0
+        .block-siblings-navigation
+            margin-top: var(--block-space-y) !important
+            padding-left: var(--grid-gutter)
+            padding-right: var(--grid-gutter)
+            ul
+                li
+                    a, span
+                        @include h3
