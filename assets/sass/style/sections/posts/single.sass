@@ -21,6 +21,8 @@
             .feature
                 &-description
                     margin-top: 0
+                + .feature
+                    margin-top: space(8)
 
             @include media-breakpoint-down(desktop)
                 .feature
@@ -30,8 +32,6 @@
                     &:not(:last-child) // exclude certifications paragraph
                         p
                             margin-bottom: space(8)
-                    + .feature
-                        margin-top: space(8)
 
             @include media-breakpoint-up(desktop)
                 .top
