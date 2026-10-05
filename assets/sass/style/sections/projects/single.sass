@@ -142,7 +142,7 @@ body.projects__page
     // BLOCKS
     .blocks 
         @include media-breakpoint-up(desktop)
-            > .block:not(.block-call_to_action)
+            > .block:not(.block-call_to_action, .block-gallery, .block-image)
                 padding-top: space(26)
                 padding-bottom: space(26)
                 .top
@@ -214,11 +214,15 @@ body.projects__page
 
     .block-gallery + .block-image,
     .block-image + .block-gallery
-        margin-top: 0
-        padding-top: 0
+        margin-top: var(--grid-gutter)
+        padding-top: var(--grid-gutter)
 
         @include media-breakpoint-up(desktop)
-            margin-top: calc(-1 * (var(--block-space-y) + #{space(13)}))
+            margin-top: calc(-1 * var(--block-space-y))
+
+        @include media-breakpoint-down(desktop)
+            padding-top: 0
+            margin-top: calc(-1 * calc(var(--block-space-y) / 2))
 
     // organizations
     .block-organizations
