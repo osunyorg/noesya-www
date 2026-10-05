@@ -7,7 +7,6 @@ body.projects__page
         padding-bottom: 0
         padding-top: 0
         position: relative
-        margin-bottom: -2px
         ul
             padding: 0
         .siblings-navigation
@@ -78,3 +77,8 @@ body.projects__page
                 li
                     a, span
                         @include h3
+
+body:not(.projects__page)
+    .siblings-container
+        margin: 0
+        width: unset
