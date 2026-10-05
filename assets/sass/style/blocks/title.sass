@@ -16,6 +16,13 @@
             &::before
                 font-size: pxToRem(61)
 
+        @include media-breakpoint-down(desktop)
+            + .collapse
+                margin-top: space(8)
+                .chapter
+                    .top
+                        margin-bottom: space(5)
+
 .block
     &.block-class-small-title
         .block-title
