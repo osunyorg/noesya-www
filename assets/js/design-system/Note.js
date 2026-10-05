@@ -63,17 +63,20 @@ window.osuny.Note.prototype.avoidOverlapTitle = function () {
 
 window.osuny.Note.prototype.avoidOverlapNotes = function () {
     var notes = this.chapter.querySelectorAll('.note'),
+        noteContent = null,
+        noteBottom = 0,
         isAfter = false;
 
     notes.forEach(function (note) {
         if (isAfter) return;
 
-        var noteContent = note.querySelector('.note__content');
+        noteContent = note.querySelector('.note__content');
+        noteBottom = noteContent.offsetTop + noteContent.offsetHeight;
 
         if (noteContent === this.content) {
             isAfter = true;
-        } else {
-            this.minTop = Math.max(this.minTop, noteContent.offsetTop + noteContent.offsetHeight);
+        } else if (noteBottom > this.minTop) {
+            this.minTop = noteBottom + 16; // Add 20px space between note if overlaping
         }
 
     }.bind(this));

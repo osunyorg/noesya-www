@@ -8,6 +8,19 @@ html
         *
             transition: color $color-duration ease, background $color-duration ease // Fix weird various animation duration
 
+.rich-text
+    a[target="_blank"]:not(.icon)
+        @include icon(external-link-line, after)
+            content: "↗" // TODO replace with icomoon font
+            font-family: $heading-font-family
+            display: inline
+            vertical-align: middle
+            opacity: 0.75
+            font-size: Max(10px, 0.4em)
+        &:hover
+            &::after
+                // vertical-align: super
+                opacity: 1
 
 // Link animation
 // Not used from now but interesting

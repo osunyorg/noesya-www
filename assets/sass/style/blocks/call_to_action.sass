@@ -53,15 +53,19 @@
         &.block-class-large
             .block-content
                 position: relative
+                @include media-breakpoint-up(desktop)
+                    padding-top: space(203)
+                    padding-bottom: space(15)
 
         @include in-page-without-sidebar
             background-color: transparent
+            &:not(.block-class-large)
+                .block-content
+                    padding-left: 0
+                    padding-right: 0
             .block-content
                 margin: 0
                 overflow: hidden
-                padding-left: 0
-                padding-right: 0
-
             .call_to_action
                 > div
                     align-items: flex-end
@@ -75,12 +79,6 @@
                     a:first-child
                         margin-right: 0
                         margin-top: 0
-
-        @include media-breakpoint-up(desktop)
-            &.block-class-large
-                .block-content
-                    padding-top: space(203)
-                    padding-bottom: space(15)
 
         @include media-breakpoint-down(desktop)
             margin-left: var(--grid-gutter)
