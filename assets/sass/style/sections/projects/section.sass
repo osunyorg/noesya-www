@@ -82,6 +82,12 @@
         @include media-breakpoint-up(desktop)
             row-gap: space(15)
 
+        @include media-breakpoint-down(desktop)
+            .project
+                .media
+                    margin-left: 0
+                    margin-right: 0
+
 .projects__section
     .hero
         min-height: 0
