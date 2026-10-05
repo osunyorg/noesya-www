@@ -61,6 +61,13 @@ body.projects__page
                         &.next
                             margin-left: offset(6)
 
+        @include media-breakpoint-down(desktop)
+            .siblings-navigation
+                li
+                    &::before,
+                    &::after
+                        content: none
+
 .projects_page,
 .ancestor-experience,
 .publications__page
