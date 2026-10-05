@@ -29,20 +29,22 @@
                 top: 0
                 right: 0
                 margin-bottom: 0
-                &::after
-                    background: rgba(0,0,0,0.5)
-                    bottom: 0
-                    content: ''
-                    left: 0
-                    pointer-events: none
-                    position: absolute
-                    right: 0
-                    top: 0
                 img, picture
                     height: 100%
                     width: 100%
                 img
                     object-fit: cover
+
+        &:not(.block-class-no-overlay)
+            figure::after
+                background: rgba(0,0,0,0.5)
+                bottom: 0
+                content: ''
+                left: 0
+                pointer-events: none
+                position: absolute
+                right: 0
+                top: 0
 
         html.has-menu-opened &
             .call_to_action
@@ -60,12 +62,17 @@
 
             .call_to_action
                 > div
+                    align-items: flex-end
                     display: flex
                     gap: var(--grid-gutter)
                     grid-column: 1 / 13 
                     justify-content: space-between
                     position: relative
                     z-index: 2
+                .actions
+                    a:first-child
+                        margin-right: 0
+                        margin-top: 0
 
         @include media-breakpoint-up(desktop)
             &.block-class-large

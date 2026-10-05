@@ -2,35 +2,14 @@
     &--large
         .project
             position: relative
-            &-content
-                bottom: 0
-                position: absolute
-                display: flex
-                align-items: center
-                left: 0
-                padding: space(10)
-                right: 0
-                top: 0
-                width: unset !important
-                z-index: 3
             &-description
-                color: var(--color-background)
                 a
                     @include h2
-                    color: inherit
+            .media
+                margin-left: 0
+                margin-right: 0
             .more::after 
                 vertical-align: middle
-            .media
-                margin: 0
-                &::before
-                    content: ''
-                    background: rgba(0,0,0,0.5)
-                    bottom: 0
-                    left: 0
-                    pointer-events: none
-                    position: absolute
-                    right: 0
-                    top: 0
 
         @include media-breakpoint-down(desktop)
             .project
@@ -44,6 +23,34 @@
                     transition: opacity $arrow-duration $arrow-ease-transition
                 &:hover .more
                     opacity: 1
+
+                .media
+                    &::before
+                        content: ''
+                        background: rgba(0,0,0,0.5)
+                        bottom: 0
+                        left: 0
+                        pointer-events: none
+                        position: absolute
+                        right: 0
+                        top: 0
+
+                &-content
+                    bottom: 0
+                    position: absolute
+                    display: flex
+                    align-items: center
+                    left: 0
+                    padding: space(10)
+                    right: 0
+                    top: 0
+                    width: unset !important
+                    z-index: 3
+
+                &-description
+                    color: var(--color-background)
+                    a
+                        color: inherit
 
         @include in-page-without-sidebar
             article
