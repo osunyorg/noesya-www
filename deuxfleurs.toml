@@ -19,6 +19,14 @@ from = "/metiers/applications/index.html"
 to = "/expertise/applications/"
 
 [[redirects]]
+from = "/politique-de-sobriete/index.html"
+to = "/mentions-legales/"
+
+[[redirects]]
+from = "/equipe/sebastien-gaya/index.html"
+to = "/entretiens/2021-09-01-sebastien-gaya/"
+
+[[redirects]]
 from = "/references/conseil/index.html"
 to = "/projets/conseil/"
 
@@ -139,6 +147,10 @@ from = "/organisations/academie-des-arts/index.html"
 to = "/organisations/academie-des-beaux-arts/"
 
 [[redirects]]
+from = "/experiences-interactives/index.html"
+to = "/expertise/"
+
+[[redirects]]
 from = "/metiers-1/formation/index.html"
 to = "/expertise/formation/"
 
@@ -191,12 +203,24 @@ from = "/metiers/formation/index.html"
 to = "/expertise/formation/"
 
 [[redirects]]
+from = "/communs-numeriques/index.html"
+to = "/expertise/"
+
+[[redirects]]
 from = "/references/2025-rennes-ville-et-metropole/index.html"
 to = "/projets/2025-rennes-ville-et-metropole/"
 
 [[redirects]]
+from = "/equipe/pierre-andre-boissinot/index.html"
+to = "/entretiens/2026-09-22-pierre-andre-boissinot/"
+
+[[redirects]]
 from = "/continuite-reversibilite-securite/index.html"
 to = "/cooperative/continuite-reversibilite-securite/"
+
+[[redirects]]
+from = "/sites-eco-concus/index.html"
+to = "/expertise/sites/"
 
 [[redirects]]
 from = "/projets/2020-atelier-narration-interactive/index.html"
@@ -245,6 +269,10 @@ to = "https://commun.osuny.org/actualites/carnet-de-recherche/"
 [[redirects]]
 from = "/references/2021-ensemble-a-table/index.html"
 to = "/projets/2021-ensemble-a-table/"
+
+[[redirects]]
+from = "/equipe/arnaud-levy/index.html"
+to = "/entretiens/2026-09-22-arnaud-levy/"
 
 [[redirects]]
 from = "/actualites/index.html"
