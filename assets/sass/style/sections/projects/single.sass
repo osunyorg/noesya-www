@@ -243,7 +243,6 @@ body.projects__page
                 column-gap: var(--grid-gutter)
                 display: flex
                 flex-wrap: wrap
-                row-gap: half(var(--grid-gutter))
             .organization
                 width: unset
                 .media
@@ -255,6 +254,11 @@ body.projects__page
                         height: pxToRem(68)
                         width: auto
                         object-fit: none
+            @include media-breakpoint-up(desktop)
+                .organization
+                    .media
+                        img
+                            object-fit: cover !important
 
     // chapter
     .block-chapter
