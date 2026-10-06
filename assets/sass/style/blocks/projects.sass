@@ -70,6 +70,13 @@
                     &-title
                         @include h3
 
+        @include media-breakpoint-down(desktop)
+            .project
+                gap: $spacing-2
+                .project-content
+                    .project-summary
+                        margin-top: $spacing-1
+
 @media (prefers-color-scheme: dark)
     .block-projects--large
         .project-content
