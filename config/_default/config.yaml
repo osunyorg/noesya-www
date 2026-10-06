@@ -3,6 +3,9 @@ theme: noesya-hugo-theme
 params:
   plausible: www.noesya.coop
   ecosystem: www
+  custom:
+    footer:
+      use_home_image: true
   blocks:
     ignored:
       - block-class-organisation
