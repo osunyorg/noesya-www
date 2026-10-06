@@ -83,70 +83,42 @@ body.projects__page
                             @include body-text
 
     // SUMMARY
-    .block.block-summary
+    .project-client
         padding-top: 0
         padding-bottom: 0
-        > .container > .block-content
+        &__content
             border-bottom: 1px solid var(--color-text)
-        .lead
-            p
-                @include h3
-        .hero-block-organization
-            .container
-                padding: 0
-            .block-title
-                @include small
-                text-align: left
-                font-style: normal
-            .organization
-                .media
-                    padding: 0
-                    margin-bottom: 0
-                    picture
-                        aspect-ratio: unset
-
+        &__organization
+            align-items: center
+            display: flex
+            gap: var(--grid-gutter)
         @include media-breakpoint-up(desktop)
             margin-top: $spacing-3
-            > .container > .block-content
+            &__content
                 padding-bottom: $spacing-3
-                .top
-                    margin-bottom: 0
-            .block-content
-                align-items: baseline
                 display: flex
+                align-items: center
+                justify-content: space-between
+            &__organization
                 justify-content: flex-end
-                gap: var(--grid-gutter)
-            .lead
-                width: columns(8)
-            .hero-block-organization
-                width: columns(4)
-                .container,
-                .block
-                    margin: 0
-                    padding: 0
-                .container
-                    width: 100%
-                .organizations
-                    @include grid(1)
-                .organization
+                .organization-logo
                     width: offset(1)
+            .h3
+                width: columns(8)
 
         @include media-breakpoint-down(desktop)
-            &, .block
-                margin-bottom: var(--grid-gutter)
-            .hero-block-organization
-                .block-content
-                    align-items: baseline
-                    display: flex
-                    justify-content: space-between
-                    gap: var(--grid-gutter)
-                .organizations--grid
-                    grid-template-columns: repeat(1, 1fr)
-                .organization
-                    .media
-                        img
-                            margin-left: auto
-                            max-width: space(25)
+            margin-bottom: var(--grid-gutter)
+            margin-top: var(--grid-gutter)
+            &__content
+                padding-bottom: var(--grid-gutter)
+            &__organization
+                justify-content: space-between
+                align-items: end
+                margin-top: $spacing-4
+                .organization-logo
+                    img
+                        margin-left: auto
+                        max-width: space(25)
 
     // BLOCKS
     .blocks 
@@ -460,12 +432,3 @@ body.projects__page
                     margin-bottom: space(8)
                 .rich-text
                     width: columns(8)
-
-// DARKMODE
-// TODO : remove for simply push white color sass variable
-// @media (prefers-color-scheme: dark)
-//     body.projects__page
-//         .hero
-//             color: var(--color-text)
-//             html.has-menu-opened &
-//                 --color-text: var(--color-background)

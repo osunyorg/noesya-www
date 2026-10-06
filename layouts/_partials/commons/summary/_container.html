@@ -17,6 +17,7 @@
       {{ range $index, $content := .context.Params.contents }}
         {{ if in site.Params.blocks.ignored .html_class }}
           {{ if eq .template "organizations" }}
+
             {{ $template := printf "blocks/templates/%s.html" .template }}
               {{ partial $template (dict
                 "block" $content

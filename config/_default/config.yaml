@@ -41,7 +41,7 @@ params:
         display: false
     single:
       summary:
-        position: content
+        position: none
       meta:
         position: hero
         options:
