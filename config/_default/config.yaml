@@ -61,6 +61,9 @@ params:
           mobile:   400
           tablet:   1024
           desktop:  1920
+        layouts:
+          list:
+            mobile:   335
         item:
           mobile:   350
           tablet:   450
