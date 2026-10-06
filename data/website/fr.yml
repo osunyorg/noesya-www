@@ -6,4 +6,22 @@ contents_reading_time:
   text: >-
     moins d'une minute
 contents:
+  - kind: block
+    template: image
+
+
+    ranks:
+      base: 2
+    html_class: "block-class-footer-owl"
+    top:
+      active: false
+
+    data:
+
+      image:
+        id: "39fde18d-777c-4b75-8029-f559a71994e2"
+
+
+
+
 
