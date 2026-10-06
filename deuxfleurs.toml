@@ -68,7 +68,7 @@ to = "/expertise/sites/"
 
 [[redirects]]
 from = "/actualites/2026-09-22-arnaud-levy/index.html"
-to = "/entretiens/2026-09-22-arnaud-levy/"
+to = "/entretiens/2021-09-01-arnaud-levy/"
 
 [[redirects]]
 from = "/actualites/2021-09-01-sebastien-gaya/index.html"
@@ -140,7 +140,7 @@ to = "/expertise/sites/"
 
 [[redirects]]
 from = "/actualites/2026-09-22-pierre-andre-boissinot/index.html"
-to = "/entretiens/2026-09-22-pierre-andre-boissinot/"
+to = "/entretiens/2021-01-01-pierre-andre-boissinot/"
 
 [[redirects]]
 from = "/references/2025-campus-art-mediterranee/index.html"
@@ -153,6 +153,10 @@ to = "/organisations/academie-des-beaux-arts/"
 [[redirects]]
 from = "/experiences-interactives/index.html"
 to = "/expertise/"
+
+[[redirects]]
+from = "/entretiens/2026-09-18-arnaud-bridou/index.html"
+to = "/entretiens/2025-09-01-arnaud-bridou/"
 
 [[redirects]]
 from = "/metiers-1/formation/index.html"
@@ -184,7 +188,7 @@ to = "/projets/2026-fablab-a-lecole/"
 
 [[redirects]]
 from = "/actualites/2026-09-18-arnaud-bridou/index.html"
-to = "/entretiens/2026-09-18-arnaud-bridou/"
+to = "/entretiens/2025-09-01-arnaud-bridou/"
 
 [[redirects]]
 from = "/actualites/2021-09-01-olivia-simonet/index.html"
@@ -197,6 +201,10 @@ to = "/projets/2023-referentiel-de-competences-mmi/"
 [[redirects]]
 from = "/metiers-1/applications/index.html"
 to = "/expertise/applications/"
+
+[[redirects]]
+from = "/entretiens/2026-09-22-arnaud-levy/index.html"
+to = "/entretiens/2021-09-01-arnaud-levy/"
 
 [[redirects]]
 from = "/organisations/mathieu-jahnich/index.html"
@@ -220,11 +228,11 @@ to = "/projets/2025-rennes-ville-et-metropole/"
 
 [[redirects]]
 from = "/equipe/pierre-andre-boissinot/index.html"
-to = "/entretiens/2026-09-22-pierre-andre-boissinot/"
+to = "/entretiens/2021-01-01-pierre-andre-boissinot/"
 
 [[redirects]]
 from = "/equipe/arnaud-bridou/index.html"
-to = "/entretiens/2026-09-18-arnaud-bridou/"
+to = "/entretiens/2025-09-01-arnaud-bridou/"
 
 [[redirects]]
 from = "/continuite-reversibilite-securite/index.html"
@@ -233,6 +241,10 @@ to = "/cooperative/continuite-reversibilite-securite/"
 [[redirects]]
 from = "/sites-eco-concus/index.html"
 to = "/expertise/sites/"
+
+[[redirects]]
+from = "/entretiens/2026-09-22-pierre-andre-boissinot/index.html"
+to = "/entretiens/2021-01-01-pierre-andre-boissinot/"
 
 [[redirects]]
 from = "/projets/2020-atelier-narration-interactive/index.html"
@@ -284,7 +296,7 @@ to = "/projets/2021-ensemble-a-table/"
 
 [[redirects]]
 from = "/equipe/arnaud-levy/index.html"
-to = "/entretiens/2026-09-22-arnaud-levy/"
+to = "/entretiens/2021-09-01-arnaud-levy/"
 
 [[redirects]]
 from = "/actualites/index.html"
