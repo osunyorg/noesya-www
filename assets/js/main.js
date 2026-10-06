@@ -6,5 +6,4 @@ import './design-system/hoverNavigation';
 import './design-system/Note';
 import './design-system/NotesManager';
 import './design-system/postParagraphs';
-import './design-system/footer';
 import './design-system/Reveal';
