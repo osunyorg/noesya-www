@@ -18,6 +18,10 @@
             .media
                 img
                     filter: grayscale(1)
+                    transition: filter $color-duration
+            &:hover
+                img
+                    filter: grayscale(0)
 
         @include media-breakpoint-up(md)
             .project

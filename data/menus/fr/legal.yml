@@ -10,4 +10,13 @@ items:
   descendants_targets: []
   path: "/pages/mentions-legales"
   file: content/fr/pages/mentions-legales/_index.html
+- title: accessibilité conforme
+  slug: accessibilite-conforme
+  target: "/accessibilite/"
+  kind: page
+  new_tab: false
+  children: []
+  descendants_targets: []
+  path: "/pages/accessibilite"
+  file: content/fr/pages/accessibilite/_index.html
 

@@ -204,6 +204,8 @@ body.projects__page
                 img
                     height: 100%
                     width: 100%
+                img
+                    object-fit: cover
 
         @include media-breakpoint-up(desktop)
             .gallery
@@ -218,8 +220,6 @@ body.projects__page
                             left: 0
                             position: absolute
                             top: 0
-                            img
-                                object-fit: cover
 
     .block-gallery + .block-image,
     .block-image + .block-gallery
@@ -318,7 +318,7 @@ body.projects__page
             .actions
                 a
                     @include hover-translate-icon
-                    @include icon(arrow-right-line, after)
+                    @include icon(arrow-right-line, after, true)
                     --btn-border: none
                     --btn-hover-border: none
                     font-family: $body-font-family !important
@@ -329,6 +329,10 @@ body.projects__page
                         margin-left: $spacing-2
                         font-size: var(--small-size)
                         line-height: var(--small-line-height)
+            &--without-image
+                .actions
+                    a:first-child
+                        text-align: left
             &--with-image
                 display: flex
                 justify-content: center

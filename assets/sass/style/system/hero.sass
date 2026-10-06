@@ -28,11 +28,13 @@
                     margin-top: 0
 
 .hero
-    hgroup
-        p
-            color: $color-title-alt
     @include hero-with-large-image
     min-height: auto
+    
+    .content
+        hgroup p,
+        h1 > span
+            color: $color-title-alt
     
     @include media-breakpoint-up(desktop)
         .hero-text
