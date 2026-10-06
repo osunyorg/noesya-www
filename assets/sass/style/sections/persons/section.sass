@@ -23,3 +23,12 @@
             @include media-breakpoint-up(xl)
                 .persons
                     @include grid(3)
+
+    &.block-class-centered-persons
+        @include in-page-without-sidebar
+            .persons
+                display: flex
+                gap: var(--grid-gutter)
+                justify-content: center
+                .person
+                    width: columns(4)
