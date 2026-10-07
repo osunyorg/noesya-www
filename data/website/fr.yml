@@ -1,6 +1,8 @@
 about:
   label: sane
 default:
+  shared_image:
+    id: 45fc9d6d-eacb-4147-bda4-1c7afea15093
 contents_reading_time:
   seconds: 0
   text: >-
