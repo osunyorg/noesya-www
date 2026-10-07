@@ -6,6 +6,9 @@
 
     &--collapsed
         align-items: center
+        transition: color $color-duration ease
+        &:hover
+            color: $color-title-alt
         &[aria-expanded="false"]::after
             border-bottom-color: var(--color-text) !important
         &::before
