@@ -135,6 +135,10 @@ from = "/references/2026-gaite-lyrique/index.html"
 to = "/projets/2026-gaite-lyrique/"
 
 [[redirects]]
+from = "/organisations/laboratoire-cemti/index.html"
+to = "/organisations/cemti/"
+
+[[redirects]]
 from = "/sites/index.html"
 to = "/expertise/sites/"
 
