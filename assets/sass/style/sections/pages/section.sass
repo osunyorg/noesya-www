@@ -156,10 +156,13 @@
 
         .call_to_action
             @include h4
-            margin-top: $spacing-2
+            margin-top: $spacing-3
             a
                 @include icon(arrow-right-line, after, true)
                 @include hover-translate-icon
+                @include button-accent
+                --btn-padding: #{$spacing-2} #{pxToRem(30)}
+                margin-top: space(4)
                 &::after
                     margin-left: space()
                     vertical-align: middle
@@ -177,8 +180,6 @@
                 margin-left: offset(2)
                 margin-right: offset(2)
                 a
-                    @include button-accent
-                    --btn-padding: #{$spacing-2} #{pxToRem(30)}
                     margin-top: space(8)
 
 .page-expertise,
