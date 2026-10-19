@@ -19,6 +19,7 @@
     &.full-width
         // call to action
         .block-call_to_action--no_background
+            --border-width: 0
             .block-content
                 padding-top: 0
                 padding-bottom: 0
@@ -36,10 +37,8 @@
                         --btn-min-width: unset
                         --btn-padding: 0
                         --btn-background: none
-                        --btn-border: none
                         --btn-color: var(--color-text)
                         --btn-hover-background: var(--color-background)
-                        --btn-hover-border: none
                         --btn-hover-color: inherit
                         margin: 0
                         text-decoration-color: inherit
@@ -160,7 +159,7 @@
             a
                 @include icon(arrow-right-line, after, true)
                 @include hover-translate-icon
-                @include button-accent
+                @include button-dark
                 --btn-padding: #{$spacing-2} #{pxToRem(30)}
                 margin-top: space(4)
                 &::after

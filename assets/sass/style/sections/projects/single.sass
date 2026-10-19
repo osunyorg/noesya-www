@@ -289,18 +289,15 @@ body.projects__page
         .call_to_action
             .actions
                 a
-                    @include hover-translate-icon
+                    // Default button style
                     @include icon(arrow-right-line, after, true)
+                    @include hover-translate-icon
                     --btn-border: none
                     --btn-hover-border: none
                     font-family: $body-font-family !important
                     font-size: var(--small-size) !important
                     line-height: var(--small-line-height) !important
                     margin: 0
-                    &::after
-                        margin-left: $spacing-2
-                        font-size: var(--small-size)
-                        line-height: var(--small-line-height)
             &--without-image
                 .actions
                     a:first-child
@@ -354,6 +351,7 @@ body.projects__page
                         color: var(--btn-color)
                         padding: var(--btn-padding) !important
                         transition: background  $color-duration ease, border  $color-duration ease, color  $color-duration ease
+                        text-decoration: none !important
                         &:hover,
                         &:focus-visible
                             background: var(--color-text)

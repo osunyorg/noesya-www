@@ -1,6 +1,8 @@
 _merge: deep
 theme: noesya-hugo-theme
 params:
+  debug:
+    productionUrl: https://www.noesya.coop
   plausible: www.noesya.coop
   ecosystem: www
   custom:
@@ -18,6 +20,8 @@ params:
   toc:
     disabled: true
   posts:
+    index:
+      layout: grid
     single:
       meta:
         position: hero
@@ -74,6 +78,10 @@ params:
       persons:
         hero_single:
           desktop:  645
+      posts:
+        layouts:
+          grid:
+            mobile: 400
     blocks:
       call_to_action:
         mobile:   400
