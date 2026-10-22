@@ -12,7 +12,6 @@
   <a href="{{ $publications_page.Permalink }}">Voir toutes</a>
 </div>
 {{ partial "blocks/templates/publications.html" (dict "block" (dict
-  "top" $block.top
   "ranks" $block.ranks
   "data" (dict "publications" $items)
 )) }}
