@@ -36,3 +36,9 @@
             right: calc(#{offset(2)} + var(--grid-gutter))
             text-decoration: none
             transform: translateY(-100%)
+
+    
+    @include media-breakpoint-down(desktop)
+        + .block
+            &, .publications
+                margin-top: 0
