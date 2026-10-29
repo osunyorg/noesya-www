@@ -1,4 +1,7 @@
 import './theme/';
+
+import './design-system/menu';
+
 import './design-system/altImage';
 import './design-system/revertHeader';
 import './design-system/gallery';
