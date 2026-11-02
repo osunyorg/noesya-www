@@ -103,6 +103,10 @@ from = "/organisations/categories/clients/index.html"
 to = "/organisations/categories/client/"
 
 [[redirects]]
+from = "/personnes/ophelie-burgstahler-1/index.html"
+to = "/personnes/ophelie-burgstahler/"
+
+[[redirects]]
 from = "/references/2022-espeli/index.html"
 to = "/projets/2022-espeli/"
 
