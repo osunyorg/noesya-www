@@ -333,6 +333,10 @@ body.projects__page
                         --btn-hover-color: var(--color-text)
                         --btn-padding: 0
 
+            @include media-breakpoint-down(desktop)
+                .call_to_action
+                    padding: 0
+
         &--accent_background
             overflow: hidden
             position: relative
