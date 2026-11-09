@@ -1,6 +1,6 @@
 <div class="project-client container">
   <div class="project-client__content">
-    <h2 class="h3">{{ .Params.summary | safeHTML }}</h2>
+    <h2 class="h3">{{ .Params.summary | markdownify }}</h2>
     {{ range $index, $content := .Params.contents }}
       {{ if and (eq .html_class "block-class-organisation") (eq .template "organizations") }}
         {{ $client := index .data.organizations 0 }}
