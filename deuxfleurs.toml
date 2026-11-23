@@ -271,6 +271,10 @@ from = "/references/2023-ecosysteme-de-la-mode/index.html"
 to = "/projets/2023-ecosysteme-de-la-mode/"
 
 [[redirects]]
+from = "/expertise/applications/reprise-dapplications-ruby-on-rails/index.html"
+to = "/expertise/applications/reprise-rails/"
+
+[[redirects]]
 from = "/metiers-1/conseil/index.html"
 to = "/expertise/conseil/"
 
