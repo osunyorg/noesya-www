@@ -3,7 +3,11 @@ import { isMobile } from '../theme/utils/breakpoints';
 var OriginalNote = window.osuny.Note;
 
 window.osuny.Note = function (element) {
-    OriginalNote.call(this, element);
+    // OriginalNote.call(this, element);
+    this.note = element;
+    this.active = false;
+    this.call = this.note.querySelector('.note__call');
+    this.content = this.note.querySelector('.note__content');
 
     this.chapter = this.note.closest('.chapter');
 
