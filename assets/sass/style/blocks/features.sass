@@ -1,4 +1,14 @@
 .block-features
+    @include in-page-without-sidebar
+        &--grid
+            .features
+                grid-template-columns: repeat(2, 1fr)
+                padding-left: offset(2)
+                width: columns(10)
+        &--list
+            .features
+                padding-left: offset(2)
+
     &.block-class-manifesto
         .feature
             .name,
